@@ -1,0 +1,1624 @@
+{
+  "en": {
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "about": "About us",
+      "fleet": "Fleet",
+      "contact": "Contact",
+      "partnerships": "Partnerships",
+      "transfer": "Airport Transfer",
+      "events": "Events",
+      "tourism": "Tourism"
+    },
+    "index": {
+      "hero": {
+        "title": "Ktransport — Driven by excellence",
+        "subtitle": "Your journey, our excellence",
+        "tagline": {
+          "part1": "Your journey,",
+          "part2": "our excellence"
+        },
+        "introduction": "Since 2009, Ktransport has distinguished itself as a benchmark in premium and corporate transportation throughout the Île-de-France region and the French Riviera. With over fifteen years of refined expertise, the company supports a discerning and international clientele from corporate leaders and diplomatic delegations to luxury travelers and world-class events upheld by an unwavering commitment to excellence, safety, discretion, and absolute punctuality.",
+        "tagline1": "Luxury in motion, crafted exclusively for you.",
+        "tagline2": "Contact us right now to receive a tailored quotation aligned with your professional requirements.",
+        "cta_text1": "Luxury in motion, crafted exclusively for you.",
+        "cta_text2": "Contact us right now to receive a tailored quotation aligned with your professional requirements.",
+        "cta_primary": "Request a quote",
+        "cta_whatsapp": "Book via WhatsApp"
+      },
+      "services": {
+        "title": "Our services",
+        "card1": {
+          "title": "Airport Transfers",
+          "text": "Premium meet-and-greet, real-time flight monitoring and seamless transfers for a refined and stress-free arrival."
+        },
+        "card2": {
+          "title": "Business / Corporate",
+          "text": "Precise, discreet and seamlessly managed business travel, crafted for executives and discerning professionals."
+        },
+        "card3": {
+          "title": "Events and MICE",
+          "text": "Elegant, smooth coordination for conferences, seminars and corporate events, with impeccable care for your guests and VIPs."
+        },
+        "card4": {
+          "title": "VIP and Protocol",
+          "text": "An exceptional service for high-profile clients and sensitive missions, offering confidentiality, precision and priority handling."
+        },
+        "card5": {
+          "title": "Chauffeur at Disposal",
+          "text": "A private chauffeur at your disposal, providing flexibility, comfort and discreet attention."
+        },
+        "card6": {
+          "title": "B2B Partnerships",
+          "text": "Tailored solutions for hotels, agencies and corporations seeking dependable, premium mobility services."
+        }
+      },
+      "features": {
+        "title": "Why choose Ktransport?",
+        "subtitle": "Excellence in transportation, designed for those who demand the very best.",
+        "card1": {
+          "title": "Excellence",
+          "text": "Each service is delivered with unwavering standards to ensure uncompromising quality."
+        },
+        "card2": {
+          "title": "Discretion and Professionalism",
+          "text": "Our chauffeurs are trained to meet corporate, protocol, and high-level professional requirements."
+        },
+        "card3": {
+          "title": "Human Commitment",
+          "text": "A personalized, attentive, and consistently reliable client experience."
+        },
+        "card4": {
+          "title": "Comfort and Safety",
+          "text": "A fleet of premium vehicles maintained in strict compliance with the highest safety standards."
+        }
+      },
+      "testimonials": {
+        "title": "What our clients say",
+        "subtitle": "Excellence recognized by our clients"
+      },
+      "cta": {
+        "title": "Luxury in motion, crafted exclusively for you.",
+        "subtitle": "Contact us right now and experience transportation driven by excellence — your journey, our excellence."
+      }
+    },
+    "services": {
+      "hero": {
+        "subtitle": "Services tailored to your needs"
+      },
+      "subtitle": "Custom services for every journey",
+      "discover": "Discover",
+      "details": {
+        "business": {
+          "title": "Business / Corporate",
+          "text": "Precise, discreet and seamlessly managed business travel, crafted for executives and discerning professionals."
+        },
+        "events": {
+          "title": "Events and MICE",
+          "text": "Elegant, smooth coordination for conferences, seminars and corporate events, with impeccable care for your guests and VIPs."
+        },
+        "airport": {
+          "title": "Airport Transfers",
+          "text": "Premium meet-and-greet, real-time flight monitoring and seamless transfers for a refined and stress-free arrival."
+        },
+        "vip": {
+          "title": "VIP and Protocol",
+          "text": "An exceptional service for high-profile clients and sensitive missions, offering confidentiality, precision and priority handling."
+        },
+        "disposition": {
+          "title": "Chauffeur at Disposal",
+          "text": "A private chauffeur at your disposal, providing flexibility, comfort and discreet attention."
+        },
+        "partnerships": {
+          "title": "B2B Partnerships",
+          "text": "Tailored solutions for hotels, agencies and corporations seeking dependable, premium mobility services."
+        }
+      }
+    },
+    "partnerships": {
+      "hero": {
+        "title": "B2B Partnerships",
+        "subtitle": "Tailored premium transport solutions for businesses",
+        "security_badge": "Confidentiality and Security Guaranteed",
+        "case_by_case": "Case-by-case handling for the protection of your information"
+      },
+      "security": {
+        "title": "Security and Confidentiality",
+        "subtitle": "Your trust is our absolute priority",
+        "description": "At Ktransport, we understand the importance of confidentiality of our partners' information. Each partnership request is handled individually by our dedicated team, ensuring maximum protection of your sensitive data.",
+        "feature1": {
+          "title": "Personalized Treatment",
+          "text": "Each partnership is analyzed and configured individually according to your specific needs and security requirements."
+        },
+        "feature2": {
+          "title": "Data Protection",
+          "text": "Your commercial and strategic information is handled with the utmost confidentiality and is never shared."
+        },
+        "feature3": {
+          "title": "Custom Agreement",
+          "text": "Contracts and conditions tailored to your company, negotiated directly with our management team."
+        }
+      },
+      "contact": {
+        "title": "Contact Our Team",
+        "subtitle": "To discuss your partnership project, contact us directly",
+        "description": "Rather than a generic form, we prefer a direct and personalized exchange. Our commercial team is available to understand your needs and propose a tailored solution.",
+        "phone": "Call Now",
+        "email": "Email Us",
+        "contact_page": "Contact Page",
+        "response_time": "Response within 24h",
+        "call_now": "Call now",
+        "email_subject": "B2B Partnership Request",
+        "send_email": "Send email",
+        "complete_form": "Complete contact form",
+        "access_form": "Access the form"
+      },
+      "discover_benefits": "Discover the benefits",
+      "types": {
+        "title": "Partnership Types",
+        "subtitle": "Solutions adapted to each business sector"
+      },
+      "hotels": {
+        "title": "Hotels and Residences",
+        "description": "Offer premium transport service to your clients with concierge integration and real-time booking.",
+        "feature1": "API integration with PMS systems",
+        "feature2": "24/7 dedicated support",
+        "feature3": "Simplified monthly billing",
+        "learn_more": "Learn more"
+      },
+      "corporate": {
+        "title": "Corporate Travel",
+        "description": "Transport solutions for businesses with centralized management and detailed reporting.",
+        "feature1": "Dedicated booking portal",
+        "feature2": "Advanced reporting and analytics",
+        "feature3": "Dedicated account manager"
+      },
+      "events": {
+        "title": "Event Planners",
+        "description": "Complete transport solutions for weddings, conferences and corporate events.",
+        "feature1": "Fleet coordination",
+        "feature2": "Event day coordination",
+        "feature3": "Flexible packages"
+      },
+      "agencies": {
+        "title": "Travel Agencies",
+        "description": "Integrate our services into your offerings with attractive commission and technical support.",
+        "feature1": "Competitive commission",
+        "feature2": "GDS and booking systems integration",
+        "feature3": "Training and technical support",
+        "learn_more": "Learn more"
+      },
+      "benefits": {
+        "title": "Benefits",
+        "subtitle": "Why choose Ktransport as a partner",
+        "card1": {
+          "title": "Dedicated Fleet",
+          "text": "Access exclusive vehicles and priority booking for your clients.",
+          "feature1": "Premium vehicles available 24/7",
+          "feature2": "Guaranteed priority booking",
+          "feature3": "Regular maintenance and renewal"
+        },
+        "card2": {
+          "title": "Seamless Integration",
+          "text": "Easy booking flows and API/portal options for hotel desks and corporate travel teams.",
+          "feature1": "Complete and documented RESTful API",
+          "feature2": "Customized booking portal",
+          "feature3": "Dedicated technical support"
+        },
+        "card3": {
+          "title": "Tailored Pricing",
+          "text": "Competitive rates and packages adapted to your needs.",
+          "feature1": "Volume-based negotiated rates",
+          "feature2": "Flexible billing (monthly/quarterly)",
+          "feature3": "Progressive volume discounts"
+        }
+      },
+      "how": {
+        "title": "How it works",
+        "subtitle": "A simple three-step process to start your partnership",
+        "step1": {
+          "title": "Get in touch",
+          "text": "Tell us about your needs and guest volumes."
+        },
+        "step2": {
+          "title": "Set up",
+          "text": "We configure booking flows and pricing to match your operations."
+        },
+        "step3": {
+          "title": "Go live",
+          "text": "Start offering premium transport to your guests with dedicated support."
+        }
+      },
+      "packages": {
+        "title": "Partner Packages",
+        "subtitle": "Choose the partnership level that matches your needs",
+        "popular": "Popular",
+        "package1": {
+          "title": "Silver",
+          "text": "Basic priority booking and monthly billing",
+          "cta": "Request Silver",
+          "feature1": "Priority booking",
+          "feature2": "Simplified monthly billing",
+          "feature3": "Standard email support",
+          "feature4": "Booking portal access"
+        },
+        "package2": {
+          "title": "Gold",
+          "text": "Dedicated account manager and volume discounts",
+          "cta": "Request Gold",
+          "all_silver": "All Silver, plus:",
+          "feature1": "Dedicated account manager",
+          "feature2": "Volume discounts (5-15%)",
+          "feature3": "Priority phone support",
+          "feature4": "Advanced API integration",
+          "feature5": "Custom monthly reporting"
+        },
+        "package3": {
+          "title": "Platinum",
+          "text": "Full concierge integration and bespoke SLAs",
+          "cta": "Request Platinum",
+          "all_gold": "All Gold, plus:",
+          "feature1": "Complete concierge integration",
+          "feature2": "Guaranteed custom SLAs",
+          "feature3": "24/7 support with dedicated hotline",
+          "feature4": "Maximum discounts (15-25%)",
+          "feature5": "Team training included",
+          "feature6": "Custom developments"
+        }
+      },
+      "logos": {
+        "title": "Trusted by"
+      },
+      "testimonials": {
+        "title": "Partner Testimonials",
+        "subtitle": "Discover how our partners benefit from our collaboration",
+        "placeholder_name": "[Partner Name]",
+        "placeholder_position": "[Position / Company]",
+        "placeholder_text": "[Testimonial coming soon - Structure ready for your partner testimonials]"
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Everything you need to know about our partnership program",
+        "q1": {
+          "question": "What are the criteria to become a partner?",
+          "answer": "We look for companies that share our values of excellence and have a regular client volume. Hotels, travel agencies, businesses and event organizers are ideal partners."
+        },
+        "q2": {
+          "question": "How long does it take to set up the partnership?",
+          "answer": "Setup typically takes between 2 to 4 weeks depending on the partnership level chosen. For complex API integrations (Platinum), it can take up to 6 weeks with our technical team."
+        },
+        "q3": {
+          "question": "Are there any integration or membership fees?",
+          "answer": "No, there are no membership fees. We operate solely on commission or negotiated rates based on your volume. The investment is only in time for the initial integration."
+        },
+        "q4": {
+          "question": "What type of technical support is available?",
+          "answer": "The level of support depends on your package. Silver includes email support, Gold adds priority phone support, and Platinum offers 24/7 support with dedicated hotline and account manager."
+        },
+        "q5": {
+          "question": "Can I change packages after starting?",
+          "answer": "Absolutely! You can upgrade to a higher package at any time. We evaluate your volume and needs to offer you the best solution. Changes are typically effective within 2 weeks."
+        }
+      },
+      "cta": {
+        "title": "Ready to transform your clients' transport experience?",
+        "subtitle": "Join our partner network and offer excellence to your clients today",
+        "button": "Become a partner now"
+      }
+    },
+    "about": {
+      "hero": {
+        "title": "About Ktransport",
+        "subtitle": "Where every journey becomes a signature of excellence."
+      },
+      "history": {
+        "title": "Our History",
+        "text1": "Since 2009, Ktransport has distinguished itself as a benchmark in premium and corporate transportation throughout the Île-de-France region and the French Riviera. With over fifteen years of refined expertise, the company has built a reputation for excellence, serving a discerning and international clientele.",
+        "text2": "From corporate leaders and diplomatic delegations to luxury travelers and world-class events, Ktransport has consistently delivered exceptional service with an unwavering commitment to excellence, safety, discretion, and absolute punctuality."
+      },
+      "presentation": {
+        "title": "Présentation Ktransport",
+        "text": "Since 2009, Ktransport has distinguished itself as a benchmark in premium and corporate transportation throughout the Île-de-France region and the French Riviera. With over fifteen years of refined expertise, the company supports a discerning and international clientele from corporate leaders and diplomatic delegations to luxury travelers and world-class events upheld by an unwavering commitment to excellence, safety, discretion, and absolute punctuality."
+      },
+      "mission": {
+        "title": "Our Mission",
+        "text": "Guarantee a transportation experience that goes beyond mere travel. At Ktransport, every journey is designed to be seamless, reliable, and aligned with the highest premium transportation standards."
+      },
+      "values": {
+        "title": "Our Values",
+        "excellence": {
+          "title": "Excellence",
+          "text": "Each service is delivered with unwavering standards to ensure uncompromising quality."
+        },
+        "discretion": {
+          "title": "Discretion and Professionalism",
+          "text": "Our chauffeurs are trained to meet corporate, protocol, and high-level professional requirements."
+        },
+        "reliability": {
+          "title": "Reliability",
+          "text": "We guarantee punctual, dependable service with real-time monitoring and proactive communication to ensure your peace of mind."
+        },
+        "personalization": {
+          "title": "Personalization",
+          "text": "Every journey is tailored to your specific needs, preferences, and requirements, ensuring a truly bespoke transportation experience."
+        },
+        "comfort": {
+          "title": "Comfort and Safety",
+          "text": "A fleet of premium vehicles maintained in strict compliance with the highest safety standards."
+        },
+        "human": {
+          "title": "Human Commitment",
+          "text": "A personalized, attentive, and consistently reliable client experience."
+        },
+        "punctuality": {
+          "title": "Ponctualité / Punctuality",
+          "text": "Always on time, with real-time flight and traffic monitoring to ensure seamless and timely pick-ups."
+        }
+      },
+      "why_choose": {
+        "title": "Pourquoi Choisir Ktransport ? | Why Choose Ktransport?",
+        "experience": {
+          "title": "Plus de 15 ans d'expérience à Paris",
+          "text": "Over 15 years of in-depth expertise in the Paris region and premium mobility sector."
+        },
+        "image": {
+          "title": "Une image élégante et internationale",
+          "text": "A refined international brand identity embodied by our signature line: Beyond Time, Beyond Place."
+        },
+        "availability": {
+          "title": "Disponibilité 24/7",
+          "text": "Immediate responsiveness and continuous service availability."
+        },
+        "chauffeurs": {
+          "title": "Chauffeurs professionnels",
+          "text": "Impeccable presentation, refined etiquette, and multilingual proficiency."
+        },
+        "solutions": {
+          "title": "Solutions sur mesure",
+          "text": "Tailored solutions for corporations, agencies, hotels, private clients, and diplomatic institutions."
+        }
+      },
+      "commitments": {
+        "title": "Nos Engagements Premium | Our Premium Commitments",
+        "text": "• High-end vehicles (Mercedes-Benz E-Class, S-Class, V-Class…) • Intelligent route planning • Absolute confidentiality • Administrative transparency and operational rigor • A trusted partner for sensitive assignments"
+      },
+      "vision": {
+        "title": "Vision & Ambition | Vision & Ambition",
+        "text": "Ktransport aims to become a leading international premium transportation provider, while strengthening its historic presence in Paris."
+      },
+      "conclusion": {
+        "title": "Conclusion",
+        "text": "Since 2009, Ktransport has embodied elegance, professionalism, and trust in premium transportation."
+      }
+    },
+    "contact": {
+      "hero": {
+        "title": "Contact Us",
+        "subtitle": "Our team remains at your disposal to assess your needs and deliver a customized quotation aligned with your professional standards."
+      },
+      "info": {
+        "title": "Our contact details"
+      },
+      "find_us": {
+        "title": "Find Us"
+      },
+      "details": {
+        "address": "Address",
+        "phone": "Phone",
+        "email": "Email",
+        "hours": "Hours"
+      },
+      "address": {
+        "label": "Headquarters Address",
+        "secondary": "Secondary Establishment Address"
+      },
+      "phone": {
+        "label": "Phone",
+        "availability": "Available 24/7"
+      },
+      "email": {
+        "label": "Email",
+        "response": "Response within 24h"
+      },
+      "hours": {
+        "label": "Hours",
+        "days": "Monday - Sunday",
+        "time": "24 hours a day"
+      },
+      "form": {
+        "title": "Send us a message",
+        "name": "Full name",
+        "email": "Email",
+        "phone": "Phone",
+        "subject": "Subject",
+        "message": "Message",
+        "submit": "Send message",
+        "send": "Send",
+        "sending": "Sending...",
+        "success": "Thank you for your message. We'll contact you shortly.",
+        "error": "Error sending message. Please try again."
+      }
+    },
+    "fleet": {
+      "hero": {
+        "title": "Our Prestige Fleet",
+        "subtitle": "Discover our exclusive selection of high-end vehicles"
+      },
+      "selection": {
+        "title": "A rigorous selection",
+        "text": "Our fleet consists exclusively of recent premium vehicles, maintained with the greatest care. Each model is chosen for its excellence in comfort, technology and safety."
+      },
+      "book": "Reserve",
+      "vehicle": {
+        "passengers": "Up to {count} passengers",
+        "passengers_1_3": "1 to 3 passengers",
+        "passengers_1_6": "1 to 6 passengers",
+        "passengers_8": "Up to 8 passengers",
+        "luggage": "{count} suitcases",
+        "luggage_4": "4 suitcases",
+        "luggage_8": "8 suitcases",
+        "spacious_trunk": "Spacious trunk",
+        "wifi": "High-speed WiFi",
+        "electric": "100% Electric",
+        "advanced_tech": "Advanced technology",
+        "ideal_groups": "Ideal for groups",
+        "premium_space": "Premium space"
+      }
+    },
+    "events": {
+      "hero": {
+        "title": "Events and MICE",
+        "subtitle": "Make your special day even more magical with our premium service",
+        "cta": "Plan my event"
+      },
+      "description": {
+        "fr": "Une coordination élégante et fluide pour vos congrès, séminaires et événements corporate, avec une prise en charge irréprochable de vos invités et VIP.",
+        "en": "Elegant, smooth coordination for conferences, seminars and corporate events, with impeccable care for your guests and VIPs."
+      },
+      "packages": {
+        "title": "Our offers for Events and MICE service",
+        "choose": "Choose this package",
+        "popular": "Popular",
+        "essentiel": {
+          "title": "Essentiel",
+          "feature1": "Luxury vehicle",
+          "feature2": "4 hours of service",
+          "feature3": "Basic floral decoration",
+          "feature4": "Elegantly dressed chauffeur"
+        },
+        "privilege": {
+          "title": "Privilege",
+          "feature1": "2 premium vehicles",
+          "feature2": "8 hours of service",
+          "feature3": "Premium floral decoration",
+          "feature4": "On-board beverages",
+          "feature5": "Personalized assistance"
+        },
+        "prestige": {
+          "title": "Prestige",
+          "feature1": "Full fleet (3-5 vehicles)",
+          "feature2": "12 hour service",
+          "feature3": "Custom decoration",
+          "feature4": "VIP service with coordinator",
+          "feature5": "Professional photos included"
+        }
+      },
+      "vehicles": {
+        "title": "Our Events and MICE vehicles",
+        "passengers_4": "4 passengers",
+        "other": "Other (to be specified)",
+        "rolls": {
+          "name": "Rolls-Royce Phantom",
+          "feature1": "4 passengers",
+          "feature2": "Custom interior",
+          "feature3": "Floral decoration included"
+        },
+        "bentley": {
+          "name": "Bentley Continental",
+          "feature1": "3 passengers",
+          "feature2": "Panoramic sunroof",
+          "feature3": "Custom ribbons"
+        },
+        "maybach": {
+          "name": "Mercedes Maybach",
+          "feature1": "4 passengers",
+          "feature2": "Heated massage seats",
+          "feature3": "Champagne included"
+        },
+        "select": "Select"
+      },
+      "reservation": {
+        "title": "Plan your Event",
+        "event_date": "Event date",
+        "package": "Selected package",
+        "vehicle": "Selected vehicle",
+        "passenger_name": "Passenger name",
+        "ceremony": "Ceremony location",
+        "reception": "Reception location",
+        "special_requests": "Special requests",
+        "submit": "Send request",
+        "sending": "Sending..."
+      }
+    },
+    "transfer": {
+      "hero": {
+        "title": "Airport Transfer",
+        "subtitle": "Door-to-door transfers to and from the airport with peace of mind"
+      },
+      "details": {
+        "title": "Service details",
+        "intro": "Premium meet-and-greet, real-time flight monitoring and seamless transfers for a refined and stress-free arrival.",
+        "feature1": "Pick-up at your exact chosen time",
+        "feature2": "Real-time flight tracking for delays or early arrivals",
+        "feature3": "Luggage assistance",
+        "feature4": "Fresh drinks and WiFi on board",
+        "feature5": "Service available 24/7",
+        "closing": "Our professional drivers know the best routes perfectly to save you time."
+      },
+      "form": {
+        "title": "Book this service",
+        "name": "Full name",
+        "email": "Email",
+        "phone": "Phone",
+        "date": "Date",
+        "time": "Time",
+        "flight": "Flight number",
+        "flight_placeholder": "Ex: AF123, LH456",
+        "notes": "Additional notes",
+        "errors": {
+          "api_invalid": "Invalid API key. Check your AviationStack key in config.json",
+          "rate_limit": "Request limit reached (100/month for free plan)",
+          "flight_not_found": "Flight not found. Check the number or try without prefix (e.g., 123 instead of AF123).",
+          "flight_error": "Error searching for flight.",
+          "submit_error": "An error occurred. Please try again."
+        },
+        "flight_found": "Flight information found:",
+        "airline": "Airline:",
+        "departure": "Departure:",
+        "departure_time": "Departure time:",
+        "arrival": "Arrival:",
+        "arrival_time": "Arrival time:",
+        "terminal": "Terminal:",
+        "gate": "Gate:",
+        "status": "Status:",
+        "use_info": "Use this information",
+        "terminal_placeholder": "Enter terminal number",
+        "gate_placeholder": "Enter gate number",
+        "arrival_airport": "Arrival airport",
+        "arrival_airport_placeholder": "Enter arrival airport code or name",
+        "auto_filled": "Auto-filled from flight data",
+        "manual_entry_required": "Please fill in the following details manually:",
+        "pickup_location": "Pickup location",
+        "pickup_location_placeholder": "Airport terminal, gate, or specific location",
+        "pickup_location_hint": "Specify where you'd like to be picked up at the airport",
+        "passengers": "Number of passengers",
+        "passengers_placeholder": "Enter number of passengers",
+        "luggage": "Number of luggage pieces",
+        "luggage_placeholder": "Enter number of luggage pieces",
+        "dropoff_address": "Drop-off address",
+        "dropoff_address_placeholder": "Enter destination address",
+        "sending": "Sending...",
+        "book": "Send request"
+      },
+      "book": "Send request"
+    },
+    "chauffeur": {
+      "hero": {
+        "title": "VIP and Protocol",
+        "subtitle": "Tailored support and services for VIP guests"
+      },
+      "details": {
+        "title": "Dedicated private transportation",
+        "intro": "An exceptional service for high-profile clients and sensitive missions, offering confidentiality, precision and priority handling.",
+        "feature1": "Available at your chosen time",
+        "feature2": "24/7 and 7 days a week service",
+        "feature3": "Multiple pickups during the day",
+        "feature4": "Total itinerary flexibility",
+        "feature5": "In-depth local knowledge"
+      },
+      "form": {
+        "title": "Book a chauffeur",
+        "service_type": "Service type",
+        "service_occasional": "Occasional (a few hours)",
+        "service_regular": "Regular (day/week package)",
+        "service_long": "Long term (more than a week)",
+        "date": "Date",
+        "duration": "Duration",
+        "duration_4": "4 hours",
+        "duration_8": "8 hours",
+        "duration_12": "12 hours",
+        "start_date": "Start date",
+        "end_date": "End date",
+        "daily_hours": "Daily hours",
+        "vehicle_type": "Vehicle type",
+        "vehicle_berline": "Luxury sedan",
+        "vehicle_suv": "Premium SUV",
+        "vehicle_chauffeur": "Car with chauffeur",
+        "vehicle_minivan": "Premium minivan",
+        "language": "Chauffeur language",
+        "language_fr": "French",
+        "language_en": "English",
+        "language_es": "Spanish",
+        "language_de": "German",
+        "language_other": "Other",
+        "special_requests": "Special requests",
+        "sending": "Sending...",
+        "submit": "Send request"
+      },
+      "book": "Send request"
+    },
+    "tourism": {
+      "hero": {
+        "title": "Private Tours and City Trips",
+        "subtitle": "Discover the city with style and comfort with your private driver"
+      },
+      "details": {
+        "title": "Custom guided tours",
+        "intro": "A private chauffeur at your disposal, providing flexibility, comfort and discreet attention.",
+        "feature1": "Customized itineraries according to your interests",
+        "feature2": "Drivers who know the region perfectly",
+        "feature3": "Flexible stops according to your wishes",
+        "feature4": "Historical and cultural commentary",
+        "feature5": "Privileged access to certain sites"
+      },
+      "itineraries": {
+        "title": "Popular itineraries",
+        "paris": {
+          "title": "Paris Essential",
+          "description": "Eiffel Tower, Champs-Élysées, Notre-Dame, Montmartre (4h)"
+        },
+        "gastronomy": {
+          "title": "French Gastronomy",
+          "description": "Local markets, hidden restaurants, tastings (6h)"
+        },
+        "chateaux": {
+          "title": "Loire Valley Castles",
+          "description": "Visit 3 castles with private guide (full day)"
+        }
+      },
+      "form": {
+        "title": "Plan your visit",
+        "date": "Date",
+        "duration": "Duration",
+        "duration_4": "4 hours",
+        "duration_6": "6 hours",
+        "duration_8": "8 hours",
+        "duration_full": "Full day",
+        "passengers": "Number of people",
+        "itinerary": "Itinerary type",
+        "itinerary_cultural": "Cultural (monuments, museums)",
+        "itinerary_gastronomic": "Gastronomic (restaurants, markets)",
+        "itinerary_shopping": "Shopping (luxury boutiques)",
+        "itinerary_nature": "Nature (parks, gardens)",
+        "itinerary_custom": "Custom (to be specified)",
+        "language": "Guide language",
+        "language_fr": "French",
+        "language_en": "English",
+        "language_es": "Spanish",
+        "language_de": "German",
+        "language_zh": "Chinese",
+        "special_requests": "Special requests",
+        "request_quote": "Request a quote",
+        "sending": "Sending..."
+      },
+      "request_quote": "Request a quote"
+    },
+    "footer": {
+      "partners": "Trusted by",
+      "company": "Company",
+      "contact": "Contact",
+      "vehicles": "Our Vehicles",
+      "chauffeurs": "Our Chauffeurs",
+      "connect": "Follow us",
+      "rights": "All rights reserved.",
+      "about": "About us",
+      "services": "Services",
+      "tagline": "Your journey, our excellence"
+    },
+    "booking": {
+      "gateway1": {
+        "title": "Request Your Service",
+        "subtitle": "Start by providing your basic information",
+        "step_indicator": "Step 1 of 2: Basic Information",
+        "fullName": "Full Name",
+        "email": "Email",
+        "phone": "Phone Number",
+        "phone_placeholder": "+33 6 12 34 56 78",
+        "preferredContact": "Preferred Contact Method",
+        "whatsapp": "WhatsApp",
+        "whatsapp_desc": "Receive updates via WhatsApp",
+        "telegram": "Telegram",
+        "telegram_desc": "Receive updates via Telegram",
+        "email_contact": "Email",
+        "email_desc": "Receive updates via email",
+        "submit": "Submit Request",
+        "submitting": "Submitting...",
+        "success": {
+          "title": "Request Submitted",
+          "message": "Your request has been submitted. You will receive a confirmation link via your preferred contact method once approved.",
+          "bookingId": "Booking Reference",
+          "next_steps": "You will receive a personalized link to complete your booking once your request is approved.",
+          "close": "Return to Home"
+        },
+        "errors": {
+          "required": "This field is required",
+          "invalid_email": "Please enter a valid email address",
+          "submit_error": "An error occurred while submitting your request. Please try again."
+        }
+      },
+      "token": {
+        "invalid": "Invalid or expired link",
+        "used": "This link has already been used",
+        "expired": "This link has expired. Please request a new booking.",
+        "notFound": "Booking link not found"
+      },
+      "status": {
+        "pending": "Pending Approval",
+        "approved": "Approved - Complete Your Booking",
+        "rejected": "Request Rejected",
+        "completed": "Booking Completed",
+        "loading": "Loading booking status...",
+        "bookingId": "Booking Reference",
+        "details": "Booking Details",
+        "created": "Created",
+        "approved_date": "Approved",
+        "expires": "Expires",
+        "completed_date": "Completed",
+        "refresh": "Refresh Status",
+        "back_home": "Back to Home",
+        "error_title": "Error Loading Status",
+        "no_booking_id": "No booking ID provided",
+        "load_error": "Failed to load booking status"
+      },
+      "error": {
+        "error_code": "Error Code",
+        "start_new": "Start New Booking",
+        "back_home": "Back to Home",
+        "default": {
+          "title": "Booking Error",
+          "message": "An error occurred with your booking. Please try again."
+        },
+        "token_invalid": {
+          "title": "Invalid Link",
+          "message": "This booking link is invalid or has expired. Please request a new booking."
+        },
+        "token_expired": {
+          "title": "Link Expired",
+          "message": "This booking link has expired. Please request a new booking."
+        },
+        "token_already_used": {
+          "title": "Link Already Used",
+          "message": "This booking link has already been used. Please request a new booking if needed."
+        },
+        "token_not_found": {
+          "title": "Link Not Found",
+          "message": "This booking link was not found. Please request a new booking."
+        },
+        "token_validation_error": {
+          "title": "Validation Error",
+          "message": "An error occurred while validating your booking link. Please try again."
+        }
+      }
+    },
+    "common": {
+      "select_language": "Language",
+      "reserve": "Reserve",
+      "select": "Select",
+      "sending": "Sending...",
+      "error": "An error occurred. Please try again."
+    }
+  },
+  "fr": {
+    "nav": {
+      "home": "Accueil",
+      "services": "Services",
+      "about": "À propos",
+      "fleet": "Notre flotte",
+      "contact": "Contact",
+      "partnerships": "Partenariats",
+      "transfer": "Transfert Aéroport",
+      "events": "Événements",
+      "tourism": "Mise à disposition"
+    },
+    "index": {
+      "hero": {
+        "title": "Ktransport — Driven by excellence",
+        "subtitle": "Votre trajet, notre excellence",
+        "tagline": {
+          "part1": "Votre trajet,",
+          "part2": "notre excellence"
+        },
+        "introduction": "Depuis 2009, Ktransport s'est distinguée comme une référence du transport premium et corporate principalement sur l'ile de France et la Côte d'Azur. Forte de plus de quinze années d'expertise, la société accompagne une clientèle exigeante,entreprises, diplomates, touristes haut de gamme et événements internationaux avec un engagement constant : excellence, sécurité, discrétion et ponctualité.",
+        "tagline1": "Le luxe en mouvement, façonné pour vous.",
+        "tagline2": "Contactez-nous dès maintenant pour recevoir un devis personnalisé, adapté à vos exigences professionnelles.",
+        "cta_text1": "Le luxe en mouvement, façonné pour vous.",
+        "cta_text2": "Contactez-nous dès maintenant pour recevoir un devis personnalisé, adapté à vos exigences professionnelles.",
+        "cta_primary": "Demander un devis",
+        "cta_whatsapp": "Réserver via WhatsApp"
+      },
+      "services": {
+        "title": "Nos services",
+        "card1": {
+          "title": "Transfert aéroport",
+          "text": "Accueil premium, suivi des vols et transferts sans attente pour une arrivée sereine et raffinée."
+        },
+        "card2": {
+          "title": "Business / Corporate",
+          "text": "Des déplacements d'affaires précis, discrets et parfaitement orchestrés, conçus pour dirigeants et professionnels exigeants."
+        },
+        "card3": {
+          "title": "Événements et MICE",
+          "text": "Une coordination élégante et fluide pour vos congrès, séminaires et événements corporate, avec une prise en charge irréprochable de vos invités et VIP."
+        },
+        "card4": {
+          "title": "VIP et Protocolaires",
+          "text": "Un service d'exception dédié aux personnalités et missions sensibles, alliant confidentialité, précision et traitement prioritaire."
+        },
+        "card5": {
+          "title": "Mise à Disposition",
+          "text": "Un chauffeur privé disponible à tout moment, alliant flexibilité, confort et discrétion."
+        },
+        "card6": {
+          "title": "Partenariats B2B",
+          "text": "Des solutions sur mesure pour hôtels, agences et entreprises souhaitant une mobilité haut de gamme et fiable."
+        }
+      },
+      "features": {
+        "title": "Pourquoi choisir Ktransport ?",
+        "subtitle": "L'excellence du transport, pensée pour ceux qui exigent le meilleur.",
+        "card1": {
+          "title": "Excellence",
+          "text": "Chaque prestation est exécutée avec un niveau d'exigence constant afin de garantir une qualité irréprochable."
+        },
+        "card2": {
+          "title": "Discrétion et Professionnalisme",
+          "text": "Nos chauffeurs sont formés aux exigences du protocole, du corporate et des environnements sensibles."
+        },
+        "card3": {
+          "title": "Engagement Humain",
+          "text": "Un accompagnement personnalisé, attentif et constant pour chaque client."
+        },
+        "card4": {
+          "title": "Confort et Sécurité",
+          "text": "Une flotte de véhicules premium, rigoureusement entretenus selon les normes les plus strictes."
+        }
+      },
+      "testimonials": {
+        "title": "Ce que disent nos clients",
+        "subtitle": "L'excellence reconnue par nos clients"
+      },
+      "cta": {
+        "title": "Le luxe en mouvement, façonné pour vous.",
+        "subtitle": "Contactez-nous dès maintenant et découvrez une expérience de transport portée par l'excellence — votre trajet, notre excellence."
+      }
+    },
+    "services": {
+      "hero": {
+        "subtitle": "Nos services adaptés à vos besoins"
+      },
+      "subtitle": "Des services sur mesure pour chaque prestation",
+      "discover": "Découvrir",
+      "details": {
+        "business": {
+          "title": "Business / Corporate",
+          "text": "Des déplacements d'affaires précis, discrets et parfaitement orchestrés, conçus pour dirigeants et professionnels exigeants."
+        },
+        "events": {
+          "title": "Événements et MICE",
+          "text": "Une coordination élégante et fluide pour vos congrès, séminaires et événements corporate, avec une prise en charge irréprochable de vos invités et VIP."
+        },
+        "airport": {
+          "title": "Transferts Aéroport",
+          "text": "Accueil premium, suivi des vols et transferts sans attente pour une arrivée sereine et raffinée."
+        },
+        "vip": {
+          "title": "VIP et Protocolaires",
+          "text": "Un service d'exception dédié aux personnalités et missions sensibles, alliant confidentialité, précision et traitement prioritaire."
+        },
+        "disposition": {
+          "title": "Mise à Disposition",
+          "text": "Un chauffeur privé disponible à tout moment, alliant flexibilité, confort et discrétion."
+        },
+        "partnerships": {
+          "title": "Partenariats B2B",
+          "text": "Des solutions sur mesure pour hôtels, agences et entreprises souhaitant une mobilité haut de gamme et fiable."
+        }
+      }
+    },
+    "partnerships": {
+      "hero": {
+        "title": "Partenariats B2B",
+        "subtitle": "Solutions de transport premium sur mesure pour entreprises",
+        "security_badge": "Confidentialité et Sécurité Garanties",
+        "case_by_case": "Traitement au cas par cas pour la protection de vos informations"
+      },
+      "security": {
+        "title": "Sécurité et Confidentialité",
+        "subtitle": "Votre confiance est notre priorité absolue",
+        "description": "Chez Ktransport, nous comprenons l'importance de la confidentialité des informations de nos partenaires. Chaque demande de partenariat est traitée individuellement par notre équipe dédiée, garantissant une protection maximale de vos données sensibles.",
+        "feature1": {
+          "title": "Traitement Personnalisé",
+          "text": "Chaque partenariat est analysé et configuré individuellement selon vos besoins spécifiques et vos exigences de sécurité."
+        },
+        "feature2": {
+          "title": "Protection des Données",
+          "text": "Vos informations commerciales et stratégiques sont traitées avec la plus grande confidentialité et ne sont jamais partagées."
+        },
+        "feature3": {
+          "title": "Accord sur Mesure",
+          "text": "Contrats et conditions adaptés à votre entreprise, négociés directement avec notre équipe dirigeante."
+        }
+      },
+      "contact": {
+        "title": "Contactez Notre Équipe",
+        "subtitle": "Pour discuter de votre projet de partenariat, contactez-nous directement",
+        "description": "Plutôt qu'un formulaire générique, nous préférons un échange direct et personnalisé. Notre équipe commerciale est à votre disposition pour comprendre vos besoins et vous proposer une solution adaptée.",
+        "phone": "Appelez-nous",
+        "email": "Écrivez-nous",
+        "contact_page": "Page de Contact",
+        "response_time": "Réponse sous 24h",
+        "call_now": "Appeler maintenant",
+        "email_subject": "Demande de Partenariat B2B",
+        "send_email": "Envoyer un email",
+        "complete_form": "Formulaire de contact complet",
+        "access_form": "Accéder au formulaire"
+      },
+      "discover_benefits": "Découvrir les avantages",
+      "types": {
+        "title": "Types de partenariats",
+        "subtitle": "Des solutions adaptées à chaque secteur d'activité"
+      },
+      "hotels": {
+        "title": "Hôtels et Résidences",
+        "description": "Offrez un service de transport premium à vos clients avec intégration concierge et réservation en temps réel.",
+        "feature1": "Intégration API avec systèmes PMS",
+        "feature2": "Support dédié 24/7",
+        "feature3": "Facturation mensuelle simplifiée",
+        "learn_more": "En savoir plus"
+      },
+      "corporate": {
+        "title": "Voyages d'Affaires",
+        "description": "Solutions de transport pour entreprises avec gestion centralisée et reporting détaillé.",
+        "feature1": "Portail de réservation dédié",
+        "feature2": "Reporting et analytics avancés",
+        "feature3": "Gestionnaire de compte dédié"
+      },
+      "events": {
+        "title": "Organisateurs d'Événements",
+        "description": "Solutions de transport complètes pour mariages, congrès et événements d'entreprise.",
+        "feature1": "Coordination de flotte",
+        "feature2": "Coordination jour J",
+        "feature3": "Forfaits flexibles"
+      },
+      "agencies": {
+        "title": "Agences de Voyage",
+        "description": "Intégrez nos services dans vos offres avec commission attractive et support technique.",
+        "feature1": "Commission compétitive",
+        "feature2": "Intégration GDS et systèmes de réservation",
+        "feature3": "Formation et support technique",
+        "learn_more": "En savoir plus"
+      },
+      "benefits": {
+        "title": "Avantages",
+        "subtitle": "Pourquoi choisir Ktransport comme partenaire",
+        "card1": {
+          "title": "Flotte dédiée",
+          "text": "Accès à des véhicules exclusifs et priorités de réservation pour vos clients.",
+          "feature1": "Véhicules premium disponibles 24/7",
+          "feature2": "Réservation prioritaire garantie",
+          "feature3": "Maintenance et renouvellement régulier"
+        },
+        "card2": {
+          "title": "Intégration fluide",
+          "text": "Flux de réservation simples et options API/portail pour les desks hôteliers et équipes voyages.",
+          "feature1": "API RESTful complète et documentée",
+          "feature2": "Portail de réservation personnalisé",
+          "feature3": "Support technique dédié"
+        },
+        "card3": {
+          "title": "Tarification sur-mesure",
+          "text": "Tarifs compétitifs et forfaits adaptés à vos besoins.",
+          "feature1": "Tarifs négociés selon volume",
+          "feature2": "Facturation flexible (mensuelle/trimestrielle)",
+          "feature3": "Remises progressives sur volume"
+        }
+      },
+      "how": {
+        "title": "Comment ça marche",
+        "subtitle": "Un processus simple en trois étapes pour démarrer votre partenariat",
+        "step1": {
+          "title": "Contactez-nous",
+          "text": "Présentez vos besoins et volumes clients."
+        },
+        "step2": {
+          "title": "Mise en place",
+          "text": "Nous configurons les flux de réservation et les tarifs selon vos opérations."
+        },
+        "step3": {
+          "title": "Lancement",
+          "text": "Proposez le service à vos clients avec un support dédié."
+        }
+      },
+      "packages": {
+        "title": "Forfaits partenaires",
+        "subtitle": "Choisissez le niveau de partenariat qui correspond à vos besoins",
+        "popular": "Populaire",
+        "package1": {
+          "title": "Silver",
+          "text": "Réservation prioritaire de base et facturation mensuelle",
+          "cta": "Demander Silver",
+          "feature1": "Réservation prioritaire",
+          "feature2": "Facturation mensuelle simplifiée",
+          "feature3": "Support email standard",
+          "feature4": "Accès portail de réservation"
+        },
+        "package2": {
+          "title": "Gold",
+          "text": "Gestionnaire dédié et remises sur volume",
+          "cta": "Demander Gold",
+          "all_silver": "Tout Silver, plus:",
+          "feature1": "Gestionnaire de compte dédié",
+          "feature2": "Remises sur volume (5-15%)",
+          "feature3": "Support téléphonique prioritaire",
+          "feature4": "Intégration API avancée",
+          "feature5": "Reporting mensuel personnalisé"
+        },
+        "package3": {
+          "title": "Platinum",
+          "text": "Intégration concierge complète et SLA personnalisés",
+          "cta": "Demander Platinum",
+          "all_gold": "Tout Gold, plus:",
+          "feature1": "Intégration concierge complète",
+          "feature2": "SLA personnalisés garantis",
+          "feature3": "Support 24/7 avec hotline dédiée",
+          "feature4": "Remises maximales (15-25%)",
+          "feature5": "Formation équipe incluse",
+          "feature6": "Développements sur mesure"
+        }
+      },
+      "logos": {
+        "title": "Ils nous font confiance"
+      },
+      "testimonials": {
+        "title": "Témoignages de nos partenaires",
+        "subtitle": "Découvrez comment nos partenaires bénéficient de notre collaboration",
+        "placeholder_name": "[Nom du Partenaire]",
+        "placeholder_position": "[Poste / Entreprise]",
+        "placeholder_text": "[Témoignage à venir - Structure prête pour vos témoignages de partenaires]"
+      },
+      "faq": {
+        "title": "Questions fréquentes",
+        "subtitle": "Tout ce que vous devez savoir sur notre programme de partenariat",
+        "q1": {
+          "question": "Quels sont les critères pour devenir partenaire ?",
+          "answer": "Nous recherchons des entreprises qui partagent nos valeurs d'excellence et qui ont un volume de clients régulier. Les hôtels, agences de voyage, entreprises et organisateurs d'événements sont les partenaires idéaux."
+        },
+        "q2": {
+          "question": "Combien de temps faut-il pour mettre en place le partenariat ?",
+          "answer": "La mise en place prend généralement entre 2 à 4 semaines selon le niveau de partenariat choisi. Pour les intégrations API complexes (Platinum), cela peut prendre jusqu'à 6 semaines avec notre équipe technique."
+        },
+        "q3": {
+          "question": "Y a-t-il des frais d'intégration ou d'adhésion ?",
+          "answer": "Non, il n'y a aucun frais d'adhésion. Nous fonctionnons uniquement sur commission ou tarifs négociés selon votre volume. L'investissement se fait uniquement en temps pour l'intégration initiale."
+        },
+        "q4": {
+          "question": "Quel type de support technique est disponible ?",
+          "answer": "Le niveau de support dépend de votre forfait. Silver inclut le support email, Gold ajoute le support téléphonique prioritaire, et Platinum offre un support 24/7 avec hotline dédiée et gestionnaire de compte."
+        },
+        "q5": {
+          "question": "Puis-je changer de forfait après avoir commencé ?",
+          "answer": "Absolument ! Vous pouvez évoluer vers un forfait supérieur à tout moment. Nous évaluons votre volume et vos besoins pour vous proposer la meilleure solution. Les changements sont généralement effectifs sous 2 semaines."
+        }
+      },
+      "cta": {
+        "title": "Prêt à transformer l'expérience transport de vos clients ?",
+        "subtitle": "Rejoignez notre réseau de partenaires et offrez l'excellence à vos clients dès aujourd'hui",
+        "button": "Devenir partenaire maintenant"
+      }
+    },
+    "about": {
+      "hero": {
+        "title": "À propos de Ktransport",
+        "subtitle": "Quand chaque trajet devient une signature d'excellence."
+      },
+      "history": {
+        "title": "Notre Histoire",
+        "text1": "Depuis 2009, Ktransport s'est distinguée comme une référence du transport premium et corporate principalement sur l'Île-de-France et la Côte d'Azur. Forte de plus de quinze années d'expertise, la société a construit une réputation d'excellence en accompagnant une clientèle exigeante et internationale.",
+        "text2": "Des dirigeants d'entreprises et délégations diplomatiques aux voyageurs haut de gamme et événements internationaux, Ktransport a constamment fourni un service exceptionnel avec un engagement inébranlable envers l'excellence, la sécurité, la discrétion et la ponctualité absolue."
+      },
+      "presentation": {
+        "title": "Présentation Ktransport",
+        "text": "Depuis 2009, Ktransport s'est distinguée comme une référence du transport premium et corporate principalement sur l'ile de France et la Côte d'Azur. Forte de plus de quinze années d'expertise, la société accompagne une clientèle exigeante,entreprises, diplomates, touristes haut de gamme et événements internationaux avec un engagement constant : excellence, sécurité, discrétion et ponctualité."
+      },
+      "mission": {
+        "title": "Notre Mission",
+        "text": "Garantir une expérience de transport qui dépasse le simple déplacement. Chez Ktransport, chaque trajet est pensé pour être fluide, fiable et conforme aux standards les plus exigeants du transport premium."
+      },
+      "values": {
+        "title": "Nos Valeurs",
+        "excellence": {
+          "title": "Excellence",
+          "text": "Chaque prestation est exécutée avec un niveau d'exigence constant afin de garantir une qualité irréprochable."
+        },
+        "discretion": {
+          "title": "Discrétion et Professionnalisme",
+          "text": "Nos chauffeurs sont formés aux exigences du protocole, du corporate et des environnements sensibles."
+        },
+        "reliability": {
+          "title": "Fiabilité",
+          "text": "Nous garantissons un service ponctuel et fiable avec un suivi en temps réel et une communication proactive pour votre tranquillité d'esprit."
+        },
+        "personalization": {
+          "title": "Personnalisation",
+          "text": "Chaque trajet est adapté à vos besoins, préférences et exigences spécifiques, garantissant une expérience de transport véritablement sur mesure."
+        },
+        "comfort": {
+          "title": "Confort et Sécurité",
+          "text": "Une flotte de véhicules premium, rigoureusement entretenus selon les normes les plus strictes."
+        },
+        "human": {
+          "title": "Engagement Humain",
+          "text": "Un accompagnement personnalisé, attentif et constant pour chaque client."
+        },
+        "punctuality": {
+          "title": "Ponctualité / Punctuality",
+          "text": "Toujours à l'heure, suivi des vols et du trafic pour garantir vos prises en charge"
+        }
+      },
+      "why_choose": {
+        "title": "Pourquoi Choisir Ktransport ? | Why Choose Ktransport?",
+        "experience": {
+          "title": "Plus de 15 ans d'expérience à Paris",
+          "text": "Une connaissance approfondie de l'Île-de-France, de ses flux et des attentes du marché premium."
+        },
+        "image": {
+          "title": "Une image élégante et internationale",
+          "text": "Une identité visuelle raffinée portée par notre signature : Beyond Time, Beyond Place."
+        },
+        "availability": {
+          "title": "Disponibilité 24/7",
+          "text": "Une réactivité immédiate et un service continu."
+        },
+        "chauffeurs": {
+          "title": "Chauffeurs professionnels",
+          "text": "Présentation irréprochable, savoir-être et maîtrise linguistique."
+        },
+        "solutions": {
+          "title": "Solutions sur mesure",
+          "text": "Pour entreprises, agences, hôtels, particuliers et institutions diplomatiques."
+        }
+      },
+      "commitments": {
+        "title": "Nos Engagements Premium | Our Premium Commitments",
+        "text": "• Véhicules haut de gamme (Mercedes-Benz Classe E, S, V…) • Planification intelligente des trajets • Confidentialité absolue • Transparence et rigueur administrative • Partenaire fiable pour missions sensibles"
+      },
+      "vision": {
+        "title": "Vision & Ambition | Vision & Ambition",
+        "text": "Ktransport ambitionne de devenir un acteur majeur du transport premium international, tout en consolidant son ancrage historique à Paris."
+      },
+      "conclusion": {
+        "title": "Conclusion",
+        "text": "Depuis 2009, Ktransport incarne l'élégance, le professionnalisme et la confiance dans le transport premium."
+      }
+    },
+    "contact": {
+      "hero": {
+        "title": "Contactez-nous",
+        "subtitle": "Notre équipe est disponible pour traiter votre demande et vous adresser un devis personnalisé, adapté à vos exigences professionnelles"
+      },
+      "info": {
+        "title": "Nos coordonnées"
+      },
+      "find_us": {
+        "title": "Nous trouver"
+      },
+      "details": {
+        "address": "Adresse",
+        "phone": "Téléphone",
+        "email": "Email",
+        "hours": "Horaires"
+      },
+      "address": {
+        "label": "Adresse siège",
+        "secondary": "Adresse établissement secondaire"
+      },
+      "phone": {
+        "label": "Téléphone",
+        "availability": "Disponible 24h/24"
+      },
+      "email": {
+        "label": "Email",
+        "response": "Réponse sous 24h"
+      },
+      "hours": {
+        "label": "Horaires",
+        "days": "Lundi - Dimanche",
+        "time": "24 heures sur 24"
+      },
+      "form": {
+        "title": "Envoyez-nous un message",
+        "name": "Nom complet",
+        "email": "Email",
+        "phone": "Téléphone",
+        "subject": "Sujet",
+        "message": "Message",
+        "submit": "Envoyer le message",
+        "send": "Envoyer",
+        "sending": "Envoi...",
+        "success": "Merci pour votre message. Nous vous contacterons rapidement.",
+        "error": "Erreur lors de l'envoi du message. Veuillez réessayer."
+      }
+    },
+    "fleet": {
+      "hero": {
+        "title": "Notre flotte de prestige",
+        "subtitle": "Découvrez notre sélection exclusive de véhicules haut de gamme"
+      },
+      "selection": {
+        "title": "Une sélection rigoureuse",
+        "text": "Notre flotte est composée exclusivement de véhicules premium récents, entretenus avec le plus grand soin. Chaque modèle est choisi pour son excellence en matière de confort, de technologie et de sécurité."
+      },
+      "book": "Réserver",
+      "vehicle": {
+        "passengers": "Jusqu'à {count} passagers",
+        "passengers_1_3": "1 à 3 passagers",
+        "passengers_4": "Jusqu'à 4 passagers",
+        "passengers_5": "Jusqu'à 5 passagers",
+        "passengers_1_6": "1 à 6 passagers",
+        "passengers_8": "Jusqu'à 8 passagers",
+        "luggage": "{count} valises",
+        "luggage_4": "4 valises",
+        "luggage_8": "8 valises",
+        "spacious_trunk": "Coffre spacieux",
+        "wifi": "WiFi haut débit",
+        "electric": "100% Électrique",
+        "advanced_tech": "Technologie avancée",
+        "ideal_groups": "Idéal pour les groupes",
+        "premium_space": "Espace premium"
+      }
+    },
+    "events": {
+      "hero": {
+        "title": "Événements et MICE",
+        "subtitle": "Faites de votre grand jour un moment encore plus magique avec notre service premium",
+        "cta": "Planifier mon événement"
+      },
+      "description": {
+        "fr": "Une coordination élégante et fluide pour vos congrès, séminaires et événements corporate, avec une prise en charge irréprochable de vos invités et VIP.",
+        "en": "Elegant, smooth coordination for conferences, seminars and corporate events, with impeccable care for your guests and VIPs."
+      },
+      "packages": {
+        "title": "Nos offres pour le service Événements et MICE",
+        "choose": "Choisir cette offre",
+        "popular": "Populaire",
+        "essentiel": {
+          "title": "Essentiel",
+          "feature1": "Véhicule de luxe",
+          "feature2": "4 heures de service",
+          "feature3": "Décoration florale de base",
+          "feature4": "Chauffeur en tenue élégante"
+        },
+        "privilege": {
+          "title": "Privilège",
+          "feature1": "2 véhicules premium",
+          "feature2": "8 heures de service",
+          "feature3": "Décoration florale premium",
+          "feature4": "Boisson à bord",
+          "feature5": "Assistance personnalisée"
+        },
+        "prestige": {
+          "title": "Prestige",
+          "feature1": "Flotte complète (3-5 véhicules)",
+          "feature2": "Service 12 heures",
+          "feature3": "Décoration sur mesure",
+          "feature4": "Service VIP avec coordinateur",
+          "feature5": "Photos professionnelles incluses"
+        }
+      },
+      "vehicles": {
+        "title": "Nos voitures d'Événements et MICE",
+        "passengers_4": "4 passagers",
+        "other": "Autre (à spécifier)",
+        "rolls": {
+          "name": "Rolls-Royce Phantom",
+          "feature1": "4 passagers",
+          "feature2": "Intérieur sur mesure",
+          "feature3": "Décoration fleurie incluse"
+        },
+        "bentley": {
+          "name": "Bentley Continental",
+          "feature1": "3 passagers",
+          "feature2": "Toit ouvrant panoramique",
+          "feature3": "Rubans personnalisés"
+        },
+        "maybach": {
+          "name": "Mercedes Maybach",
+          "feature1": "4 passagers",
+          "feature2": "Sièges massants chauffants",
+          "feature3": "Champagne offert"
+        },
+        "select": "Sélectionner"
+      },
+      "reservation": {
+        "title": "Planifiez votre Événement",
+        "event_date": "Date de l'événement",
+        "package": "Package choisi",
+        "vehicle": "Véhicule choisi",
+        "passenger_name": "Nom de passager",
+        "ceremony": "Lieu de la cérémonie",
+        "reception": "Lieu de la réception",
+        "special_requests": "Demandes spéciales",
+        "submit": "Envoyer la demande",
+        "sending": "Envoi..."
+      }
+    },
+    "transfer": {
+      "hero": {
+        "title": "Transfert Aéroport",
+        "subtitle": "Service porte-à-porte depuis ou vers l'aéroport en toute tranquillité"
+      },
+      "details": {
+        "title": "Détails du service",
+        "intro": "Accueil premium, suivi des vols et transferts sans attente pour une arrivée sereine et raffinée.",
+        "feature1": "Prise en charge à l'heure exacte de votre choix",
+        "feature2": "Suivi en temps réel de votre vol pour les retards ou avances",
+        "feature3": "Aide avec les bagages",
+        "feature4": "Boissons fraîches et WiFi à bord",
+        "feature5": "Service disponible 24h/24, 7j/7",
+        "closing": "Nos chauffeurs professionnels connaissent parfaitement les meilleurs itinéraires pour vous faire gagner du temps."
+      },
+      "form": {
+        "title": "Réserver ce service",
+        "name": "Nom complet",
+        "email": "Email",
+        "phone": "Téléphone",
+        "date": "Date",
+        "time": "Heure",
+        "flight": "Numéro de vol",
+        "flight_placeholder": "Ex: AF123, LH456",
+        "notes": "Notes supplémentaires",
+        "flight_found": "Informations du vol trouvées :",
+        "airline": "Compagnie:",
+        "departure": "Départ:",
+        "departure_time": "Heure départ:",
+        "arrival": "Arrivée:",
+        "arrival_time": "Heure arrivée:",
+        "terminal": "Terminal:",
+        "gate": "Porte:",
+        "status": "Statut:",
+        "use_info": "Utiliser ces informations",
+        "terminal_placeholder": "Saisir le numéro de terminal",
+        "gate_placeholder": "Saisir le numéro de porte",
+        "arrival_airport": "Aéroport d'arrivée",
+        "arrival_airport_placeholder": "Saisir le code ou nom de l'aéroport d'arrivée",
+        "auto_filled": "Rempli automatiquement depuis les données du vol",
+        "manual_entry_required": "Veuillez remplir manuellement les détails suivants :",
+        "pickup_location": "Lieu de prise en charge",
+        "pickup_location_placeholder": "Terminal, porte ou lieu spécifique à l'aéroport",
+        "pickup_location_hint": "Indiquez où vous souhaitez être pris en charge à l'aéroport",
+        "passengers": "Nombre de passagers",
+        "passengers_placeholder": "Saisir le nombre de passagers",
+        "luggage": "Nombre de bagages",
+        "luggage_placeholder": "Saisir le nombre de bagages",
+        "dropoff_address": "Adresse de destination",
+        "dropoff_address_placeholder": "Saisir l'adresse de destination",
+        "sending": "Envoi...",
+        "book": "Envoyer la demande",
+        "errors": {
+          "api_invalid": "Clé API invalide. Vérifiez votre clé AviationStack dans config.json",
+          "rate_limit": "Limite de requêtes atteinte (100/mois pour le plan gratuit)",
+          "flight_not_found": "Vol non trouvé. Vérifiez le numéro ou essayez sans préfixe (ex: 123 au lieu de AF123).",
+          "flight_error": "Erreur lors de la recherche du vol.",
+          "submit_error": "Une erreur est survenue. Veuillez réessayer."
+        }
+      },
+      "book": "Envoyer la demande"
+    },
+    "chauffeur": {
+      "hero": {
+        "title": "VIP et Protocolaires",
+        "subtitle": "Accompagnement et services sur-mesure pour invités d'honneur"
+      },
+      "details": {
+        "title": "Transport privé dédié",
+        "intro": "Un service d'exception dédié aux personnalités et missions sensibles, alliant confidentialité, précision et traitement prioritaire.",
+        "feature1": "Disponible à l'heure de votre choix",
+        "feature2": "Service 24h/24 et 7j/7",
+        "feature3": "Multiples prises en charge dans la journée",
+        "feature4": "Flexibilité totale d'itinéraire",
+        "feature5": "Connaissances locales approfondies"
+      },
+      "form": {
+        "title": "Réserver un chauffeur",
+        "service_type": "Type de service",
+        "service_occasional": "Occasionnel (quelques heures)",
+        "service_regular": "Régulier (forfait jour/semaine)",
+        "service_long": "Longue durée (plus d'une semaine)",
+        "date": "Date",
+        "duration": "Durée",
+        "duration_4": "4 heures",
+        "duration_8": "8 heures",
+        "duration_12": "12 heures",
+        "start_date": "Date de début",
+        "end_date": "Date de fin",
+        "daily_hours": "Heures quotidiennes",
+        "vehicle_type": "Type de véhicule",
+        "vehicle_berline": "Berline de luxe",
+        "vehicle_suv": "SUV premium",
+        "vehicle_chauffeur": "Voiture avec chauffeur",
+        "vehicle_minivan": "Minivan haut de gamme",
+        "language": "Langue du chauffeur",
+        "language_fr": "Français",
+        "language_en": "Anglais",
+        "language_es": "Espagnol",
+        "language_de": "Allemand",
+        "language_other": "Autre",
+        "special_requests": "Demandes particulières",
+        "sending": "Envoi...",
+        "submit": "Envoyer la demande"
+      },
+      "book": "Envoyer la demande"
+    },
+    "tourism": {
+      "hero": {
+        "title": "Mise à disposition",
+        "subtitle": "Découvrez la ville avec style et confort avec votre chauffeur privé"
+      },
+      "details": {
+        "title": "Visites guidées sur mesure",
+        "intro": "Un chauffeur privé disponible à tout moment, alliant flexibilité, confort et discrétion.",
+        "feature1": "Itinéraires personnalisés selon vos centres d'intérêt",
+        "feature2": "Chauffeurs connaissant parfaitement la région",
+        "feature3": "Arrêts flexibles selon vos envies",
+        "feature4": "Commentaires historiques et culturels",
+        "feature5": "Accès privilégié à certains sites"
+      },
+      "itineraries": {
+        "title": "Itinéraires populaires",
+        "paris": {
+          "title": "Paris Essentiel",
+          "description": "Tour Eiffel, Champs-Élysées, Notre-Dame, Montmartre (4h)"
+        },
+        "gastronomy": {
+          "title": "Gastronomie française",
+          "description": "Marchés locaux, restaurants cachés, dégustations (6h)"
+        },
+        "chateaux": {
+          "title": "Châteaux de la Loire",
+          "description": "Visite de 3 châteaux avec guide privé (journée complète)"
+        }
+      },
+      "form": {
+        "title": "Planifiez votre visite",
+        "date": "Date",
+        "duration": "Durée",
+        "duration_4": "4 heures",
+        "duration_6": "6 heures",
+        "duration_8": "8 heures",
+        "duration_full": "Journée complète",
+        "passengers": "Nombre de personnes",
+        "itinerary": "Type d'itinéraire",
+        "itinerary_cultural": "Culturel (monuments, musées)",
+        "itinerary_gastronomic": "Gastronomique (restaurants, marchés)",
+        "itinerary_shopping": "Shopping (boutiques de luxe)",
+        "itinerary_nature": "Nature (parcs, jardins)",
+        "itinerary_custom": "Personnalisé (à préciser)",
+        "language": "Langue du guide",
+        "language_fr": "Français",
+        "language_en": "Anglais",
+        "language_es": "Espagnol",
+        "language_de": "Allemand",
+        "language_zh": "Chinois",
+        "special_requests": "Demandes spéciales",
+        "request_quote": "Demander un devis",
+        "sending": "Envoi..."
+      },
+      "request_quote": "Demander un devis"
+    },
+    "footer": {
+      "partners": "Ils nous font confiance",
+      "company": "Entreprise",
+      "contact": "Contact",
+      "vehicles": "Nos véhicules",
+      "chauffeurs": "Nos chauffeurs",
+      "connect": "Nous suivre",
+      "rights": "Tous droits réservés.",
+      "about": "À propos",
+      "services": "Services",
+      "tagline": "Votre trajet, notre excellence"
+    },
+    "booking": {
+      "gateway1": {
+        "title": "Demander votre service",
+        "subtitle": "Commencez par fournir vos informations de base",
+        "step_indicator": "Étape 1 sur 2 : Informations de base",
+        "fullName": "Nom complet",
+        "email": "Email",
+        "phone": "Numéro de téléphone",
+        "phone_placeholder": "+33 6 12 34 56 78",
+        "preferredContact": "Méthode de contact préférée",
+        "whatsapp": "WhatsApp",
+        "whatsapp_desc": "Recevoir les mises à jour via WhatsApp",
+        "telegram": "Telegram",
+        "telegram_desc": "Recevoir les mises à jour via Telegram",
+        "email_contact": "Email",
+        "email_desc": "Recevoir les mises à jour par email",
+        "submit": "Envoyer la demande",
+        "submitting": "Envoi en cours...",
+        "success": {
+          "title": "Demande envoyée",
+          "message": "Votre demande a été envoyée. Vous recevrez un lien de confirmation via votre méthode de contact préférée une fois approuvée.",
+          "bookingId": "Référence de réservation",
+          "next_steps": "Vous recevrez un lien personnalisé pour compléter votre réservation une fois votre demande approuvée.",
+          "close": "Retour à l'accueil"
+        },
+        "errors": {
+          "required": "Ce champ est requis",
+          "invalid_email": "Veuillez entrer une adresse email valide",
+          "submit_error": "Une erreur s'est produite lors de l'envoi de votre demande. Veuillez réessayer."
+        }
+      },
+      "token": {
+        "invalid": "Lien invalide ou expiré",
+        "used": "Ce lien a déjà été utilisé",
+        "expired": "Ce lien a expiré. Veuillez demander une nouvelle réservation.",
+        "notFound": "Lien de réservation introuvable"
+      },
+      "status": {
+        "pending": "En attente d'approbation",
+        "approved": "Approuvé - Complétez votre réservation",
+        "rejected": "Demande rejetée",
+        "completed": "Réservation terminée",
+        "loading": "Chargement du statut de la réservation...",
+        "bookingId": "Référence de réservation",
+        "details": "Détails de la réservation",
+        "created": "Créé",
+        "approved_date": "Approuvé",
+        "expires": "Expire",
+        "completed_date": "Terminé",
+        "refresh": "Actualiser le statut",
+        "back_home": "Retour à l'accueil",
+        "error_title": "Erreur de chargement du statut",
+        "no_booking_id": "Aucun ID de réservation fourni",
+        "load_error": "Échec du chargement du statut de la réservation"
+      },
+      "error": {
+        "error_code": "Code d'erreur",
+        "start_new": "Nouvelle réservation",
+        "back_home": "Retour à l'accueil",
+        "default": {
+          "title": "Erreur de réservation",
+          "message": "Une erreur s'est produite avec votre réservation. Veuillez réessayer."
+        },
+        "token_invalid": {
+          "title": "Lien invalide",
+          "message": "Ce lien de réservation est invalide ou a expiré. Veuillez demander une nouvelle réservation."
+        },
+        "token_expired": {
+          "title": "Lien expiré",
+          "message": "Ce lien de réservation a expiré. Veuillez demander une nouvelle réservation."
+        },
+        "token_already_used": {
+          "title": "Lien déjà utilisé",
+          "message": "Ce lien de réservation a déjà été utilisé. Veuillez demander une nouvelle réservation si nécessaire."
+        },
+        "token_not_found": {
+          "title": "Lien introuvable",
+          "message": "Ce lien de réservation n'a pas été trouvé. Veuillez demander une nouvelle réservation."
+        },
+        "token_validation_error": {
+          "title": "Erreur de validation",
+          "message": "Une erreur s'est produite lors de la validation de votre lien de réservation. Veuillez réessayer."
+        }
+      }
+    },
+    "common": {
+      "select_language": "Langue",
+      "reserve": "Réserver",
+      "select": "Sélectionner",
+      "sending": "Envoi...",
+      "error": "Une erreur est survenue. Veuillez réessayer."
+    }
+  }
+}

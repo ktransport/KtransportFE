@@ -1,0 +1,908 @@
+:host {
+  display: block;
+}
+
+/* Base navbar - horizontal layout with logo left, nav center, actions right */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(11, 19, 43, 0.98);
+  backdrop-filter: blur(14px);
+  font-family: var(--font-driven, var(--font-serif));
+  overflow: visible;
+  height: 140px; // Increased from 90px for bigger logo
+  transition:
+    height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.4s ease,
+    box-shadow 0.4s ease;
+  z-index: 1000;
+
+  &.scrolled {
+    height: 90px; // Shrinks to 90px when scrolled
+    background: rgba(11, 19, 43, 0.98);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem; // Increased vertical padding for more breathing room
+  height: 100%;
+  position: relative;
+  transition: padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// Adjust padding slightly when scrolled for better alignment
+.navbar.scrolled .navbar-container {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  cursor: pointer;
+  z-index: 1001;
+  position: relative;
+  padding: 0.5rem 1.5rem 0.5rem 1rem;
+  border-radius: 12px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0; // Prevent logo from shrinking
+  min-width: fit-content; // Ensure logo maintains its size
+
+  // Sleek separator after logo
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 50%;
+    background: linear-gradient(to bottom,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.15),
+        transparent);
+    opacity: 0.6;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.logo img {
+  height: 120px; // Larger size at top - increased from 75px
+  width: auto;
+  max-width: 100%; // Prevent overflow
+  object-fit: contain; // Maintain aspect ratio, prevent compression
+  object-position: center; // Center the image
+  flex-shrink: 0; // Prevent image from shrinking
+  transition:
+    height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    filter 0.4s ease;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 2px 6px rgba(245, 158, 11, 0.3)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.logo:hover img {
+  transform: scale(1.08);
+  filter: drop-shadow(0 4px 12px rgba(245, 158, 11, 0.5)) drop-shadow(0 2px 6px rgba(181, 182, 186, 0.3));
+}
+
+// Logo shrinks when navbar is scrolled
+.navbar.scrolled .logo img {
+  height: 75px; // Shrinks to 75px when scrolled
+  filter: drop-shadow(0 2px 6px rgba(245, 158, 11, 0.2)) drop-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
+}
+
+.navbar.scrolled .logo:hover img {
+  filter: drop-shadow(0 10px 20px rgba(245, 158, 11, 0.5)) drop-shadow(0 4px 10px rgba(181, 182, 186, 0.4));
+}
+
+/* Nav menu - horizontal, always visible */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem; // Increased spacing between icons
+  flex: 1;
+  justify-content: center;
+  font-family: var(--font-serif);
+  padding: 0 2rem;
+}
+
+/* Menu links - icon-based navigation */
+.nav-menu a,
+.nav-menu .nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  text-decoration: none;
+  position: relative;
+  padding: 1rem 1.25rem;
+  min-height: 64px; // Reserve space for icon and text
+  opacity: 0.85; // Start at 85% opacity
+  transform: scale(1);
+  transition:
+    opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: visible; // Allow text to be visible
+}
+
+/* Navigation icons */
+.nav-icon {
+  width: 28px;
+  height: 28px;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  fill: none;
+  color: var(--white);
+  opacity: 1;
+  transition:
+    color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+/* Navigation link text - positioned absolutely for slot machine effect */
+.nav-link-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  opacity: 0;
+  transition:
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+  text-transform: uppercase;
+  font-family: var(--font-driven, var(--font-serif));
+}
+
+/* Underline hover - positioned below icon */
+.nav-menu a::after,
+.nav-menu .nav-link::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 3px;
+  background: var(--luxury-gold);
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-menu a:hover,
+.nav-menu .nav-link:hover {
+  opacity: 1;
+
+  .nav-icon {
+    color: var(--luxury-gold);
+    transform: translateY(-150%);
+    opacity: 0.4; // Translucent when moving up
+  }
+
+  .nav-link-text {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    color: var(--luxury-gold);
+  }
+}
+
+.nav-menu a:hover::after,
+.nav-menu .nav-link:hover::after {
+  width: 80%;
+}
+
+.nav-menu a.active,
+.nav-menu .nav-link.active {
+  opacity: 1;
+
+  .nav-icon {
+    color: var(--luxury-gold);
+  }
+}
+
+.nav-menu a.active::after,
+.nav-menu .nav-link.active::after {
+  width: 80%;
+}
+
+/* Disabled state */
+.nav-menu .nav-link.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+
+  .nav-icon {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+
+/* Actions (language/theme/mobile) positioned right */
+.navbar-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  z-index: 1001;
+  flex-shrink: 0;
+}
+
+.lang-select {
+  background-color: var(--lang-bg);
+  color: var(--white);
+  border: 1px solid var(--lang-border);
+  border-radius: 18px;
+  padding: 0.4rem 0.9rem;
+  min-width: 62px;
+  height: 36px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M2 4L6 8L10 4' stroke='%23b5b6ba' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.6rem center;
+  background-size: 12px;
+  padding-right: 2rem;
+  font-family: var(--font-sans);
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-2px) scale(1.05);
+    background-color: var(--lang-bg-hover);
+    border-color: var(--accent);
+    box-shadow: 0 4px 12px rgba(181, 182, 186, 0.15);
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.98);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(181, 182, 186, 0.1);
+  }
+
+  option {
+    background-color: var(--navbar-bg-scrolled);
+    color: var(--white);
+    padding: 0.5rem;
+    border: none;
+
+    &:hover {
+      background-color: var(--lang-bg-hover);
+    }
+
+    &:checked {
+      background-color: var(--accent);
+      color: var(--dark);
+    }
+  }
+}
+
+.theme-toggle {
+  width: 40px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--lang-bg);
+  border: 1px solid var(--lang-border);
+  cursor: pointer;
+  color: var(--white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px) scale(1.05);
+  background: var(--lang-bg-hover);
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(181, 182, 186, 0.15);
+}
+
+.theme-toggle:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover svg {
+  color: var(--accent);
+  transform: rotate(15deg);
+}
+
+/* ============================================
+   MOBILE HAMBURGER BUTTON
+   ============================================ */
+.mobile-toggle {
+  display: none;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  border: none;
+  background: var(--lang-bg);
+  border: 1px solid var(--lang-border);
+  border-radius: 10px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  touch-action: manipulation;
+  z-index: 1002;
+
+  &:hover {
+    background: var(--lang-bg-hover);
+    border-color: var(--accent);
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  .hamburger-line {
+    width: 24px;
+    height: 2.5px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+  }
+
+  &.active {
+    .hamburger-line:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger-line:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    .hamburger-line:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+}
+
+/* ============================================
+   MOBILE MENU OVERLAY
+   ============================================ */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1001;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* ============================================
+   MOBILE SIDEBAR MENU
+   ============================================ */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 85%;
+  max-width: 320px;
+  height: 100vh;
+  background: rgba(11, 19, 43, 0.98);
+  backdrop-filter: blur(20px);
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.3);
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1002;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  font-family: var(--font-serif, var(--font-driven));
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.mobile-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  min-height: 70px;
+
+  .logo {
+    position: relative;
+    padding: 0.4rem 0.8rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 10px;
+      padding: 1.5px;
+      background: linear-gradient(135deg, var(--luxury-gold), var(--luxury-gold-light));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0.3;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover::before {
+      opacity: 0.6;
+    }
+  }
+
+  .logo img {
+    height: 100px; // Increased from 40px to match desktop proportion - big in mobile sidebar
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 4px rgba(245, 158, 11, 0.2));
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .logo:hover img {
+    transform: scale(1.1);
+    filter: drop-shadow(0 4px 8px rgba(245, 158, 11, 0.4));
+  }
+}
+
+.close-button {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  border: none;
+  background: transparent;
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  touch-action: manipulation;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(90deg);
+  }
+
+  &:active {
+    transform: rotate(90deg) scale(0.9);
+  }
+}
+
+.mobile-nav-menu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  gap: 0.5rem;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 1rem 1.25rem;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.35rem;
+  font-weight: 500;
+  font-family: var(--font-serif, var(--font-driven));
+  transition: all 0.3s ease;
+  position: relative;
+  touch-action: manipulation;
+  min-height: 56px;
+  line-height: 1.5;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: var(--accent, var(--secondary));
+    position: absolute;
+    bottom: 0.75rem;
+    left: 1.25rem;
+    transition: width 0.4s ease;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--accent, var(--secondary));
+    padding-left: 1.5rem;
+
+    &::after {
+      width: calc(100% - 2.5rem);
+    }
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &.active {
+    color: var(--accent, var(--secondary));
+
+    &::after {
+      width: calc(100% - 2.5rem);
+    }
+  }
+
+  .mobile-sidebar.active &:nth-child(1) {
+    animation: slideInRight 0.3s ease 0.05s both;
+  }
+
+  .mobile-sidebar.active &:nth-child(2) {
+    animation: slideInRight 0.3s ease 0.1s both;
+  }
+
+  .mobile-sidebar.active &:nth-child(3) {
+    animation: slideInRight 0.3s ease 0.15s both;
+  }
+
+  .mobile-sidebar.active &:nth-child(4) {
+    animation: slideInRight 0.3s ease 0.2s both;
+  }
+
+  .mobile-sidebar.active &:nth-child(5) {
+    animation: slideInRight 0.3s ease 0.25s both;
+  }
+
+  .mobile-sidebar.active &:nth-child(6) {
+    animation: slideInRight 0.3s ease 0.3s both;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-sidebar-footer {
+  padding: 1.5rem 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.mobile-lang-select {
+  flex: 1;
+  background-color: var(--lang-bg);
+  color: var(--white);
+  border: 1px solid var(--lang-border);
+  border-radius: 18px;
+  padding: 0.4rem 0.9rem;
+  min-width: 62px;
+  height: 36px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M2 4L6 8L10 4' stroke='%23b5b6ba' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.6rem center;
+  background-size: 12px;
+  padding-right: 2rem;
+  min-height: 48px;
+  touch-action: manipulation;
+
+  &:hover {
+    transform: translateY(-2px) scale(1.05);
+    background-color: var(--lang-bg-hover);
+    border-color: var(--accent);
+    box-shadow: 0 4px 12px rgba(181, 182, 186, 0.15);
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.98);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(181, 182, 186, 0.1);
+  }
+
+  option {
+    background-color: var(--navbar-bg-scrolled);
+    color: var(--white);
+    padding: 0.5rem;
+  }
+}
+
+.mobile-theme-toggle {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  border-radius: 10px;
+  background: var(--lang-bg);
+  border: 1px solid var(--lang-border);
+  cursor: pointer;
+  color: var(--white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  touch-action: manipulation;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-2px) scale(1.05);
+    background: var(--lang-bg-hover);
+    border-color: var(--accent);
+    box-shadow: 0 4px 12px rgba(181, 182, 186, 0.15);
+
+    svg {
+      color: var(--accent);
+      transform: rotate(15deg);
+    }
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.98);
+  }
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Tablet and below (768px) - Match desktop with shrinking on scroll */
+@media (max-width: 768px) {
+  .navbar {
+    height: 140px !important; // Match desktop size (140px) for big mobile logo
+    transition:
+      height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      background 0.4s ease,
+      box-shadow 0.4s ease;
+
+    &.scrolled {
+      height: 100px !important; // Shrinks to 100px when scrolled - gives users more space
+    }
+  }
+
+  .navbar-container {
+    padding: 0.75rem 1rem; // Slightly more padding for larger logo
+    transition: padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  // Adjust padding when scrolled for better alignment
+  .navbar.scrolled .navbar-container {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-actions {
+    gap: 0.4rem;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .lang-select,
+  .theme-toggle {
+    display: none;
+  }
+
+  .logo img {
+    height: 120px !important; // Match desktop size (120px) - same as desktop!
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+    transition:
+      height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+      filter 0.4s ease;
+  }
+
+  // Logo shrinks when scrolled on mobile
+  .navbar.scrolled .logo img {
+    height: 80px !important; // Shrinks to 80px when scrolled - saves space
+  }
+}
+
+/* Small phones (480px and below) - Shrinks on scroll for space */
+@media (max-width: 480px) {
+  .mobile-sidebar {
+    width: 90%;
+    max-width: 280px;
+  }
+
+  .navbar-container {
+    padding: 0.625rem 0.75rem; // Slightly more padding for larger logo
+    transition: padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  // Adjust padding when scrolled
+  .navbar.scrolled .navbar-container {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .navbar {
+    height: 130px !important; // Close to desktop (140px) - still very prominent
+    transition:
+      height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      background 0.4s ease,
+      box-shadow 0.4s ease;
+    // Note: Slightly smaller than 140px to prevent taking too much screen on small phones
+
+    &.scrolled {
+      height: 90px !important; // Shrinks to 90px when scrolled - more space for content
+    }
+  }
+
+  .logo img {
+    height: 110px !important; // Close to desktop (120px) - almost same size!
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+    transition:
+      height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+      filter 0.4s ease;
+  }
+
+  // Logo shrinks when scrolled on small mobile
+  .navbar.scrolled .logo img {
+    height: 65px !important; // Shrinks to 65px when scrolled - saves space
+  }
+
+  .navbar-actions {
+    gap: 0.3rem;
+  }
+
+  .mobile-toggle {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* Very small phones (360px and below) */
+@media (max-width: 360px) {
+  .mobile-sidebar {
+    width: 95%;
+  }
+
+  .mobile-nav-link {
+    font-size: 1rem;
+    padding: 0.875rem 1rem;
+    min-height: 52px;
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .mobile-sidebar {
+    padding-top: 0;
+  }
+
+  .mobile-sidebar-header {
+    padding: 1rem 1.25rem;
+    min-height: 60px;
+  }
+
+  .mobile-nav-menu {
+    padding: 0.5rem 0;
+    gap: 0.25rem;
+  }
+
+  .mobile-nav-link {
+    padding: 0.75rem 1.25rem;
+    min-height: 48px;
+  }
+}

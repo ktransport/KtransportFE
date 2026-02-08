@@ -1,0 +1,171 @@
+:host {
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.about-section {
+  background-color: var(--page-bg);
+}
+
+.about-title {
+  color: var(--primary);
+}
+
+.about-text {
+  color: var(--primary);
+}
+
+/* Prevent images from disappearing or compressing on smaller screens */
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  img {
+    min-height: 200px; // Ensure minimum height on mobile
+  }
+}
+
+@media (max-width: 480px) {
+  img {
+    min-height: 180px; // Smaller minimum height for very small screens
+  }
+}
+
+// Carousel animations and effects
+.carousel-section {
+  perspective: 1000px;
+}
+
+.luxury-card {
+  backface-visibility: hidden;
+  will-change: transform, opacity, filter;
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+
+  &.active {
+    transform: scale(1) translateZ(0) translateX(0);
+    opacity: 1;
+  }
+
+  &.inactive {
+    transform: scale(0.9) translateZ(0);
+    opacity: 0.8;
+    filter: blur(2px);
+  }
+}
+
+// Smooth transitions for all carousel elements
+.transition-all {
+  transition-property: transform, opacity, filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// Ensure cards maintain their position during transitions
+.grid>div {
+  transform-style: preserve-3d;
+}
+
+// Navigation button hover effects
+button[aria-label^="Show"]:hover {
+  transform: scale(1.2);
+}
+
+// Subtle blur effect for inactive cards
+.blur-\[2px\] {
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+// Carousel container positioning
+.relative.overflow-hidden {
+  position: relative;
+  perspective: 1200px;
+}
+
+.carousel-card {
+  width: 95%;
+  max-width: 800px;
+  backface-visibility: hidden;
+  will-change: transform, opacity, filter;
+  min-height: fit-content;
+
+  // Responsive sizing for all phone sizes
+  @media (max-width: 475px) {
+    width: 92%;
+    font-size: 0.9rem;
+  }
+
+  @media (min-width: 475px) and (max-width: 640px) {
+    width: 93%;
+  }
+
+  @media (min-width: 640px) {
+    width: 90%;
+  }
+
+  // Prevent text overflow on small screens - allow content to expand
+  h2 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+}
+
+// Ensure container adapts to content on mobile
+.relative.overflow-visible {
+  @media (max-width: 640px) {
+    overflow: visible;
+    padding-bottom: 2rem; // Extra space for hint text on mobile
+  }
+}
+
+// Ensure hint text and navigation are above cards on mobile
+.relative.z-30 {
+  position: relative;
+  z-index: 30;
+}
+
+// Touch-friendly interactions
+.touch-none {
+  touch-action: none;
+}
+
+.touch-pan-y {
+  touch-action: pan-y;
+}
+
+/* Responsive banner image for mobile - will use banner-mobile.png when available */
+.banner-bg {
+  @media (max-width: 768px) {
+    background-image: url('~src/assets/images/banner-mobile.png') !important;
+  }
+}
+
+/* Move hero content up */
+.about-hero-content {
+  margin-top: -2rem;
+
+  @media (min-width: 640px) {
+    margin-top: -3rem;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: -4rem;
+  }
+}

@@ -1,0 +1,182 @@
+<!-- Hero Section -->
+<section class="relative flex items-start justify-center bg-gray-900 overflow-hidden w-full pt-12 sm:pt-16 md:pt-20"
+  style="margin-top: 120px; width: 100vw; margin-left: calc(-50vw + 50%); height: clamp(300px, 60vh, 700px);">
+  <div class="absolute inset-0 bg-black opacity-60 z-10"></div>
+  <div class="absolute inset-0 banner-bg"
+    style="background-image: url('assets/images/banner.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  </div>
+  <div class="container mx-auto px-4 sm:px-6 z-20 text-center contact-hero-content">
+    <h1
+      class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-extrabold text-white mb-4 sm:mb-6 leading-tight tracking-wide px-2">
+      {{ i18n.t$('contact.hero.title') | async }}</h1>
+    <p
+      class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
+      {{ i18n.t$('contact.hero.subtitle') | async }}</p>
+  </div>
+</section>
+
+<!-- Contact Content -->
+<section class="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-50">
+  <div class="container mx-auto px-4 sm:px-6 max-w-6xl">
+    <div class="grid md:grid-cols-2 gap-8 sm:gap-12 md:gap-16">
+      <!-- Contact Info -->
+      <div>
+        <h2
+          class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-6 sm:mb-8 md:mb-10 text-gray-900 section-heading">
+          {{ i18n.t$('contact.info.title') | async }}</h2>
+
+        <div class="space-y-4 sm:space-y-6 md:space-y-8">
+          <!-- Primary Address -->
+          <div
+            class="luxury-card p-4 sm:p-5 md:p-6 flex items-start group hover:shadow-xl-hover transition-all duration-300">
+            <div
+              class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-yellow-100 rounded-xl sm:rounded-2xl flex items-center justify-center mr-3 sm:mr-4 md:mr-6 flex-shrink-0 group-hover:bg-yellow-200 transition-colors duration-300">
+              <svg class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-yellow-600" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-bold mb-1 sm:mb-2 text-gray-900">{{ i18n.t$('contact.address.label') |
+                async }}</h3>
+              <p class="text-sm sm:text-base text-gray-700 leading-relaxed break-words">99 Avenue Albert 1er
+                siège<br>92500 Rueil-Malmaison, France</p>
+            </div>
+          </div>
+
+          <!-- Secondary Address -->
+          <div
+            class="luxury-card p-4 sm:p-5 md:p-6 flex items-start group hover:shadow-xl-hover transition-all duration-300">
+            <div
+              class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-yellow-100 rounded-xl sm:rounded-2xl flex items-center justify-center mr-3 sm:mr-4 md:mr-6 flex-shrink-0 group-hover:bg-yellow-200 transition-colors duration-300">
+              <svg class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-yellow-600" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-bold mb-1 sm:mb-2 text-gray-900">{{
+                i18n.t$('contact.address.secondary') | async }}</h3>
+              <p class="text-sm sm:text-base text-gray-700 leading-relaxed break-words">6B Avenue Durante<br>06000 Nice,
+                France</p>
+            </div>
+          </div>
+
+          <!-- Phone -->
+          <div
+            class="luxury-card p-4 sm:p-5 md:p-6 flex items-start group hover:shadow-xl-hover transition-all duration-300">
+            <div
+              class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-yellow-100 rounded-xl sm:rounded-2xl flex items-center justify-center mr-3 sm:mr-4 md:mr-6 flex-shrink-0 group-hover:bg-yellow-200 transition-colors duration-300">
+              <svg class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-yellow-600 flex-shrink-0" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-bold mb-1 sm:mb-2 text-gray-900">{{ i18n.t$('contact.phone.label') |
+                async }}</h3>
+              <p class="text-sm sm:text-base text-gray-700 leading-relaxed break-words"><a href="tel:+33680282572"
+                  class="hover:text-yellow-600 transition-colors break-all">+33 6 80 28 25 72</a><br>{{
+                i18n.t$('contact.phone.availability') | async }}</p>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div
+            class="luxury-card p-4 sm:p-5 md:p-6 flex items-start group hover:shadow-xl-hover transition-all duration-300">
+            <div
+              class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-yellow-100 rounded-xl sm:rounded-2xl flex items-center justify-center mr-3 sm:mr-4 md:mr-6 flex-shrink-0 group-hover:bg-yellow-200 transition-colors duration-300">
+              <svg class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-yellow-600" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                </path>
+              </svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-bold mb-1 sm:mb-2 text-gray-900">{{ i18n.t$('contact.email.label') |
+                async }}</h3>
+              <p class="text-sm sm:text-base text-gray-700 leading-relaxed break-words"><a
+                  href="mailto:bilal.ktransport&#64;hotmail.com"
+                  class="hover:text-yellow-600 transition-colors break-all">bilal.ktransport&#64;hotmail.com</a><br>{{
+                i18n.t$('contact.email.response') | async }}</p>
+            </div>
+          </div>
+
+          <!-- Hours -->
+          <div
+            class="luxury-card p-4 sm:p-5 md:p-6 flex items-start group hover:shadow-xl-hover transition-all duration-300">
+            <div
+              class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-yellow-100 rounded-xl sm:rounded-2xl flex items-center justify-center mr-3 sm:mr-4 md:mr-6 flex-shrink-0 group-hover:bg-yellow-200 transition-colors duration-300">
+              <svg class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-yellow-600" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z">
+                </path>
+              </svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-bold mb-1 sm:mb-2 text-gray-900">{{ i18n.t$('contact.hours.label') |
+                async }}</h3>
+              <p class="text-sm sm:text-base text-gray-700 leading-relaxed break-words">{{ i18n.t$('contact.hours.days')
+                | async }}<br>{{ i18n.t$('contact.hours.time') | async }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div>
+        <h2
+          class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-6 sm:mb-8 md:mb-10 text-gray-900 section-heading">
+          {{ i18n.t$('contact.form.title') | async }}</h2>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()"
+          class="luxury-card-alt p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-5 md:space-y-6">
+          <div>
+            <label class="block text-xs sm:text-sm font-semibold mb-2 sm:mb-3 text-gray-900">{{
+              i18n.t$('contact.form.name') | async }}</label>
+            <input type="text" formControlName="name" required
+              class="form-input w-full text-sm sm:text-base px-3 sm:px-4 py-2 sm:py-3">
+          </div>
+          <div>
+            <label class="block text-xs sm:text-sm font-semibold mb-2 sm:mb-3 text-gray-900">{{
+              i18n.t$('contact.form.email') | async }}</label>
+            <input type="email" formControlName="email" required
+              class="form-input w-full text-sm sm:text-base px-3 sm:px-4 py-2 sm:py-3">
+          </div>
+          <div>
+            <label class="block text-xs sm:text-sm font-semibold mb-2 sm:mb-3 text-gray-900">{{
+              i18n.t$('contact.form.phone') | async }}</label>
+            <input type="tel" formControlName="phone" required
+              class="form-input w-full text-sm sm:text-base px-3 sm:px-4 py-2 sm:py-3">
+          </div>
+          <div>
+            <label class="block text-xs sm:text-sm font-semibold mb-2 sm:mb-3 text-gray-900">{{
+              i18n.t$('contact.form.message') | async }}</label>
+            <textarea formControlName="message" rows="5"
+              class="form-input w-full text-sm sm:text-base px-3 sm:px-4 py-2 sm:py-3" required></textarea>
+          </div>
+          <button type="submit" [disabled]="!contactForm.valid || isSubmitting"
+            class="btn-primary w-full text-sm sm:text-base px-4 sm:px-6 py-2.5 sm:py-3">
+            {{ isSubmitting ? (i18n.t$('contact.form.sending') | async) : (i18n.t$('contact.form.send') | async) }}
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="mt-12 sm:mt-16 md:mt-20">
+      <h2
+        class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-6 sm:mb-8 md:mb-10 text-center text-gray-900 section-heading">
+        {{ i18n.t$('contact.find_us.title') | async }}</h2>
+      <div id="map"
+        class="h-64 sm:h-80 md:h-96 rounded-xl sm:rounded-2xl shadow-xl-hover border-2 border-gray-200 overflow-hidden relative"
+        style="margin-top: 0;"></div>
+    </div>
+  </div>
+</section>

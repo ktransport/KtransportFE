@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ktransport | Transport de Luxe Professionnel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,400&family=Inter:wght@300;400;600&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="assets/logo-transparent.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/logo-transparent.png">
+
+</head>
+
+<body class="font-sans">
+    <custom-navbar></custom-navbar>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen flex items-center justify-center bg-gray-900 overflow-hidden"
+        style="margin-top: 70px;">
+        <div class="absolute inset-0 bg-black opacity-60 z-10"></div>
+
+        <!-- Background Slideshow -->
+        <div class="absolute inset-0">
+            <div class="hero-slide bg-cover bg-center absolute inset-0 opacity-0 transition-opacity duration-1000"
+                style="background-image: url('https://static.photos/cityscape/1200x630/3')"></div>
+            <div class="hero-slide bg-cover bg-center absolute inset-0 opacity-0 transition-opacity duration-1000"
+                style="background-image: url('https://static.photos/cityscape/1200x630/58')"></div>
+            <div class="hero-slide bg-cover bg-center absolute inset-0 opacity-0 transition-opacity duration-1000"
+                style="background-image: url('https://static.photos/cityscape/1200x630/36')"></div>
+        </div>
+
+        <div class="container mx-auto px-6 z-20 text-center">
+            <h1 data-i18n="index.hero.title"
+                class="text-5xl md:text-6xl font-serif font-bold text-white mb-6 animate-fadeIn">
+            </h1>
+            <p data-i18n="index.hero.subtitle" class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a data-i18n="index.hero.cta_primary" href="transfert-aeroport.html"
+                    class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-medium py-3 px-8 rounded-full transition duration-300 transform hover:scale-105"></a>
+                <a id="whatsapp-book" href="#"
+                    class="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white font-medium py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 flex items-center gap-2 justify-center"
+                    target="_blank" rel="noopener noreferrer">
+
+                    <!-- WhatsApp Icon (Gold) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#FFD700" viewBox="0 0 24 24">
+                        <path
+                            d="M12.04 2C6.58 2 2.21 6.37 2.21 11.83c0 2.08.61 4.05 1.76 5.76L2 22l4.55-1.92c1.63.9 3.47 1.38 5.49 1.38h.01c5.46 0 9.83-4.37 9.83-9.83C21.88 6.37 17.5 2 12.04 2zm5.68 14.27c-.24.67-1.39 1.3-1.96 1.38-.5.08-1.12.11-1.81-.11-.42-.14-.96-.31-1.65-.61-2.92-1.27-4.82-4.23-4.97-4.43-.14-.19-1.18-1.57-1.18-3.01 0-1.44.75-2.15 1.02-2.44.24-.26.64-.38 1.02-.38.12 0 .23.01.33.01.29.01.43.03.62.48.24.58.83 2.01.9 2.15.07.14.12.31.03.5-.08.19-.12.31-.24.48-.12.17-.26.38-.37.51-.12.14-.24.29-.1.54.14.24.62 1.02 1.34 1.65.92.82 1.69 1.08 1.94 1.2.24.12.38.1.52-.06.14-.17.6-.7.76-.94.17-.24.31-.2.52-.12.21.07 1.33.63 1.56.75.24.12.4.17.46.27.07.1.07.69-.17 1.36z" />
+                    </svg>
+
+                    <span data-i18n="index.hero.cta_whatsapp"></span>
+
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 data-i18n="index.features.title" class="text-3xl font-serif font-bold text-center mb-16"></h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="feature-card p-8 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-yellow-500 mb-4">
+                        <i data-feather="clock" class="w-12 h-12"></i>
+                    </div>
+                    <h3 data-i18n="index.features.card1.title" class="text-xl font-bold mb-3"></h3>
+                    <p data-i18n="index.features.card1.text" class="text-gray-600"></p>
+                </div>
+
+                <div
+                    class="feature-card p-8 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-yellow-500 mb-4">
+                        <i data-feather="shield" class="w-12 h-12"></i>
+                    </div>
+                    <h3 data-i18n="index.features.card2.title" class="text-xl font-bold mb-3"></h3>
+                    <p data-i18n="index.features.card2.text" class="text-gray-600"></p>
+                </div>
+
+                <div
+                    class="feature-card p-8 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="text-yellow-500 mb-4">
+                        <i data-feather="star" class="w-12 h-12"></i>
+                    </div>
+                    <h3 data-i18n="index.features.card3.title" class="text-xl font-bold mb-3"></h3>
+                    <p data-i18n="index.features.card3.text" class="text-gray-600"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 data-i18n="index.services.title" class="text-3xl font-serif font-bold text-center mb-16"></h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="transfert-aeroport.html"
+                    class="service-item group relative overflow-hidden rounded-lg shadow-lg transition duration-500 hover:shadow-2xl">
+                    <img src="https://static.photos/travel/640x360/8" alt="Transfert aéroport"
+                        class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 data-i18n="index.services.card1.title" class="text-xl font-bold text-white mb-2"></h3>
+                        <p data-i18n="index.services.card1.text" class="text-gray-300"></p>
+                    </div>
+                </a>
+                <a href="evenements.html"
+                    class="service-item group relative overflow-hidden rounded-lg shadow-lg transition duration-500 hover:shadow-2xl">
+                    <img src="https://static.photos/office/640x360/7" alt="Événements d'entreprise"
+                        class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 data-i18n="index.services.card2.title" class="text-xl font-bold text-white mb-2"></h3>
+                        <p data-i18n="index.services.card2.text" class="text-gray-300"></p>
+                    </div>
+                </a>
+                <a href="mariages.html"
+                    class="service-item group relative overflow-hidden rounded-lg shadow-lg transition duration-500 hover:shadow-2xl">
+                    <img src="https://static.photos/restaurant/640x360/1" alt="Dîners et soirées"
+                        class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 data-i18n="index.services.card3.title" class="text-xl font-bold text-white mb-2"></h3>
+                        <p data-i18n="index.services.card3.text" class="text-gray-300"></p>
+                    </div>
+                </a>
+                <a href="chauffeur.html"
+                    class="service-item group relative overflow-hidden rounded-lg shadow-lg transition duration-500 hover:shadow-2xl">
+                    <img src="https://static.photos/office/640x360/21" alt="VIP et Protocolaires"
+                        class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 data-i18n="index.services.card4.title" class="text-xl font-bold text-white mb-2"></h3>
+                        <p data-i18n="index.services.card4.text" class="text-gray-300"></p>
+                    </div>
+                </a>
+                <a href="tourisme.html"
+                    class="service-item group relative overflow-hidden rounded-lg shadow-lg transition duration-500 hover:shadow-2xl">
+                    <img src="https://static.photos/travel/640x360/1" alt="Mise a disposition"
+                        class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 data-i18n="index.services.card5.title" class="text-xl font-bold text-white mb-2"></h3>
+                        <p data-i18n="index.services.card5.text" class="text-gray-300"></p>
+                    </div>
+                </a>
+                <a href="partenariats.html"
+                    class="service-item group relative overflow-hidden rounded-lg shadow-lg transition duration-500 hover:shadow-2xl">
+                    <img src="https://static.photos/office/640x360/140" alt="Partenariats"
+                        class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 data-i18n="index.services.card6.title" class="text-xl font-bold text-white mb-2"></h3>
+                        <p data-i18n="index.services.card6.text" class="text-gray-300"></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Vehicle Gallery -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-serif font-bold text-center mb-16">Notre flotte de prestige</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="vehicle-card group relative overflow-hidden rounded-lg shadow-xl">
+                    <img src="https://static.photos/automotive/640x360/1" alt="Mercedes Classe S"
+                        class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold mb-1">Mercedes Classe S</h3>
+                            <p class="text-gray-300">Le summum du luxe et du confort</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vehicle-card group relative overflow-hidden rounded-lg shadow-xl">
+                    <img src="https://static.photos/automotive/640x360/2" alt="BMW Série 7"
+                        class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold mb-1">BMW Série 7</h3>
+                            <p class="text-gray-300">Performance et élégance allemande</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vehicle-card group relative overflow-hidden rounded-lg shadow-xl">
+                    <img src="https://static.photos/automotive/640x360/3" alt="Audi A8"
+                        class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-80 transition duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold mb-1">Audi A8</h3>
+                            <p class="text-gray-300">Technologie et sophistication</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-serif font-bold text-center mb-16">Ce que disent nos clients</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-gray-100 p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-500 space-x-1">
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">
+                        "Service impeccable ! Le chauffeur était ponctuel, professionnel et la voiture était en parfait
+                        état. Je
+                        recommande vivement."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="https://static.photos/people/200x200/1" alt="Client"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Jean Dupont</h4>
+                            <p class="text-sm text-gray-500">Directeur Marketing</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="testimonial-card bg-gray-100 p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-500 space-x-1">
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"J'utilise leurs services pour tous mes déplacements
+                        professionnels. Toujours à l'heure et d'une grande discrétion."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="https://static.photos/people/200x200/2" alt="Client"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sophie Martin</h4>
+                            <p class="text-sm text-gray-500">CEO, TechSolutions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card bg-gray-100 p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-500 space-x-1">
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"Parfait pour les transferts aéroport. Ils ont même aidé avec
+                        les bagages. Un service haut de gamme comme on en voit peu."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="https://static.photos/people/200x200/3" alt="Client"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Thomas Leroy</h4>
+                            <p class="text-sm text-gray-500">Voyageur fréquent</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-yellow-500 text-gray-900">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-serif font-bold mb-6">Prêt à voyager dans le luxe ?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Réservez votre véhicule dès maintenant et profitez d'un service
+                exceptionnel.</p>
+            <a href=""
+                class="inline-block bg-gray-900 hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                Découvrir nos services
+            </a>
+        </div>
+    </section>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+
+        // Hero slideshow
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.hero-slide');
+            let currentSlide = 0;
+
+            function showSlide(n) {
+                slides.forEach((slide, index) => {
+                    slide.style.opacity = index === n ? '1' : '0';
+                });
+                currentSlide = (n + 1) % slides.length;
+            }
+
+            // Initial slide
+            showSlide(0);
+
+            // Auto rotate slides every 5 seconds
+            setInterval(() => showSlide(currentSlide), 5000);
+        });
+    </script>
+    <script>
+        (function configureWhatsApp() {
+            const CONFIG_NUMBER = '+216 98 910 068';
+            const defaultMsg = 'Bonjour, je souhaite réserver un transport.';
+
+            try {
+                const btn = document.getElementById('whatsapp-book');
+                if (!btn) return;
+                let normalized = (CONFIG_NUMBER || '').toString().replace(/\D+/g, '');
+                if (!normalized) return;
+
+                const url = 'https://wa.me/' + normalized + '?text=' + encodeURIComponent(defaultMsg);
+                btn.setAttribute('href', url);
+                btn.setAttribute('aria-label', 'Chat on WhatsApp');
+            } catch (e) { /* silent */ }
+        })();
+    </script>
+</body>
+
+</html>

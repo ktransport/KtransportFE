@@ -1,0 +1,66 @@
+:host {
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.service-card {
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Prevent images from disappearing or compressing on smaller screens */
+.service-item {
+  flex-shrink: 0;
+  min-width: 0; // Allow flex items to shrink below their minimum content size
+}
+
+.service-item img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
+  display: block; // Ensure image is displayed
+  min-height: 0; // Allow image to shrink
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .service-item img {
+    min-height: 200px; // Ensure minimum height on mobile
+  }
+}
+
+@media (max-width: 480px) {
+  .service-item img {
+    min-height: 180px; // Smaller minimum height for very small screens
+  }
+}
+
+/* Responsive banner image for mobile - will use banner-mobile.png when available */
+.banner-bg {
+  @media (max-width: 768px) {
+    background-image: url('~src/assets/images/banner-mobile.png') !important;
+  }
+}
+
+/* Move hero content up */
+.services-hero-content {
+  margin-top: -2rem;
+
+  @media (min-width: 640px) {
+    margin-top: -3rem;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: -4rem;
+  }
+}

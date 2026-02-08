@@ -1,0 +1,59 @@
+{
+  "api": {
+    "flight": {
+      "provider": "aviationstack",
+      "aviationStack": {
+        "apiKey": "02d9e98c7d62e99f628c298a253624c2",
+        "apiUrl": "https://api.aviationstack.com/v1/flights"
+      },
+      "opensky": {
+        "apiUrl": "https://opensky-network.org/api",
+        "username": "",
+        "password": ""
+      },
+      "amadeus": {
+        "clientId": "Z2w3mNGCQBblcGwMDOnbqp5WXsADzZeh",
+        "clientSecret": "doG8KWpArxQnPTxL",
+        "apiUrl": "https://test.api.amadeus.com"
+      }
+    }
+  },
+  "whatsapp": {
+    "number": "+33680282572",
+    "defaultMessage": "Bonjour, je souhaite réserver un transport."
+  },
+  "contact": {
+    "email": "bilal.ktransport@hotmail.com",
+    "phone": "+33 6 80 28 25 72",
+    "address": "99 Avenue Albert 1er siège, 92500 Rueil-Malmaison, France",
+    "addressSecondary": "6B Avenue Durante, 06000 Nice, France"
+  },
+  "map": {
+    "defaultLatitude": 48.8847,
+    "defaultLongitude": 2.17,
+    "defaultZoom": 15
+  },
+  "backend": {
+    "apiUrl": "http://10.73.139.207:8080",
+    "endpoints": {
+      "bookings": {
+        "base": "/api/v1/bookings",
+        "initialRequest": "/api/v1/bookings/initial-request",
+        "validateToken": "/api/v1/bookings/validate-token",
+        "complete": "/api/v1/bookings",
+        "status": "/api/v1/bookings"
+      },
+      "admin": {
+        "base": "/api/v1/admin/bookings",
+        "approve": "/api/v1/admin/bookings",
+        "reject": "/api/v1/admin/bookings"
+      },
+      "contact": "/forms/contact",
+      "transfer": "/forms/transfer",
+      "events": "/forms/events",
+      "tourism": "/forms/tourism",
+      "chauffeurs": "/forms/chauffeurs",
+      "partnership": "/forms/partnership"
+    }
+  }
+}

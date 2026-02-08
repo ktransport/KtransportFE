@@ -1,0 +1,188 @@
+<!-- Hero Section -->
+<section class="relative flex items-start justify-center bg-gray-900 overflow-hidden w-full pt-12 sm:pt-16 md:pt-20"
+  style="margin-top: 120px; width: 100vw; margin-left: calc(-50vw + 50%); height: clamp(300px, 60vh, 700px);">
+  <div class="absolute inset-0 bg-black opacity-60 z-10"></div>
+  <div class="absolute inset-0 banner-bg"
+    style="background-image: url('assets/images/banner.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  </div>
+  <div class="container mx-auto px-4 sm:px-6 z-20 text-center services-hero-content">
+    <h1
+      class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-extrabold text-white mb-4 sm:mb-6 leading-tight tracking-wide px-2">
+      {{
+      i18n.t$('nav.services') | async }}</h1>
+    <p
+      class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
+      {{
+      i18n.t$('services.hero.subtitle') | async }}</p>
+  </div>
+</section>
+
+<!-- Services Image Cards Section -->
+<section class="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-50" appFadeIn>
+  <div class="container mx-auto px-4 sm:px-6 max-w-7xl xl:max-w-7xl 2xl:max-w-[1600px]">
+    <div class="text-center mb-10 sm:mb-14 md:mb-20">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-4 sm:mb-6 section-heading px-2">
+        {{ i18n.t$('index.services.title') | async }}
+      </h2>
+      <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-2">
+        {{ i18n.t$('services.subtitle') | async }}
+      </p>
+    </div>
+
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-10 xl:gap-12">
+      <a routerLink="/booking" [queryParams]="{service: 'transfer'}"
+        class="service-item group relative overflow-visible rounded-2xl shadow-xl-hover transition-all duration-500 hover:shadow-2xl border-2 border-gray-200 transform hover:-translate-y-2 flex flex-col min-h-[400px] sm:min-h-[450px] md:min-h-[500px]">
+        <div class="relative overflow-hidden rounded-t-2xl">
+          <img src="assets/images/service-corporate-events.jpg" alt="Transfert aéroport"
+            class="w-full h-56 sm:h-64 md:h-72 lg:h-80 object-cover transition-all duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
+        </div>
+        <div class="relative bg-black/90 p-5 sm:p-6 md:p-8 rounded-b-2xl flex-1 flex flex-col">
+          <h3
+            class="text-xl sm:text-2xl font-serif font-bold text-white mb-2 sm:mb-3 group-hover:text-yellow-400 transition-colors duration-300">
+            {{ i18n.t$('index.services.card1.title') | async }}</h3>
+          <p class="text-gray-200 leading-relaxed text-sm sm:text-base mb-3 sm:mb-4 flex-1">{{
+            i18n.t$('index.services.card1.text') | async
+            }}</p>
+          <span
+            class="inline-flex items-center text-yellow-400 font-semibold text-sm group-hover:gap-2 gap-1 transition-all duration-300">
+            {{ i18n.t$('services.discover') | async }}
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+        </div>
+      </a>
+
+      <a routerLink="/booking" [queryParams]="{service: 'corporate'}"
+        class="service-item group relative overflow-visible rounded-2xl shadow-xl-hover transition-all duration-500 hover:shadow-2xl border-2 border-gray-200 transform hover:-translate-y-2 flex flex-col min-h-[400px] sm:min-h-[450px] md:min-h-[500px]">
+        <div class="relative overflow-hidden rounded-t-2xl">
+          <img src="assets/images/service-vehicle-rental.jpg" alt="Événements d'entreprise"
+            class="w-full h-56 sm:h-64 md:h-72 lg:h-80 object-cover transition-all duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
+        </div>
+        <div class="relative bg-black/90 p-5 sm:p-6 md:p-8 rounded-b-2xl flex-1 flex flex-col">
+          <h3
+            class="text-xl sm:text-2xl font-serif font-bold text-white mb-2 sm:mb-3 group-hover:text-yellow-400 transition-colors duration-300">
+            {{ i18n.t$('index.services.card2.title') | async }}</h3>
+          <p class="text-gray-200 leading-relaxed text-sm sm:text-base mb-3 sm:mb-4 flex-1">{{
+            i18n.t$('index.services.card2.text') | async
+            }}</p>
+          <span
+            class="inline-flex items-center text-yellow-400 font-semibold text-sm group-hover:gap-2 gap-1 transition-all duration-300">
+            {{ i18n.t$('services.discover') | async }}
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+        </div>
+      </a>
+
+      <a routerLink="/booking" [queryParams]="{service: 'events'}"
+        class="service-item group relative overflow-visible rounded-2xl shadow-xl-hover transition-all duration-500 hover:shadow-2xl border-2 border-gray-200 transform hover:-translate-y-2 flex flex-col min-h-[400px] sm:min-h-[450px] md:min-h-[500px]">
+        <div class="relative overflow-hidden rounded-t-2xl">
+          <img src="assets/images/service-dinners.jpg" alt="Dîners et soirées"
+            class="w-full h-56 sm:h-64 md:h-72 lg:h-80 object-cover transition-all duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
+        </div>
+        <div class="relative bg-black/90 p-5 sm:p-6 md:p-8 rounded-b-2xl flex-1 flex flex-col">
+          <h3
+            class="text-xl sm:text-2xl font-serif font-bold text-white mb-2 sm:mb-3 group-hover:text-yellow-400 transition-colors duration-300">
+            {{ i18n.t$('index.services.card3.title') | async }}</h3>
+          <p class="text-gray-200 leading-relaxed text-sm sm:text-base mb-3 sm:mb-4 flex-1">{{
+            i18n.t$('index.services.card3.text') | async
+            }}</p>
+          <span
+            class="inline-flex items-center text-yellow-400 font-semibold text-sm group-hover:gap-2 gap-1 transition-all duration-300">
+            {{ i18n.t$('services.discover') | async }}
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+        </div>
+      </a>
+
+      <a routerLink="/booking" [queryParams]="{service: 'chauffeur'}"
+        class="service-item group relative overflow-visible rounded-2xl shadow-xl-hover transition-all duration-500 hover:shadow-2xl border-2 border-gray-200 transform hover:-translate-y-2 flex flex-col min-h-[400px] sm:min-h-[450px] md:min-h-[500px]">
+        <div class="relative overflow-hidden rounded-t-2xl">
+          <img src="assets/images/service-airport-transfer.jpg" alt="VIP et Protocolaires"
+            class="w-full h-56 sm:h-64 md:h-72 lg:h-80 object-cover transition-all duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
+        </div>
+        <div class="relative bg-black/90 p-5 sm:p-6 md:p-8 rounded-b-2xl flex-1 flex flex-col">
+          <h3
+            class="text-xl sm:text-2xl font-serif font-bold text-white mb-2 sm:mb-3 group-hover:text-yellow-400 transition-colors duration-300">
+            {{ i18n.t$('index.services.card4.title') | async }}</h3>
+          <p class="text-gray-200 leading-relaxed text-sm sm:text-base mb-3 sm:mb-4 flex-1">{{
+            i18n.t$('index.services.card4.text') | async
+            }}</p>
+          <span
+            class="inline-flex items-center text-yellow-400 font-semibold text-sm group-hover:gap-2 gap-1 transition-all duration-300">
+            {{ i18n.t$('services.discover') | async }}
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+        </div>
+      </a>
+
+      <a routerLink="/booking" [queryParams]="{service: 'tourism'}"
+        class="service-item group relative overflow-visible rounded-2xl shadow-xl-hover transition-all duration-500 hover:shadow-2xl border-2 border-gray-200 transform hover:-translate-y-2 flex flex-col min-h-[400px] sm:min-h-[450px] md:min-h-[500px]">
+        <div class="relative overflow-hidden rounded-t-2xl">
+          <img src="assets/images/service-vip.jpg" alt="Mise a disposition"
+            class="w-full h-56 sm:h-64 md:h-72 lg:h-80 object-cover transition-all duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
+        </div>
+        <div class="relative bg-black/90 p-5 sm:p-6 md:p-8 rounded-b-2xl flex-1 flex flex-col">
+          <h3
+            class="text-xl sm:text-2xl font-serif font-bold text-white mb-2 sm:mb-3 group-hover:text-yellow-400 transition-colors duration-300">
+            {{ i18n.t$('index.services.card5.title') | async }}</h3>
+          <p class="text-gray-200 leading-relaxed text-sm sm:text-base mb-3 sm:mb-4 flex-1">{{
+            i18n.t$('index.services.card5.text') | async
+            }}</p>
+          <span
+            class="inline-flex items-center text-yellow-400 font-semibold text-sm group-hover:gap-2 gap-1 transition-all duration-300">
+            {{ i18n.t$('services.discover') | async }}
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+        </div>
+      </a>
+
+      <a routerLink="/partnerships"
+        class="service-item group relative overflow-visible rounded-2xl shadow-xl-hover transition-all duration-500 hover:shadow-2xl border-2 border-gray-200 transform hover:-translate-y-2 flex flex-col min-h-[400px] sm:min-h-[450px] md:min-h-[500px]">
+        <div class="relative overflow-hidden rounded-t-2xl">
+          <img src="assets/images/Partenariats.jpeg" alt="Partenariats"
+            class="w-full h-56 sm:h-64 md:h-72 lg:h-80 object-cover transition-all duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
+        </div>
+        <div class="relative bg-black/90 p-5 sm:p-6 md:p-8 rounded-b-2xl flex-1 flex flex-col">
+          <h3
+            class="text-xl sm:text-2xl font-serif font-bold text-white mb-2 sm:mb-3 group-hover:text-yellow-400 transition-colors duration-300">
+            <ng-container *ngIf="(i18n.t$('index.services.card6.title') | async) as title">
+              <span [innerHTML]="formatB2BTitle(title)"></span>
+            </ng-container>
+          </h3>
+          <p class="text-gray-200 leading-relaxed text-sm sm:text-base mb-3 sm:mb-4 flex-1">{{
+            i18n.t$('index.services.card6.text') | async
+            }}</p>
+          <span
+            class="inline-flex items-center text-yellow-400 font-semibold text-sm group-hover:gap-2 gap-1 transition-all duration-300">
+            {{ i18n.t$('services.discover') | async }}
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>

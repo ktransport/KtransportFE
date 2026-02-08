@@ -1,0 +1,412 @@
+{
+  "en": {
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "about": "About us",
+      "fleet": "Fleet",
+      "contact": "Contact",
+      "partnerships": "Partnerships"
+    },
+    "index": {
+      "hero": {
+        "title": "Ktransport — Driven by excellence",
+        "subtitle": "Premium chauffeur service for elegant travel",
+        "cta_primary": "Request a quote",
+        "cta_whatsapp": "Book via WhatsApp"
+      },
+      "services": {
+        "title": "Our services",
+        "card1": {
+          "title": "Airport Transfers",
+          "text": "Door-to-door transfers to and from the airport"
+        },
+        "card2": {
+          "title": "Business Travel",
+          "text": "On-demand trips and chauffeur at disposal for meetings"
+        },
+        "card3": {
+          "title": "Events and MICE",
+          "text": "Logistics and transport for weddings, conferences and evening events"
+        },
+        "card4": {
+          "title": "VIP and Protocol",
+          "text": "Tailored accompaniment and services for VIP guests"
+        },
+        "card5": {
+          "title": "Private Tours and Day Hire",
+          "text": "Vehicles and drivers available for full-day or half-day hires"
+        },
+        "card6": {
+          "title": "Partnerships",
+          "text": "Partner with hotels and enterprises to deliver premium transport services"
+        }
+      },
+      "features": {
+        "title": "Why choose Ktransport?",
+        "card1": {
+          "title": "Punctuality",
+          "text": "Always on time — we monitor flights and traffic to ensure prompt pickups."
+        },
+        "card2": {
+          "title": "Safety and Security",
+          "text": "Professional, trained drivers providing discreet and secure service."
+        },
+        "card3": {
+          "title": "Excellence",
+          "text": "Premium vehicles and attentive, personalized service for every trip."
+        }
+      }
+    },
+    "partnerships": {
+      "hero": {
+        "title": "Partnerships for Hotels and Enterprises",
+        "subtitle": "Collaborate with Ktransport to offer premium transport solutions to your guests and clients",
+        "cta": "Become a partner"
+      },
+      "benefits": {
+        "title": "Benefits",
+        "card1": {
+          "title": "Dedicated Fleet",
+          "text": "Access exclusive vehicles and priority booking for your clients."
+        },
+        "card2": {
+          "title": "Seamless Integration",
+          "text": "Easy booking flows and API/portal options for hotel desks and corporate travel teams."
+        },
+        "card3": {
+          "title": "Tailored Pricing",
+          "text": "Competitive rates and packages adapted to your needs."
+        }
+      },
+      "packages": {
+        "title": "Partner Packages",
+        "package1": {
+          "title": "Silver",
+          "text": "Basic priority booking and monthly billing",
+          "cta": "Request Silver"
+        },
+        "package2": {
+          "title": "Gold",
+          "text": "Dedicated account manager and volume discounts",
+          "cta": "Request Gold"
+        },
+        "package3": {
+          "title": "Platinum",
+          "text": "Full concierge integration and bespoke SLAs",
+          "cta": "Request Platinum"
+        }
+      },
+      "how": {
+        "title": "How it works",
+        "step1": {
+          "title": "Get in touch",
+          "text": "Tell us about your needs and guest volumes."
+        },
+        "step2": {
+          "title": "Set up",
+          "text": "We configure booking flows and pricing to match your operations."
+        },
+        "step3": {
+          "title": "Go live",
+          "text": "Start offering premium transport to your guests with dedicated support."
+        }
+      },
+      "logos": { "title": "Trusted by" },
+      "contact": {
+        "title": "Partner With Us",
+        "form": {
+          "company": "Company name",
+          "name": "Contact person",
+          "email": "Email",
+          "phone": "Phone",
+          "message": "Message",
+          "submit": "Send partnership request"
+        },
+        "success": "Thanks — we'll contact you shortly to discuss partnership options."
+      }
+    },
+    "about": {
+      "hero": {
+        "title": "About Ktransport",
+        "subtitle": "Our story, values and commitment to excellence"
+      },
+      "history": {
+        "title": "Our History"
+      },
+      "values": {
+        "title": "Our Values",
+        "list": ["Excellence", "Discretion", "Reliability", "Personalization"]
+      }
+    },
+    "contact": {
+      "hero": {
+        "title": "Contact Us",
+        "subtitle": "Our team is here to answer your questions"
+      },
+      "details": {
+        "address": "Address",
+        "phone": "Phone",
+        "email": "Email",
+        "hours": "Hours"
+      },
+      "form": {
+        "name": "Full name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "submit": "Send message",
+        "success": "Thank you for your message. We'll contact you shortly."
+      }
+    },
+    "fleet": {
+      "hero": {
+        "title": "Our Prestige Fleet",
+        "subtitle": "Discover our exclusive selection of high-end vehicles"
+      },
+      "book": "Book"
+    },
+    "events": {
+      "hero": {
+        "title": "Events and MICE",
+        "subtitle": "Make your special day even more magical with our premium service",
+        "cta": "Plan my event"
+      },
+      "packages": {
+        "choose": "Choose this package",
+        "popular": "Popular"
+      }
+    },
+    "transfer": {
+      "hero": {
+        "title": "Airport Transfer",
+        "subtitle": "Door-to-door transfers to and from the airport with peace of mind"
+      },
+      "book": "Send request"
+    },
+    "chauffeur": {
+      "hero": {
+        "title": "VIP and Protocol",
+        "subtitle": "Tailored support and services for VIP guests"
+      },
+      "book": "Send request"
+    },
+    "tourism": {
+      "hero": {
+        "title": "Private Tours and City Trips",
+        "subtitle": "Discover the city with style and comfort with your private driver"
+      },
+      "request_quote": "Request a quote"
+    },
+    "common": {
+      "select_language": "Language",
+      "reserve": "Reserve",
+      "select": "Select"
+    }
+  },
+  "fr": {
+    "nav": {
+      "home": "Accueil",
+      "services": "Services",
+      "about": "À propos",
+      "fleet": "Notre flotte",
+      "contact": "Contact",
+      "partnerships": "Partenariats"
+    },
+    "index": {
+      "hero": {
+        "title": "Ktransport — Driven by excellence",
+        "subtitle": "Service de chauffeur privé haut de gamme pour vos déplacements en toute élégance",
+        "cta_primary": "Demander un devis",
+        "cta_whatsapp": "Réserver via WhatsApp"
+      },
+      "services": {
+        "title": "Nos services",
+        "card1": {
+          "title": "Transfert aéroport",
+          "text": "Service porte-à-porte depuis ou vers l'aéroport"
+        },
+        "card2": {
+          "title": "Déplacements business",
+          "text": "Trajets ponctuels ou mise à disposition pour vos rendez-vous et meetings"
+        },
+        "card3": {
+          "title": "Événements et MICE",
+          "text": "Gestion logistique pour mariages, congrès et soirées"
+        },
+        "card4": {
+          "title": "VIP et Protocolaires",
+          "text": "Accompagnement et services sur-mesure pour invités d'honneur"
+        },
+        "card5": {
+          "title": "Mise à disposition",
+          "text": "Véhicules et chauffeurs disponibles à la journée ou à la demi-journée"
+        },
+        "card6": {
+          "title": "Partenariats",
+          "text": "Collaborer avec les hôtels et entreprises pour proposer un service de transport premium"
+        }
+      },
+      "features": {
+        "title": "Pourquoi choisir Ktransport ?",
+        "card1": {
+          "title": "Ponctualité",
+          "text": "Toujours à l'heure — suivi des vols et du trafic pour garantir vos prises en charge."
+        },
+        "card2": {
+          "title": "Sécurité et Fiabilité",
+          "text": "Chauffeurs professionnels, discrets et formés pour votre sécurité."
+        },
+        "card3": {
+          "title": "Excellence",
+          "text": "Véhicules haut de gamme et service personnalisé pour chaque trajet."
+        }
+      }
+    },
+    "partnerships": {
+      "hero": {
+        "title": "Partenariats pour entreprises",
+        "subtitle": "Collaborez avec Ktransport pour offrir des solutions de transport premium à vos clients",
+        "cta": "Devenir partenaire"
+      },
+      "benefits": {
+        "title": "Avantages",
+        "card1": {
+          "title": "Flotte dédiée",
+          "text": "Accès à des véhicules exclusifs et priorités de réservation pour vos clients."
+        },
+        "card2": {
+          "title": "Intégration fluide",
+          "text": "Flux de réservation simples et options API/portail pour les desks hôteliers et équipes voyages."
+        },
+        "card3": {
+          "title": "Tarification sur-mesure",
+          "text": "Tarifs compétitifs et forfaits adaptés à vos besoins."
+        }
+      },
+      "packages": {
+        "title": "Forfaits partenaires",
+        "package1": {
+          "title": "Silver",
+          "text": "Réservation prioritaire de base et facturation mensuelle",
+          "cta": "Demander Silver"
+        },
+        "package2": {
+          "title": "Gold",
+          "text": "Gestionnaire dédié et remises sur volume",
+          "cta": "Demander Gold"
+        },
+        "package3": {
+          "title": "Platinum",
+          "text": "Intégration concierge complète et SLA personnalisés",
+          "cta": "Demander Platinum"
+        }
+      },
+      "how": {
+        "title": "Comment ça marche",
+        "step1": {
+          "title": "Contactez-nous",
+          "text": "Présentez vos besoins et volumes clients."
+        },
+        "step2": {
+          "title": "Mise en place",
+          "text": "Nous configurons les flux de réservation et les tarifs selon vos opérations."
+        },
+        "step3": {
+          "title": "Lancement",
+          "text": "Proposez le service à vos clients avec un support dédié."
+        }
+      },
+      "logos": { "title": "Ils nous font confiance" },
+      "contact": {
+        "title": "Devenez partenaire",
+        "form": {
+          "company": "Nom de l'entreprise",
+          "name": "Personne à contacter",
+          "email": "Email",
+          "phone": "Téléphone",
+          "message": "Message",
+          "submit": "Envoyer la demande de partenariat"
+        },
+        "success": "Merci — nous vous contacterons rapidement pour discuter des options de partenariat."
+      }
+    },
+    "about": {
+      "hero": {
+        "title": "À propos de Ktransport",
+        "subtitle": "Notre histoire, nos valeurs et notre engagement envers l'excellence"
+      },
+      "history": {
+        "title": "Notre histoire"
+      },
+      "values": {
+        "title": "Nos valeurs",
+        "list": ["Excellence", "Discrétion", "Fiabilité", "Personnalisation"]
+      }
+    },
+    "contact": {
+      "hero": {
+        "title": "Contactez-nous",
+        "subtitle": "Notre équipe est à votre écoute pour répondre à toutes vos questions"
+      },
+      "details": {
+        "address": "Adresse",
+        "phone": "Téléphone",
+        "email": "Email",
+        "hours": "Horaires"
+      },
+      "form": {
+        "name": "Nom complet",
+        "email": "Email",
+        "subject": "Sujet",
+        "message": "Message",
+        "submit": "Envoyer le message",
+        "success": "Merci pour votre message. Nous vous contacterons rapidement."
+      }
+    },
+    "fleet": {
+      "hero": {
+        "title": "Notre flotte de prestige",
+        "subtitle": "Découvrez notre sélection exclusive de véhicules haut de gamme"
+      },
+      "book": "Réserver"
+    },
+    "events": {
+      "hero": {
+        "title": "Evenements et MICE",
+        "subtitle": "Faites de votre grand jour un moment encore plus magique avec notre service premium",
+        "cta": "Planifier mon Evenements"
+      },
+      "packages": {
+        "choose": "Choisir cette offre",
+        "popular": "Populaire"
+      }
+    },
+    "transfer": {
+      "hero": {
+        "title": "Transfert Aéroport",
+        "subtitle": "Service porte-à-porte depuis ou vers l'aéroport en toute tranquillité"
+      },
+      "book": "Envoyer la demande"
+    },
+    "chauffeur": {
+      "hero": {
+        "title": "VIP et Protocolaires",
+        "subtitle": "Accompagnement et services sur-mesure pour invités d'honneur"
+      },
+      "book": "Envoyer la demande"
+    },
+    "tourism": {
+      "hero": {
+        "title": "Mise a disposition",
+        "subtitle": "Découvrez la ville avec style et comfort avec votre chauffeur privé"
+      },
+      "request_quote": "Demander un devis"
+    },
+    "common": {
+      "select_language": "Langue",
+      "reserve": "Réserver",
+      "select": "Sélectionner"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+:host {
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.service-item {
+  cursor: pointer;
+  flex-shrink: 0; // Prevent items from shrinking
+  min-width: 0; // Allow flex items to shrink below their minimum content size
+}
+
+/* Prevent images from disappearing or compressing on smaller screens */
+img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
+  display: block; // Ensure image is displayed
+}
+
+@media (max-width: 768px) {
+  img {
+    min-height: 200px; // Ensure minimum height on mobile
+  }
+}
+
+@media (max-width: 480px) {
+  img {
+    min-height: 180px; // Smaller minimum height for very small screens
+  }
+}
+
+/* Responsive banner image for mobile - will use banner-mobile.png when available */
+.banner-bg {
+  @media (max-width: 768px) {
+    background-image: url('~src/assets/images/banner-mobile.png') !important;
+  }
+}
+
+/* Move hero content up */
+.fleet-hero-content {
+  margin-top: -2rem;
+
+  @media (min-width: 640px) {
+    margin-top: -3rem;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: -4rem;
+  }
+}

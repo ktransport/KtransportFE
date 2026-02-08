@@ -1,0 +1,39 @@
+:host {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Responsive banner image for mobile - will use banner-mobile.png when available */
+.banner-bg {
+  @media (max-width: 768px) {
+    background-image: url('~src/assets/images/banner-mobile.png') !important;
+  }
+}
+
+/* Move hero content up */
+.partnerships-hero-content {
+  margin-top: -2rem;
+
+  @media (min-width: 640px) {
+    margin-top: -3rem;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: -4rem;
+  }
+}

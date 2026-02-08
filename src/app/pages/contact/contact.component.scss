@@ -1,0 +1,192 @@
+:host {
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.contact-label {
+  color: var(--primary);
+}
+
+.contact-text {
+  color: var(--primary);
+}
+
+.contact-title {
+  color: var(--primary);
+}
+
+.contact-input {
+  border-color: var(--lang-border);
+  background-color: var(--lang-bg);
+  color: white;
+}
+
+/* Ensure map zoom controls don't overlap with navbar */
+#map {
+  position: relative;
+}
+
+/* Set z-index for Leaflet controls to be below navbar (navbar is z-index 1000+) */
+:host ::ng-deep .leaflet-control-container {
+  z-index: 400;
+}
+
+:host ::ng-deep .leaflet-top,
+:host ::ng-deep .leaflet-bottom {
+  z-index: 400;
+}
+
+:host ::ng-deep .leaflet-control {
+  z-index: 400;
+}
+
+/* Position Leaflet zoom controls at bottom to avoid navbar */
+:host ::ng-deep .leaflet-bottom.leaflet-right {
+  bottom: 10px;
+  right: 10px;
+}
+
+:host ::ng-deep .leaflet-bottom.leaflet-left {
+  bottom: 10px;
+  left: 10px;
+}
+
+/* Responsive Leaflet Popup Styles */
+:host ::ng-deep .custom-popup {
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 2px solid #f3f4f6;
+  min-width: 200px !important;
+  width: auto !important;
+}
+
+:host ::ng-deep .custom-popup .leaflet-popup-content-wrapper {
+  border-radius: 10px;
+  padding: 0;
+  box-shadow: none;
+  min-width: 200px !important;
+  width: auto !important;
+}
+
+:host ::ng-deep .custom-popup .leaflet-popup-content {
+  margin: 0 !important;
+  padding: 12px 16px !important;
+  min-width: 200px !important;
+  max-width: 280px !important;
+  width: auto !important;
+  display: block !important;
+  box-sizing: border-box !important;
+}
+
+:host ::ng-deep .custom-popup .popup-content {
+  text-align: left;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+:host ::ng-deep .custom-popup .popup-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 6px 0;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  display: block;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+:host ::ng-deep .custom-popup .popup-address {
+  font-size: 12px;
+  color: #374151;
+  margin: 0;
+  line-height: 1.5;
+  word-wrap: break-word;
+  white-space: normal;
+  display: block;
+}
+
+/* Responsive popup for larger screens */
+@media (min-width: 640px) {
+  :host ::ng-deep .custom-popup {
+    min-width: 240px !important;
+    max-width: 320px !important;
+  }
+
+  :host ::ng-deep .custom-popup .leaflet-popup-content-wrapper {
+    min-width: 240px !important;
+  }
+
+  :host ::ng-deep .custom-popup .leaflet-popup-content {
+    padding: 16px 20px !important;
+    min-width: 240px !important;
+    max-width: 320px !important;
+  }
+
+  :host ::ng-deep .custom-popup .popup-title {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  :host ::ng-deep .custom-popup .popup-address {
+    font-size: 14px;
+  }
+}
+
+/* Responsive popup for medium screens and up */
+@media (min-width: 768px) {
+  :host ::ng-deep .custom-popup {
+    min-width: 260px !important;
+    max-width: 350px !important;
+  }
+
+  :host ::ng-deep .custom-popup .leaflet-popup-content-wrapper {
+    min-width: 260px !important;
+  }
+
+  :host ::ng-deep .custom-popup .leaflet-popup-content {
+    padding: 18px 24px !important;
+    min-width: 260px !important;
+    max-width: 350px !important;
+  }
+
+  :host ::ng-deep .custom-popup .popup-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  :host ::ng-deep .custom-popup .popup-address {
+    font-size: 15px;
+  }
+}
+
+/* Popup tip styling */
+:host ::ng-deep .custom-popup .leaflet-popup-tip {
+  background: white;
+  border: 2px solid #f3f4f6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive banner image for mobile - will use banner-mobile.png when available */
+.banner-bg {
+  @media (max-width: 768px) {
+    background-image: url('~src/assets/images/banner-mobile.png') !important;
+  }
+}
+
+/* Move hero content up */
+.contact-hero-content {
+  margin-top: -2rem;
+
+  @media (min-width: 640px) {
+    margin-top: -3rem;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: -4rem;
+  }
+}

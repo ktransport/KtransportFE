@@ -1,0 +1,61 @@
+=== PARAGRAPH PLACEMENT MAPPING ===
+
+Based on the text you provided, here's where each paragraph should be placed:
+
+POSITION 1: "Présentation Ktransport" (Title)
+POSITION 2: [EMPTY]
+POSITION 3: [EMPTY]
+POSITION 4: "Depuis 2009, Ktransport s'est distinguée comme une référence du transport premium et corporate principalement sur l'ile de France et la Côte d'Azur. Forte de plus de quinze années d'expertise, la société accompagne une clientèle exigeante — entreprises, diplomates, touristes haut de gamme et événements internationaux — avec un engagement constant : excellence, sécurité, discrétion et   ponctualité." (French Introduction)
+POSITION 5: "Since 2009, Ktransport has distinguished itself as a benchmark in premium and corporate transportation throughout the Île-de-France region and the French Riviera. With over fifteen years of refined expertise, the company supports a discerning and international clientele — from corporate leaders and diplomatic delegations to luxury travelers and world-class events — upheld by an unwavering commitment to excellence, safety, discretion, and absolute punctuality." (English Introduction)
+POSITION 6: [EMPTY]
+POSITION 7: [EMPTY]
+POSITION 8: "Ktransport – Version  (FR/EN)" (Section Header)
+POSITION 9: [EMPTY]
+POSITION 10: [EMPTY]
+
+--- SERVICE 1: Business / Corporate ---
+POSITION 11: "Business / Corporate" (Service Title)
+POSITION 12: "FR" (Label)
+POSITION 13: "Des déplacements d'affaires précis, discrets et parfaitement orchestrés, conçus pour dirigeants et professionnels exigeants." (French Description)
+POSITION 14: "EN" (Label)
+POSITION 15: "Precise, discreet and seamlessly managed business travel, crafted for executives and discerning professionals." (English Description)
+POSITION 16: [EMPTY]
+
+--- SERVICE 2: Événementiel & MICE ---
+POSITION 17: "Événementiel & MICE" (Service Title)
+POSITION 18: "FR" (Label)
+POSITION 19: "Une coordination élégante et fluide pour vos congrès, séminaires et événements corporate, avec une prise en charge irréprochable de vos invités et VIP." (French Description)
+POSITION 20: "EN" (Label)
+POSITION 21: "Elegant, smooth coordination for conferences, seminars and corporate events, with impeccable care for your guests and VIPs." (English Description)
+POSITION 22: [EMPTY]
+
+--- SERVICE 3: Transferts Aéroport ---
+POSITION 23: "Transferts Aéroport" (Service Title)
+POSITION 24: "FR" (Label)
+POSITION 25: "Accueil premium, suivi des vols et transferts sans attente pour une arrivée sereine et raffinée." (French Description)
+POSITION 26: "EN" (Label)
+POSITION 27: "Premium meet-and-greet, real-time flight monitoring and seamless transfers for a refined and stress-free arrival." (English Description)
+POSITION 28: [EMPTY]
+
+--- SERVICE 4: VIP & Protocolaires ---
+POSITION 29: "VIP & Protocolaires" (Service Title)
+POSITION 30: "FR" (Label)
+POSITION 31: "Un service d'exception dédié aux personnalités et missions sensibles, alliant confidentialité, précision et traitement prioritaire." (French Description)
+POSITION 32: "EN" (Label)
+POSITION 33: "An exceptional service for high-profile clients and sensitive missions, offering confidentiality, precision and priority handling." (English Description)
+POSITION 34: [EMPTY]
+
+--- SERVICE 5: Mise à Disposition ---
+POSITION 35: "Mise à Disposition" (Service Title)
+POSITION 36: "FR" (Label)
+POSITION 37: "Un chauffeur privé disponible à tout moment, alliant flexibilité, confort et discrétion." (French Description)
+POSITION 38: "EN" (Label)
+POSITION 39: "A private chauffeur at your disposal, providing flexibility, comfort and discreet attention." (English Description)
+POSITION 40: [EMPTY]
+
+--- SERVICE 6: Partenariats B2B ---
+POSITION 41: "Partenariats B2B" (Service Title)
+POSITION 42: "FR" (Label)
+POSITION 43: "Des solutions sur mesure pour hôtels, agences et entreprises souhant une mobilité haut de gamme et fiable." (French Description)
+POSITION 44: "EN" (Label)
+POSITION 45: "Tailored solutions for hotels, agencies and corporations seeking dependable, premium mobility services." (English Description)

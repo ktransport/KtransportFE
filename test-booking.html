@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Workflow Test Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #f0c040;
+            padding-bottom: 10px;
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-left: 4px solid #f0c040;
+            border-radius: 4px;
+        }
+        .test-section h2 {
+            margin-top: 0;
+            color: #555;
+        }
+        .test-link {
+            display: block;
+            padding: 12px 20px;
+            margin: 10px 0;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .test-link:hover {
+            background: #45a049;
+        }
+        .test-link.error {
+            background: #f44336;
+        }
+        .test-link.error:hover {
+            background: #da190b;
+        }
+        .test-link.info {
+            background: #2196F3;
+        }
+        .test-link.info:hover {
+            background: #0b7dda;
+        }
+        .description {
+            color: #666;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .note strong {
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Booking Workflow Test Links</h1>
+        
+        <div class="note">
+            <strong>Note:</strong> Make sure the Angular dev server is running on <code>http://localhost:4200</code>
+            <br>Start it with: <code>npm start</code>
+        </div>
+
+        <div class="test-section">
+            <h2>1️⃣ Start New Booking (Gateway 1)</h2>
+            <a href="http://localhost:4200/services" class="test-link">
+                📋 Services Page
+            </a>
+            <div class="description">Click any service card to start booking</div>
+            
+            <a href="http://localhost:4200/booking?service=transfer" class="test-link info">
+                ✈️ Airport Transfer Booking
+            </a>
+            <div class="description">Direct link to transfer booking form</div>
+            
+            <a href="http://localhost:4200/booking?service=events" class="test-link info">
+                🎉 Events & MICE Booking
+            </a>
+            
+            <a href="http://localhost:4200/booking?service=tourism" class="test-link info">
+                🗺️ Tourism Booking
+            </a>
+        </div>
+
+        <div class="test-section">
+            <h2>2️⃣ Test with Valid Token (Gateway 2)</h2>
+            <a href="http://localhost:4200/transfer?token=test-token-valid-12345" class="test-link">
+                ✅ Valid Token - Transfer Form
+            </a>
+            <div class="description">Form should be pre-populated with: John Doe, john.doe@example.com</div>
+            
+            <a href="http://localhost:4200/events?token=test-token-valid-12345" class="test-link">
+                ✅ Valid Token - Events Form
+            </a>
+            
+            <a href="http://localhost:4200/tourism?token=test-token-valid-12345" class="test-link">
+                ✅ Valid Token - Tourism Form
+            </a>
+        </div>
+
+        <div class="test-section">
+            <h2>3️⃣ Test Error Scenarios</h2>
+            <a href="http://localhost:4200/transfer?token=test-token-expired-12345" class="test-link error">
+                ⏰ Expired Token
+            </a>
+            <div class="description">Should show "Link Expired" error</div>
+            
+            <a href="http://localhost:4200/transfer?token=test-token-used-12345" class="test-link error">
+                🔄 Used Token
+            </a>
+            <div class="description">Should show "Link Already Used" error</div>
+            
+            <a href="http://localhost:4200/transfer?token=invalid-token-12345" class="test-link error">
+                ❌ Invalid Token
+            </a>
+            <div class="description">Should show "Link Not Found" error</div>
+            
+            <a href="http://localhost:4200/transfer" class="test-link error">
+                🚫 No Token (Direct Access)
+            </a>
+            <div class="description">Should redirect to booking gateway</div>
+        </div>
+
+        <div class="test-section">
+            <h2>4️⃣ Booking Status</h2>
+            <a href="http://localhost:4200/booking-status/BK-2024-001234" class="test-link info">
+                📊 View Booking Status
+            </a>
+            <div class="description">Check status of booking BK-2024-001234</div>
+        </div>
+
+        <div class="test-section">
+            <h2>5️⃣ Other Pages</h2>
+            <a href="http://localhost:4200/" class="test-link">
+                🏠 Home Page
+            </a>
+            <a href="http://localhost:4200/services" class="test-link">
+                📋 Services Page
+            </a>
+            <a href="http://localhost:4200/contact" class="test-link">
+                📧 Contact Page
+            </a>
+        </div>
+
+        <div class="note" style="margin-top: 30px;">
+            <strong>Testing Checklist:</strong>
+            <ul>
+                <li>✅ Server running on port 4200</li>
+                <li>✅ No console errors</li>
+                <li>✅ Mock API calls visible in Network tab</li>
+                <li>✅ Forms validate correctly</li>
+                <li>✅ Token validation works</li>
+                <li>✅ Error handling works</li>
+                <li>✅ Translations display correctly</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+

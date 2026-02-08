@@ -1,0 +1,221 @@
+<!-- Hero Section with Slideshow -->
+<section class="relative flex items-center justify-center bg-black overflow-hidden min-h-screen">
+  <div class="absolute inset-0 bg-black opacity-60 z-10"></div>
+
+  <!-- Background Slideshow -->
+  <div class="absolute inset-0 z-0">
+    <div class="hero-slide bg-cover bg-center absolute inset-0 transition-opacity duration-1000"
+      [style.background-image]="'url(https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1920&h=1080&fit=crop)'"
+      [style.opacity]="'1'" data-slide="0"></div>
+    <div class="hero-slide bg-cover bg-center absolute inset-0 transition-opacity duration-1000"
+      [style.background-image]="'url(https://images.unsplash.com/photo-1549144511-f099e773c147?w=1920&h=1080&fit=crop)'"
+      [style.opacity]="'0'" data-slide="1"></div>
+    <div class="hero-slide bg-cover bg-center absolute inset-0 transition-opacity duration-1000"
+      [style.background-image]="'url(https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1920&h=1080&fit=crop)'"
+      [style.opacity]="'0'" data-slide="2"></div>
+    <div class="hero-slide bg-cover bg-center absolute inset-0 transition-opacity duration-1000"
+      [style.background-image]="'url(assets/images/Promenade-Des-Anglais.jpg)'" [style.opacity]="'0'" data-slide="3">
+    </div>
+  </div>
+
+  <div class="container mx-auto px-4 sm:px-6 z-20 text-center">
+    <h1
+      class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-white mb-8 sm:mb-10 md:mb-12 animate-fadeIn">
+      <div>Ktransport</div>
+    </h1>
+    <div
+      class="hero-tagline text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-5xl font-serif leading-tight animate-fadeIn"
+      style="animation-delay: 0.2s;">
+      <div class="text-white mb-2 sm:mb-3" *ngIf="(i18n.t$('index.hero.tagline.part1') | async) as part1">{{ part1 }}
+      </div>
+      <div class="hero-tagline-golden relative inline-block"
+        *ngIf="(i18n.t$('index.hero.tagline.part2') | async) as part2">
+        <span class="text-yellow-500 italic font-serif relative z-10">{{ part2 }}</span>
+        <span class="hero-golden-line-base"></span>
+        <span class="hero-golden-line-swoosh"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-50" appFadeIn>
+  <div class="container mx-auto px-4 sm:px-6">
+    <h2
+      class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-center mb-4 sm:mb-6 section-heading">
+      {{ i18n.t$('index.features.title') | async }}
+    </h2>
+    <p class="text-center text-gray-600 mb-8 sm:mb-12 md:mb-16 max-w-2xl mx-auto text-base sm:text-lg px-2">
+      {{ i18n.t$('index.features.subtitle') | async }}
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10">
+      <div
+        class="feature-card p-6 sm:p-8 md:p-10 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100">
+        <div class="text-yellow-500 mb-4 sm:mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16" fill="currentColor"
+            viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" fill="none" stroke="currentColor" stroke-width="2" />
+          </svg>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">{{ i18n.t$('index.features.card1.title') | async }}</h3>
+        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">{{ i18n.t$('index.features.card1.text') | async }}
+        </p>
+      </div>
+
+      <div
+        class="feature-card p-6 sm:p-8 md:p-10 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100">
+        <div class="text-yellow-500 mb-4 sm:mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16" viewBox="0 0 24 24">
+            <rect x="6" y="11" width="12" height="10" rx="1" fill="currentColor" />
+            <path d="M8 11V7c0-2.21 1.79-4 4-4s4 1.79 4 4v4" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">{{ i18n.t$('index.features.card2.title') | async }}</h3>
+        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">{{ i18n.t$('index.features.card2.text') | async }}
+        </p>
+      </div>
+
+      <div
+        class="feature-card p-6 sm:p-8 md:p-10 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100">
+        <div class="text-yellow-500 mb-4 sm:mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16" fill="currentColor"
+            viewBox="0 0 24 24">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+          </svg>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">{{ i18n.t$('index.features.card3.title') | async }}</h3>
+        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">{{ i18n.t$('index.features.card3.text') | async }}
+        </p>
+      </div>
+
+      <div
+        class="feature-card p-6 sm:p-8 md:p-10 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100">
+        <div class="text-yellow-500 mb-4 sm:mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16" fill="currentColor"
+            viewBox="0 0 24 24">
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
+            <path d="M9 12l2 2 4-4" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+              fill="none" />
+          </svg>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">{{ i18n.t$('index.features.card4.title') | async }}</h3>
+        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">{{ i18n.t$('index.features.card4.text') | async }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-24 bg-white" appFadeIn>
+  <div class="container mx-auto px-6 max-w-7xl">
+    <h2 class="text-4xl md:text-5xl font-serif font-bold text-center mb-6 section-heading">{{
+      i18n.t$('index.testimonials.title') | async }}</h2>
+    <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto text-lg">
+      {{ i18n.t$('index.testimonials.subtitle') | async }}
+    </p>
+
+    <!-- Testimonials Carousel -->
+    <div class="relative">
+      <!-- Carousel Container -->
+      <div class="mb-8">
+        <!-- Carousel Track -->
+        <div class="overflow-x-auto px-4 md:px-16 py-8 md:py-12 scroll-smooth hide-scrollbar snap-x snap-mandatory"
+          #testimonialCarousel (scroll)="onScroll()">
+          <div class="flex" [style.gap]="cardGap + 'px'">
+            <div *ngFor="let testimonial of testimonials; let i = index" (click)="onCardClick(i)"
+              class="testimonial-card bg-white p-6 md:p-8 rounded-2xl shadow-xl border-2 transition-all duration-300 hover:shadow-2xl flex flex-col flex-shrink-0 self-start cursor-pointer snap-center"
+              [class.border-yellow-400]="selectedCardIndex === i" [class.border-gray-100]="selectedCardIndex !== i"
+              [class.ring-2]="selectedCardIndex === i" [class.ring-yellow-300]="selectedCardIndex === i"
+              [class.ring-opacity-50]="selectedCardIndex === i"
+              [class.hover:border-yellow-400]="selectedCardIndex !== i" [style.width]="cardWidth + 'px'">
+              <div class="flex items-center mb-4">
+                <div class="flex text-yellow-500 space-x-1">
+                  <svg *ngFor="let i of [1,2,3,4,5]" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    class="md:w-[18px] md:h-[18px] flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                </div>
+              </div>
+              <p class="text-gray-700 italic mb-6 leading-relaxed text-sm md:text-base break-words">
+                "{{ testimonial.text }}"
+              </p>
+              <div class="flex items-center pt-4 border-t border-gray-100 mt-auto">
+                <div
+                  class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-yellow-100 to-yellow-200 mr-3 md:mr-4 overflow-hidden ring-2 ring-yellow-400/30 flex items-center justify-center flex-shrink-0">
+                  <span class="text-yellow-600 font-bold text-base md:text-lg">{{ testimonial.initials }}</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <h4 class="font-bold text-base md:text-lg text-gray-900 break-words">{{ testimonial.name }}</h4>
+                  <p class="text-xs md:text-sm text-gray-600 break-words" *ngIf="testimonial.position">{{
+                    testimonial.position }}</p>
+                  <p class="text-xs text-gray-500 mt-1 break-words">{{ testimonial.company }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Arrows - Discreet Design -->
+        <div class="flex justify-center items-center gap-4 mt-6">
+          <button type="button" (click)="goToPrev()"
+            class="group w-10 h-10 md:w-11 md:h-11 bg-white/60 backdrop-blur-sm rounded-full border border-gray-200/50 flex items-center justify-center hover:bg-white/80 hover:border-gray-300/70 transition-all duration-300"
+            aria-label="Previous testimonial">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor"
+              stroke-width="2" class="text-gray-500 group-hover:text-gray-700 transition-colors duration-300"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button type="button" (click)="goToNext()"
+            class="group w-10 h-10 md:w-11 md:h-11 bg-white/60 backdrop-blur-sm rounded-full border border-gray-200/50 flex items-center justify-center hover:bg-white/80 hover:border-gray-300/70 transition-all duration-300"
+            aria-label="Next testimonial">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor"
+              stroke-width="2" class="text-gray-500 group-hover:text-gray-700 transition-colors duration-300"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Animated Golden Line Section -->
+<section class="relative py-24 md:py-32 bg-black overflow-hidden" appFadeIn>
+  <div class="container mx-auto px-4 sm:px-6 text-center relative z-10">
+    <!-- Text with Line Piercing Through -->
+    <div class="relative cta-text-container">
+      <!-- Text wrapper - centered -->
+      <div class="cta-text-wrapper text-center relative">
+        <div class="cta-line-1 text-white font-serif">
+          <ng-container *ngIf="(i18n.t$('index.cta.title') | async) as title">
+            {{ title.split(',')[0] }},
+          </ng-container>
+        </div>
+        <div class="cta-line-2-wrapper relative">
+          <div class="cta-line-2 text-white font-serif italic relative z-20">
+            <ng-container *ngIf="(i18n.t$('index.cta.title') | async) as title">
+              {{ title.split(',').slice(1).join(',').trim() }}
+            </ng-container>
+          </div>
+
+          <!-- Golden line piercing through façonné pour vous -->
+          <div class="bottom-golden-line-full-container absolute left-1/2 -translate-x-1/2"
+            style="top: 80%; width: 100vw; max-width: 1400px;">
+            <!-- Base line -->
+            <div class="bottom-golden-line-base"></div>
+            <!-- Animated glowing streak -->
+            <div class="bottom-golden-line-swoosh"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

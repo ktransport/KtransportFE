@@ -1,0 +1,194 @@
+<!-- Hero Section -->
+<section class="relative h-[400px] flex items-start justify-center bg-gray-900 overflow-hidden w-full pt-12 sm:pt-16 md:pt-20" style="margin-top: 70px; width: 100vw; margin-left: calc(-50vw + 50%);">
+  <div class="absolute inset-0 bg-black opacity-60 z-10"></div>
+  <div class="absolute inset-0 bg-center booking-hero-bg"></div>
+  <div class="container mx-auto px-6 z-20 text-center booking-hero-content">
+    <h1 class="text-4xl md:text-5xl font-serif font-extrabold text-white mb-4 leading-tight tracking-wide">
+      {{ i18n.t$('booking.gateway1.title') | async }}
+    </h1>
+    <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+      {{ i18n.t$('booking.gateway1.subtitle') | async }}
+    </p>
+  </div>
+</section>
+
+<!-- Booking Form Section -->
+<section class="py-24 bg-gray-50">
+  <div class="container mx-auto px-6 max-w-2xl">
+    <div class="luxury-card-alt p-10">
+      <div class="mb-8">
+        <div class="flex items-center justify-center mb-4">
+          <div class="flex items-center space-x-2">
+            <div class="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center text-gray-900 font-bold">
+              1
+            </div>
+            <div class="h-1 w-20 bg-gray-300"></div>
+            <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-bold">
+              2
+            </div>
+          </div>
+        </div>
+        <p class="text-center text-gray-600 mb-2">
+          {{ i18n.t$('booking.gateway1.step_indicator') | async }}
+        </p>
+      </div>
+
+      <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()" class="space-y-6">
+        <!-- Service Type (Hidden) -->
+        <input type="hidden" [value]="serviceType" formControlName="serviceType">
+
+        <!-- Full Name -->
+        <div>
+          <label for="fullName" class="block text-sm font-semibold mb-3 text-gray-900">
+            {{ i18n.t$('booking.gateway1.fullName') | async }}
+            <span class="text-red-500">*</span>
+          </label>
+          <input
+            type="text"
+            id="fullName"
+            formControlName="fullName"
+            class="form-input w-full"
+            [class.border-red-500]="bookingForm.get('fullName')?.invalid && bookingForm.get('fullName')?.touched">
+          <p *ngIf="bookingForm.get('fullName')?.invalid && bookingForm.get('fullName')?.touched" 
+             class="mt-1 text-sm text-red-600">
+            {{ i18n.t$('booking.gateway1.errors.required') | async }}
+          </p>
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="block text-sm font-semibold mb-3 text-gray-900">
+            {{ i18n.t$('booking.gateway1.email') | async }}
+            <span class="text-red-500">*</span>
+          </label>
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            class="form-input w-full"
+            [class.border-red-500]="bookingForm.get('email')?.invalid && bookingForm.get('email')?.touched">
+          <p *ngIf="bookingForm.get('email')?.hasError('required') && bookingForm.get('email')?.touched" 
+             class="mt-1 text-sm text-red-600">
+            {{ i18n.t$('booking.gateway1.errors.required') | async }}
+          </p>
+          <p *ngIf="bookingForm.get('email')?.hasError('email') && bookingForm.get('email')?.touched" 
+             class="mt-1 text-sm text-red-600">
+            {{ i18n.t$('booking.gateway1.errors.invalid_email') | async }}
+          </p>
+        </div>
+
+        <!-- Phone -->
+        <div>
+          <label for="phone" class="block text-sm font-semibold mb-3 text-gray-900">
+            {{ i18n.t$('booking.gateway1.phone') | async }}
+            <span class="text-red-500">*</span>
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            formControlName="phone"
+            class="form-input w-full"
+            [placeholder]="(i18n.t$('booking.gateway1.phone_placeholder') | async)"
+            [class.border-red-500]="bookingForm.get('phone')?.invalid && bookingForm.get('phone')?.touched">
+          <p *ngIf="bookingForm.get('phone')?.invalid && bookingForm.get('phone')?.touched" 
+             class="mt-1 text-sm text-red-600">
+            {{ i18n.t$('booking.gateway1.errors.required') | async }}
+          </p>
+        </div>
+
+        <!-- Preferred Contact Method -->
+        <div>
+          <label class="block text-sm font-semibold mb-3 text-gray-900">
+            {{ i18n.t$('booking.gateway1.preferredContact') | async }}
+            <span class="text-red-500">*</span>
+          </label>
+          <div class="space-y-3">
+            <label class="flex items-center p-4 border-2 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors"
+                   [class.border-yellow-500]="bookingForm.get('preferredContact')?.value === 'whatsapp'"
+                   [class.border-gray-300]="bookingForm.get('preferredContact')?.value !== 'whatsapp'">
+              <input type="radio" formControlName="preferredContact" value="whatsapp" class="mr-3">
+              <div class="flex-1">
+                <span class="font-semibold">{{ i18n.t$('booking.gateway1.whatsapp') | async }}</span>
+                <p class="text-sm text-gray-600">{{ i18n.t$('booking.gateway1.whatsapp_desc') | async }}</p>
+              </div>
+            </label>
+            <label class="flex items-center p-4 border-2 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors"
+                   [class.border-yellow-500]="bookingForm.get('preferredContact')?.value === 'telegram'"
+                   [class.border-gray-300]="bookingForm.get('preferredContact')?.value !== 'telegram'">
+              <input type="radio" formControlName="preferredContact" value="telegram" class="mr-3">
+              <div class="flex-1">
+                <span class="font-semibold">{{ i18n.t$('booking.gateway1.telegram') | async }}</span>
+                <p class="text-sm text-gray-600">{{ i18n.t$('booking.gateway1.telegram_desc') | async }}</p>
+              </div>
+            </label>
+            <label class="flex items-center p-4 border-2 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors"
+                   [class.border-yellow-500]="bookingForm.get('preferredContact')?.value === 'email'"
+                   [class.border-gray-300]="bookingForm.get('preferredContact')?.value !== 'email'">
+              <input type="radio" formControlName="preferredContact" value="email" class="mr-3">
+              <div class="flex-1">
+                <span class="font-semibold">{{ i18n.t$('booking.gateway1.email_contact') | async }}</span>
+                <p class="text-sm text-gray-600">{{ i18n.t$('booking.gateway1.email_desc') | async }}</p>
+              </div>
+            </label>
+          </div>
+          <p *ngIf="bookingForm.get('preferredContact')?.invalid && bookingForm.get('preferredContact')?.touched" 
+             class="mt-1 text-sm text-red-600">
+            {{ i18n.t$('booking.gateway1.errors.required') | async }}
+          </p>
+        </div>
+
+        <!-- Submit Button -->
+        <button
+          type="submit"
+          [disabled]="!bookingForm.valid || isSubmitting"
+          class="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed">
+          <span *ngIf="!isSubmitting">{{ i18n.t$('booking.gateway1.submit') | async }}</span>
+          <span *ngIf="isSubmitting" class="flex items-center justify-center">
+            <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            {{ i18n.t$('booking.gateway1.submitting') | async }}
+          </span>
+        </button>
+
+        <!-- Error Message -->
+        <div *ngIf="submitError" class="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+          <p class="text-red-800 text-sm">{{ submitError }}</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Success Modal -->
+<div *ngIf="submitSuccess" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+  <div class="bg-white rounded-xl p-8 max-w-md w-full">
+    <div class="text-center mb-6">
+      <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </div>
+      <h3 class="text-2xl font-serif font-bold text-gray-900 mb-2">
+        {{ i18n.t$('booking.gateway1.success.title') | async }}
+      </h3>
+      <p class="text-gray-600 mb-4">
+        {{ i18n.t$('booking.gateway1.success.message') | async }}
+      </p>
+      <div *ngIf="bookingId" class="bg-gray-50 p-4 rounded-lg mb-4">
+        <p class="text-sm text-gray-600 mb-1">{{ i18n.t$('booking.gateway1.success.bookingId') | async }}</p>
+        <p class="text-lg font-mono font-bold text-gray-900">{{ bookingId }}</p>
+      </div>
+      <p class="text-sm text-gray-600 mb-6">
+        {{ i18n.t$('booking.gateway1.success.next_steps') | async }}
+      </p>
+      <button
+        (click)="goToHome()"
+        class="btn-primary w-full">
+        {{ i18n.t$('booking.gateway1.success.close') | async }}
+      </button>
+    </div>
+  </div>
+</div>
+

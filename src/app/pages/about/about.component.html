@@ -1,0 +1,126 @@
+<!-- Hero Section -->
+<section class="relative flex items-start justify-center bg-gray-900 overflow-hidden w-full pt-12 sm:pt-16 md:pt-20"
+  style="margin-top: 120px; width: 100vw; margin-left: calc(-50vw + 50%); height: clamp(300px, 60vh, 700px);">
+  <div class="absolute inset-0 bg-black opacity-60 z-10"></div>
+  <div class="absolute inset-0 banner-bg"
+    style="background-image: url('assets/images/banner.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  </div>
+  <div class="container mx-auto px-4 sm:px-6 z-20 text-center about-hero-content">
+    <h1
+      class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-extrabold text-white mb-4 sm:mb-6 leading-tight tracking-wide px-2">
+      {{
+      i18n.t$('about.hero.title') | async }}</h1>
+    <p
+      class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
+      {{
+      i18n.t$('about.hero.subtitle') | async }}</p>
+  </div>
+</section>
+
+<!-- About Content -->
+<section class="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 max-w-6xl">
+    <!-- History & Mission Section -->
+    <div class="space-y-8 sm:space-y-12 md:space-y-16 mb-16 sm:mb-20 md:mb-24">
+      <!-- History Card -->
+      <div class="luxury-card p-4 min-[475px]:p-5 sm:p-6 md:p-8 lg:p-10">
+        <h2
+          class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900 section-heading">
+          {{ i18n.t$('about.history.title') | async }}
+        </h2>
+        <p class="mb-4 sm:mb-6 text-gray-700 leading-relaxed text-base sm:text-lg">
+          {{ i18n.t$('about.history.text1') | async }}
+        </p>
+      </div>
+
+      <!-- Mission Card -->
+      <div class="luxury-card p-4 min-[475px]:p-5 sm:p-6 md:p-8 lg:p-10">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-4 sm:mb-6 text-gray-900 section-heading">
+          {{ i18n.t$('about.mission.title') | async }}
+        </h2>
+        <p class="text-gray-700 leading-relaxed text-base sm:text-lg">
+          {{ i18n.t$('about.mission.text') | async }}
+        </p>
+      </div>
+    </div>
+
+    <!-- Values Section -->
+    <div class="grid md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
+      <div class="order-2 md:order-1 relative group">
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-2xl transform -rotate-3 group-hover:-rotate-6 transition-transform duration-300 opacity-20">
+        </div>
+        <img src="assets/images/NosValeursPhoto.jpg" alt="Nos valeurs"
+          class="rounded-2xl shadow-xl-hover w-full h-48 sm:h-56 md:h-64 lg:h-80 object-cover relative z-10 transform group-hover:scale-105 transition-transform duration-300">
+      </div>
+      <div class="order-1 md:order-2 luxury-card p-6 sm:p-8 md:p-10">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-6 sm:mb-8 text-gray-900 section-heading">
+          {{ i18n.t$('about.values.title') | async }}
+        </h2>
+        <ul class="space-y-4 sm:space-y-5 md:space-y-6">
+          <li class="flex items-start group">
+            <div
+              class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-yellow-200 transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                stroke-width="2" class="text-yellow-600 w-6 h-6 flex-shrink-0" viewBox="0 0 24 24">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <div>
+              <strong class="text-xl font-bold text-gray-900 block mb-1">{{ i18n.t$('about.values.excellence.title') |
+                async }}</strong>
+              <span class="text-gray-700 leading-relaxed">{{ i18n.t$('about.values.excellence.text') | async }}</span>
+            </div>
+          </li>
+          <li class="flex items-start group">
+            <div
+              class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-yellow-200 transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                stroke-width="2" class="text-yellow-600 w-6 h-6 flex-shrink-0" viewBox="0 0 24 24">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <div>
+              <strong class="text-xl font-bold text-gray-900 block mb-1">{{ i18n.t$('about.values.discretion.title') |
+                async }}</strong>
+              <span class="text-gray-700 leading-relaxed">{{ i18n.t$('about.values.discretion.text') | async }}</span>
+            </div>
+          </li>
+          <li class="flex items-start group">
+            <div
+              class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-yellow-200 transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                stroke-width="2" class="text-yellow-600 w-6 h-6 flex-shrink-0" viewBox="0 0 24 24">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <div>
+              <strong class="text-xl font-bold text-gray-900 block mb-1">{{ i18n.t$('about.values.reliability.title') |
+                async }}</strong>
+              <span class="text-gray-700 leading-relaxed">{{ i18n.t$('about.values.reliability.text') | async }}</span>
+            </div>
+          </li>
+          <li class="flex items-start group">
+            <div
+              class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:bg-yellow-200 transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                stroke-width="2" class="text-yellow-600 w-6 h-6 flex-shrink-0" viewBox="0 0 24 24">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <div>
+              <strong class="text-xl font-bold text-gray-900 block mb-1">{{
+                i18n.t$('about.values.personalization.title') | async }}</strong>
+              <span class="text-gray-700 leading-relaxed">{{ i18n.t$('about.values.personalization.text') | async
+                }}</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

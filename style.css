@@ -1,0 +1,431 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,400&family=Inter:wght@300;400;600&family=Montserrat:wght@400;500;600;700&display=swap");
+:root {
+  --dark-navy: #0b132b;
+  --light-navy: #1c2541;
+  --primary: #1a1a1a;
+  --secondary: #f59e0b;
+  --accent: #b5b6ba;
+  --dark: #111827;
+  --light: #f3f4f6;
+  --page-bg: #ffffff;
+  /* UI surface variables (used by components) */
+  --navbar-bg: rgba(11, 19, 43, 0.7);
+  --navbar-bg-scrolled: rgba(17, 24, 39, 0.98);
+  --lang-bg: rgba(255, 255, 255, 0.04);
+  --lang-border: rgba(181, 182, 186, 0.12);
+  --lang-bg-hover: rgba(181, 182, 186, 0.04);
+  --footer-bg: var(--dark);
+  --footer-text: #ffffff;
+  --footer-muted: #d1d5db;
+  --footer-border: rgba(255, 255, 255, 0.06);
+  --partner-bg: rgba(255, 255, 255, 0.04);
+  --social-bg: rgba(255, 255, 255, 0.1);
+  --ui-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --white: #ffffff;
+  --card-bg: #f8f8f8;
+}
+
+/* Dark theme overrides when `theme-dark` class is set on the documentElement */
+:root.theme-dark {
+  --dark-navy: #071025;
+  --light-navy: #0b1a2b;
+  --primary: #e6eef8; /* main text color */
+  --secondary: #f59e0b;
+  --accent: #b5b6ba;
+  --dark: #061122;
+  --light: #0f1724;
+  --page-bg: #041027; /* page background */
+  --white: #e6eef8;
+  --card-bg: #0b1724;
+  /* Dark overrides for UI surfaces */
+  --navbar-bg: rgba(4, 8, 15, 0.6);
+  --navbar-bg-scrolled: rgba(6, 10, 18, 0.96);
+  --lang-bg: rgba(255, 255, 255, 0.02);
+  --lang-border: rgba(181, 182, 186, 0.08);
+  --lang-bg-hover: rgba(181, 182, 186, 0.03);
+  --footer-bg: #041022;
+  --footer-text: #dbeafe;
+  --footer-muted: #94a3b8;
+  --footer-border: rgba(255, 255, 255, 0.03);
+  --partner-bg: rgba(255, 255, 255, 0.02);
+  --social-bg: rgba(255, 255, 255, 0.04);
+  --ui-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--primary);
+  background: var(--page-bg);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+}
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+/* Hero Section */
+#hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 4rem;
+  color: var(--white);
+  overflow: hidden;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: crossfade 16s infinite;
+  z-index: 0;
+}
+
+.hero-slide:nth-child(1) {
+  animation-delay: 0s;
+}
+.hero-slide:nth-child(2) {
+  animation-delay: 4s;
+}
+.hero-slide:nth-child(3) {
+  animation-delay: 8s;
+}
+
+@keyframes crossfade {
+  0%,
+  50%,
+  100% {
+    opacity: 0;
+  }
+  10%,
+  40% {
+    opacity: 1;
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-content h1 {
+  font-size: 3.8rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content h1 span {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.btn {
+  padding: 0.9rem 2rem;
+  border: 1.5px solid var(--white);
+  background: transparent;
+  color: var(--white);
+  cursor: pointer;
+  font-family: var(--font-montserrat);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: var(--white);
+  color: var(--dark-navy);
+}
+/* Feature Cards */
+.feature-card {
+  transition: all 0.4s ease;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #f8f8f8;
+}
+
+.feature-card:hover {
+  background: var(--light-navy);
+  color: white;
+  transform: translateY(-6px);
+  border-color: transparent;
+}
+
+.feature-card:hover i,
+.feature-card:hover svg {
+  color: white;
+  transform: scale(1.1);
+}
+/* Service Items */
+.service-item {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.service-item img {
+  transition: transform 0.6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+}
+
+.service-item:hover img {
+  transform: scale(1.08);
+}
+/* Vehicle Cards */
+.vehicle-card {
+  transition: all 0.4s ease;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: var(--card-bg);
+}
+
+.vehicle-card:hover {
+  background: var(--light-navy);
+  color: var(--white);
+  transform: translateY(-6px);
+  border-color: transparent;
+}
+
+.vehicle-card:hover i,
+.vehicle-card:hover svg {
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+  transition: all 0.4s ease;
+  background: var(--card-bg);
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+/* Fade Sections */
+.fade-section {
+  opacity: 0.8;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #hero {
+    padding: 0 2rem;
+    text-align: center;
+  }
+
+  #hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .service-item,
+  .vehicle-card {
+    height: 280px;
+  }
+
+  .feature-card,
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+}
+/* Map styles */
+.start-marker,
+.end-marker {
+  background: none !important;
+  border: none !important;
+}
+
+.leaflet-tooltip {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 4px;
+}
+
+.leaflet-popup-content {
+  margin: 8px 12px;
+  font-family: "Inter", sans-serif;
+}
+
+/* ============================================
+   DARK THEME OVERRIDES 
+   ============================================ */
+
+/* Background colors */
+.theme-dark .bg-white {
+  background-color: var(--card-bg) !important;
+}
+.theme-dark .bg-gray-50,
+.theme-dark .bg-gray-100 {
+  background-color: var(--light) !important;
+}
+.theme-dark .bg-gray-200 {
+  background-color: var(--light-navy) !important;
+}
+.theme-dark .bg-gray-700,
+.theme-dark .bg-gray-800 {
+  background-color: var(--dark-navy) !important;
+}
+.theme-dark .bg-gray-900,
+.theme-dark .bg-black {
+  background-color: var(--dark) !important;
+}
+.theme-dark .bg-transparent {
+  background-color: transparent !important;
+}
+
+/* Accent colors remain vibrant in dark mode */
+.theme-dark .bg-yellow-500 {
+  background-color: var(--secondary) !important;
+}
+.theme-dark .bg-yellow-600 {
+  background-color: #d97706 !important;
+}
+.theme-dark .bg-green-500 {
+  background-color: #16a34a !important;
+}
+.theme-dark .bg-red-500 {
+  background-color: #dc2626 !important;
+}
+
+/* Text colors */
+.theme-dark .text-white {
+  color: var(--white) !important;
+}
+.theme-dark .text-gray-300,
+.theme-dark .text-gray-400,
+.theme-dark .text-gray-500,
+.theme-dark .text-gray-600 {
+  color: var(--footer-muted) !important;
+}
+.theme-dark .text-gray-700,
+.theme-dark .text-gray-800,
+.theme-dark .text-gray-900 {
+  color: var(--white) !important;
+}
+.theme-dark .text-black {
+  color: var(--white) !important;
+}
+
+/* Border and shadow utilities */
+.theme-dark .border-white {
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+.theme-dark .shadow-md,
+.theme-dark .shadow-lg,
+.theme-dark .shadow-xl {
+  box-shadow: var(--ui-box-shadow) !important;
+}
+
+/* Hover states */
+.theme-dark .hover\:bg-white:hover {
+  background-color: var(--card-bg) !important;
+}
+.theme-dark .hover\:bg-gray-100:hover {
+  background-color: var(--light) !important;
+}
+.theme-dark .hover\:text-gray-900:hover {
+  color: var(--white) !important;
+}
+
+/* Component-specific overrides */
+.theme-dark .testimonial-card {
+  background-color: var(--card-bg) !important;
+  color: var(--white) !important;
+}
+.theme-dark .feature-card {
+  background-color: var(--card-bg) !important;
+  border-color: rgba(181, 182, 186, 0.1) !important;
+}
+.theme-dark .feature-card:hover {
+  background-color: var(--light-navy) !important;
+  color: var(--white) !important;
+}
+
+/* Ensure all text elements are readable */
+.theme-dark h1,
+.theme-dark h2,
+.theme-dark h3,
+.theme-dark h4,
+.theme-dark h5,
+.theme-dark h6 {
+  color: var(--white) !important;
+}
+
+.theme-dark p {
+  color: var(--footer-muted) !important;
+}
+
+.theme-dark a {
+  color: var(--white);
+}
+
+.theme-dark .text-yellow-500 {
+  color: var(--secondary) !important;
+}
