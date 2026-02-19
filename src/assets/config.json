@@ -34,7 +34,7 @@
     "defaultZoom": 15
   },
   "backend": {
-    "apiUrl": "http://10.73.139.207:8080",
+    "apiUrl": "https://api.ktransport.online",
     "endpoints": {
       "bookings": {
         "base": "/api/v1/bookings",

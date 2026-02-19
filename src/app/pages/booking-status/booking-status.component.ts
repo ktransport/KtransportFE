@@ -236,7 +236,7 @@ export class BookingStatusComponent implements OnInit {
     private router: Router
   ) {
     this.configService.loadConfig().subscribe(config => {
-      this.apiBaseUrl = config.backend?.apiUrl || 'http://10.73.139.207:8080';
+      this.apiBaseUrl = config.backend?.apiUrl || 'https://api.ktransport.online';
     });
   }
 
@@ -260,7 +260,7 @@ export class BookingStatusComponent implements OnInit {
       next: (status) => {
         this.bookingStatus = status;
         this.loading = false;
-        
+
         // Load invoice if status is invoice_sent
         if (this.isInvoiceSent()) {
           this.loadInvoice();
@@ -278,11 +278,11 @@ export class BookingStatusComponent implements OnInit {
     if (!this.bookingStatus) return false;
     const status = this.bookingStatus.status?.toLowerCase() || '';
     // Check for various possible status formats
-    return status === 'invoice_sent' || 
-           status === 'invoicesent' ||
-           status.includes('invoice_sent') ||
-           status.includes('invoicesent') ||
-           (status.includes('invoice') && status.includes('sent'));
+    return status === 'invoice_sent' ||
+      status === 'invoicesent' ||
+      status.includes('invoice_sent') ||
+      status.includes('invoicesent') ||
+      (status.includes('invoice') && status.includes('sent'));
   }
 
   hasInvoice(): boolean {
@@ -293,12 +293,12 @@ export class BookingStatusComponent implements OnInit {
 
   loadInvoice(): void {
     if (!this.bookingId) return;
-    
+
     this.loadingInvoice = true;
     // Build the invoice URL directly
     this.configService.loadConfig().subscribe({
       next: (config) => {
-        const apiUrl = config.backend?.apiUrl || 'http://10.73.139.207:8080';
+        const apiUrl = config.backend?.apiUrl || 'https://api.ktransport.online';
         this.invoiceUrl = `${apiUrl}/api/v1/bookings/${this.bookingId}/invoice/download`;
         this.loadingInvoice = false;
       },
@@ -317,7 +317,7 @@ export class BookingStatusComponent implements OnInit {
 
   acceptInvoice(): void {
     if (this.processing) return;
-    
+
     this.processing = true;
     this.bookingService.acceptInvoice(this.bookingId).subscribe({
       next: (response) => {
@@ -338,7 +338,7 @@ export class BookingStatusComponent implements OnInit {
 
   rejectInvoice(): void {
     if (this.processing || !this.rejectionReason.trim()) return;
-    
+
     this.processing = true;
     this.bookingService.rejectInvoice(this.bookingId, this.rejectionReason.trim()).subscribe({
       next: (response) => {
@@ -380,14 +380,14 @@ export class BookingStatusComponent implements OnInit {
     if (!status) return '';
     // Convert to lowercase
     const normalized = status.toLowerCase();
-    
+
     // Map common status values to translation keys
     // Handle formats like "PENDING_APPROVAL", "pending_approval", "PENDING", etc.
     if (normalized.includes('pending')) return 'pending';
     if (normalized.includes('approved')) return 'approved';
     if (normalized.includes('rejected')) return 'rejected';
     if (normalized.includes('completed')) return 'completed';
-    
+
     // If no match, return the normalized status (without underscores for simple cases)
     return normalized.replace(/_/g, '');
   }
@@ -428,10 +428,10 @@ export class BookingStatusComponent implements OnInit {
 
   formatDate(dateInput: string | Date | undefined | null): string {
     if (!dateInput) return '-';
-    
+
     try {
       let date: Date;
-      
+
       // Handle different input types
       if (dateInput instanceof Date) {
         date = dateInput;
@@ -452,13 +452,13 @@ export class BookingStatusComponent implements OnInit {
         console.warn('Unexpected date input type:', typeof dateInput, dateInput);
         return '-';
       }
-      
+
       // Check if date is valid
       if (isNaN(date.getTime())) {
         console.warn('Invalid date:', dateInput);
         return '-';
       }
-      
+
       // Format according to locale
       const locale = this.i18n.getLanguage() === 'fr' ? 'fr-FR' : 'en-US';
       return date.toLocaleString(locale, {

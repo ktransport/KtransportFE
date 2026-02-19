@@ -70,7 +70,7 @@ export class ConfigService {
   private config$: Observable<AppConfig> | null = null;
   private configCache: AppConfig | null = null;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   /**
    * Load configuration from config.json
@@ -146,7 +146,7 @@ export class ConfigService {
         defaultZoom: 15
       },
       backend: {
-        apiUrl: 'http://10.73.139.207:8080',
+        apiUrl: 'https://api.ktransport.online',
         endpoints: {
           bookings: {
             base: '/api/v1/bookings',
