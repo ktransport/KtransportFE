@@ -34,6 +34,7 @@
     "defaultZoom": 15
   },
   "backend": {
+    //backAPIUrl
     "apiUrl": "https://api.ktransport.online",
     "endpoints": {
       "bookings": {
