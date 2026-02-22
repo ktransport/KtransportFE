@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Booking Request – Ktransport</title>
+</head>
+<body style="margin:0; padding:0; background-color:#f3f4f6; font-family: Arial, Helvetica, sans-serif;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color:#f3f4f6;">
+    <tr>
+      <td align="center" style="padding: 32px 16px;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width: 600px; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+
+          <!-- Header with logo -->
+          <tr>
+            <td style="background-color: #0b132b; padding: 24px 32px; text-align: center;">
+              <img src="{logoUrl}" alt="Ktransport" width="180" height="48" style="display: inline-block; border: 0; outline: none; max-height: 48px; height: auto;" />
+              <!-- Fallback text when images are blocked -->
+              <div style="font-family: Georgia, serif; font-size: 24px; font-weight: 500; color: #ffffff; margin-top: 8px; display: none;">Ktransport</div>
+            </td>
+          </tr>
+
+          <!-- Title -->
+          <tr>
+            <td style="padding: 28px 32px 0 32px;">
+              <h1 style="margin: 0; font-family: Georgia, serif; font-size: 22px; font-weight: 500; color: #1a1a1a;">New booking request</h1>
+              <p style="margin: 8px 0 0 0; font-size: 14px; color: #6b7280;">A client has submitted a request. Approve or reject below.</p>
+            </td>
+          </tr>
+
+          <!-- Client details card -->
+          <tr>
+            <td style="padding: 20px 32px;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #f8f8f8; border-radius: 12px; border: 1px solid #e5e7eb;">
+                <tr>
+                  <td style="padding: 20px 24px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                      <tr><td style="font-size: 12px; color: #6b7280; padding-bottom: 4px;">Client</td></tr>
+                      <tr><td style="font-size: 16px; font-weight: 600; color: #1a1a1a;">{FullName}</td></tr>
+                      <tr><td style="height: 12px;"></td></tr>
+                      <tr><td style="font-size: 12px; color: #6b7280; padding-bottom: 4px;">Email</td></tr>
+                      <tr><td style="font-size: 15px; color: #1a1a1a;"><a href="mailto:{Email}" style="color: #f59e0b; text-decoration: none;">{Email}</a></td></tr>
+                      <tr><td style="height: 12px;"></td></tr>
+                      <tr><td style="font-size: 12px; color: #6b7280; padding-bottom: 4px;">Phone</td></tr>
+                      <tr><td style="font-size: 15px; color: #1a1a1a;">{Phone}</td></tr>
+                      <tr><td style="height: 12px;"></td></tr>
+                      <tr><td style="font-size: 12px; color: #6b7280; padding-bottom: 4px;">Service</td></tr>
+                      <tr><td style="font-size: 15px; color: #1a1a1a;">{ServiceType}</td></tr>
+                      <tr><td style="height: 12px;"></td></tr>
+                      <tr><td style="font-size: 12px; color: #6b7280; padding-bottom: 4px;">Booking reference</td></tr>
+                      <tr><td style="font-size: 15px; font-weight: 600; color: #111827;">{BookingReference}</td></tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- CTA buttons -->
+          <tr>
+            <td style="padding: 8px 32px 24px 32px;">
+              <table role="presentation" cellspacing="0" cellpadding="0" align="center">
+                <tr>
+                  <td style="padding-right: 12px;">
+                    <a href="{baseUrl}/api/v1/admin/bookings/{bookingId}/approve?token={adminToken}" style="display: inline-block; background: linear-gradient(135deg, #f59e0b, #fbbf24); color: #111827; font-weight: 600; font-size: 15px; text-decoration: none; padding: 14px 28px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">Approve</a>
+                  </td>
+                  <td>
+                    <a href="{baseUrl}/api/v1/admin/bookings/{bookingId}/reject?token={adminToken}" style="display: inline-block; background: transparent; color: #f59e0b; font-weight: 600; font-size: 15px; text-decoration: none; padding: 12px 26px; border-radius: 12px; border: 2px solid #f59e0b;">Reject</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding: 16px 32px 24px 32px; border-top: 1px solid #e5e7eb;">
+              <p style="margin: 0; font-size: 12px; color: #9ca3af;">Request submitted at {CreatedAt}</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
