@@ -1,0 +1,23 @@
+/* ============================================
+   PAGE HERO (inner pages: Services, About, Contact, Fleet, Partnerships, Booking)
+   Single source of truth for title/subtitle placement. Adjust breakpoints or values here only.
+   ============================================ */
+
+.page-hero-content {
+  margin-top: -2rem;
+
+  @media (min-width: 640px) {
+    margin-top: -3rem;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 4rem;
+  }
+}
+
+/* Shared banner background: mobile uses different image. Used by Services, About, Contact, Fleet, Partnerships. */
+.banner-bg {
+  @media (max-width: 768px) {
+    background-image: url('../assets/images/banner-mobile.png') !important;
+  }
+}

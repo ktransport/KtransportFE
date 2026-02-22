@@ -16,16 +16,3 @@
     background-position: center center;
   }
 }
-
-/* Move hero content down */
-.booking-hero-content {
-  margin-top: 3rem;
-
-  @media (min-width: 640px) {
-    margin-top: 4rem;
-  }
-
-  @media (min-width: 768px) {
-    margin-top: 5rem;
-  }
-}

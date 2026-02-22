@@ -149,23 +149,3 @@ button[aria-label^="Show"]:hover {
 .touch-pan-y {
   touch-action: pan-y;
 }
-
-/* Responsive banner image for mobile - will use banner-mobile.png when available */
-.banner-bg {
-  @media (max-width: 768px) {
-    background-image: url('~src/assets/images/banner-mobile.png') !important;
-  }
-}
-
-/* Move hero content up */
-.about-hero-content {
-  margin-top: -2rem;
-
-  @media (min-width: 640px) {
-    margin-top: -3rem;
-  }
-
-  @media (min-width: 768px) {
-    margin-top: -4rem;
-  }
-}

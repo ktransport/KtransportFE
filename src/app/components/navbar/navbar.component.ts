@@ -2,7 +2,6 @@ import { Component, OnInit, OnDestroy, HostListener, AfterViewInit } from '@angu
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { MatIconModule } from '@angular/material/icon';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { I18nService, Language } from '../../core/services/i18n.service';
@@ -11,7 +10,7 @@ import { ThemeService } from '../../core/services/theme.service';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterLinkActive, FormsModule, MatIconModule],
+  imports: [CommonModule, RouterLink, RouterLinkActive, FormsModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })

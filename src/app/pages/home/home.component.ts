@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy, AfterViewInit, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClient } from '@angular/common/http';
 import { I18nService } from '../../core/services/i18n.service';
@@ -19,7 +18,7 @@ interface Testimonial {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, MatIconModule, MatButtonModule, FadeInDirective],
+  imports: [CommonModule, RouterModule, MatButtonModule, FadeInDirective],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })

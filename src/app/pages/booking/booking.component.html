@@ -1,8 +1,10 @@
 <!-- Hero Section -->
-<section class="relative h-[400px] flex items-start justify-center bg-gray-900 overflow-hidden w-full pt-12 sm:pt-16 md:pt-20" style="margin-top: 70px; width: 100vw; margin-left: calc(-50vw + 50%);">
+<section
+  class="relative h-[400px] flex items-start justify-center bg-gray-900 overflow-hidden w-full pt-12 sm:pt-16 md:pt-20"
+  style="margin-top: 70px; width: 100vw; margin-left: calc(-50vw + 50%);">
   <div class="absolute inset-0 bg-black opacity-60 z-10"></div>
   <div class="absolute inset-0 bg-center booking-hero-bg"></div>
-  <div class="container mx-auto px-6 z-20 text-center booking-hero-content">
+  <div class="container mx-auto px-6 z-20 text-center page-hero-content">
     <h1 class="text-4xl md:text-5xl font-serif font-extrabold text-white mb-4 leading-tight tracking-wide">
       {{ i18n.t$('booking.gateway1.title') | async }}
     </h1>
@@ -43,14 +45,10 @@
             {{ i18n.t$('booking.gateway1.fullName') | async }}
             <span class="text-red-500">*</span>
           </label>
-          <input
-            type="text"
-            id="fullName"
-            formControlName="fullName"
-            class="form-input w-full"
+          <input type="text" id="fullName" formControlName="fullName" class="form-input w-full"
             [class.border-red-500]="bookingForm.get('fullName')?.invalid && bookingForm.get('fullName')?.touched">
-          <p *ngIf="bookingForm.get('fullName')?.invalid && bookingForm.get('fullName')?.touched" 
-             class="mt-1 text-sm text-red-600">
+          <p *ngIf="bookingForm.get('fullName')?.invalid && bookingForm.get('fullName')?.touched"
+            class="mt-1 text-sm text-red-600">
             {{ i18n.t$('booking.gateway1.errors.required') | async }}
           </p>
         </div>
@@ -61,18 +59,14 @@
             {{ i18n.t$('booking.gateway1.email') | async }}
             <span class="text-red-500">*</span>
           </label>
-          <input
-            type="email"
-            id="email"
-            formControlName="email"
-            class="form-input w-full"
+          <input type="email" id="email" formControlName="email" class="form-input w-full"
             [class.border-red-500]="bookingForm.get('email')?.invalid && bookingForm.get('email')?.touched">
-          <p *ngIf="bookingForm.get('email')?.hasError('required') && bookingForm.get('email')?.touched" 
-             class="mt-1 text-sm text-red-600">
+          <p *ngIf="bookingForm.get('email')?.hasError('required') && bookingForm.get('email')?.touched"
+            class="mt-1 text-sm text-red-600">
             {{ i18n.t$('booking.gateway1.errors.required') | async }}
           </p>
-          <p *ngIf="bookingForm.get('email')?.hasError('email') && bookingForm.get('email')?.touched" 
-             class="mt-1 text-sm text-red-600">
+          <p *ngIf="bookingForm.get('email')?.hasError('email') && bookingForm.get('email')?.touched"
+            class="mt-1 text-sm text-red-600">
             {{ i18n.t$('booking.gateway1.errors.invalid_email') | async }}
           </p>
         </div>
@@ -83,15 +77,11 @@
             {{ i18n.t$('booking.gateway1.phone') | async }}
             <span class="text-red-500">*</span>
           </label>
-          <input
-            type="tel"
-            id="phone"
-            formControlName="phone"
-            class="form-input w-full"
+          <input type="tel" id="phone" formControlName="phone" class="form-input w-full"
             [placeholder]="(i18n.t$('booking.gateway1.phone_placeholder') | async)"
             [class.border-red-500]="bookingForm.get('phone')?.invalid && bookingForm.get('phone')?.touched">
-          <p *ngIf="bookingForm.get('phone')?.invalid && bookingForm.get('phone')?.touched" 
-             class="mt-1 text-sm text-red-600">
+          <p *ngIf="bookingForm.get('phone')?.invalid && bookingForm.get('phone')?.touched"
+            class="mt-1 text-sm text-red-600">
             {{ i18n.t$('booking.gateway1.errors.required') | async }}
           </p>
         </div>
@@ -104,8 +94,8 @@
           </label>
           <div class="space-y-3">
             <label class="flex items-center p-4 border-2 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors"
-                   [class.border-yellow-500]="bookingForm.get('preferredContact')?.value === 'whatsapp'"
-                   [class.border-gray-300]="bookingForm.get('preferredContact')?.value !== 'whatsapp'">
+              [class.border-yellow-500]="bookingForm.get('preferredContact')?.value === 'whatsapp'"
+              [class.border-gray-300]="bookingForm.get('preferredContact')?.value !== 'whatsapp'">
               <input type="radio" formControlName="preferredContact" value="whatsapp" class="mr-3">
               <div class="flex-1">
                 <span class="font-semibold">{{ i18n.t$('booking.gateway1.whatsapp') | async }}</span>
@@ -113,8 +103,8 @@
               </div>
             </label>
             <label class="flex items-center p-4 border-2 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors"
-                   [class.border-yellow-500]="bookingForm.get('preferredContact')?.value === 'telegram'"
-                   [class.border-gray-300]="bookingForm.get('preferredContact')?.value !== 'telegram'">
+              [class.border-yellow-500]="bookingForm.get('preferredContact')?.value === 'telegram'"
+              [class.border-gray-300]="bookingForm.get('preferredContact')?.value !== 'telegram'">
               <input type="radio" formControlName="preferredContact" value="telegram" class="mr-3">
               <div class="flex-1">
                 <span class="font-semibold">{{ i18n.t$('booking.gateway1.telegram') | async }}</span>
@@ -122,8 +112,8 @@
               </div>
             </label>
             <label class="flex items-center p-4 border-2 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors"
-                   [class.border-yellow-500]="bookingForm.get('preferredContact')?.value === 'email'"
-                   [class.border-gray-300]="bookingForm.get('preferredContact')?.value !== 'email'">
+              [class.border-yellow-500]="bookingForm.get('preferredContact')?.value === 'email'"
+              [class.border-gray-300]="bookingForm.get('preferredContact')?.value !== 'email'">
               <input type="radio" formControlName="preferredContact" value="email" class="mr-3">
               <div class="flex-1">
                 <span class="font-semibold">{{ i18n.t$('booking.gateway1.email_contact') | async }}</span>
@@ -131,22 +121,23 @@
               </div>
             </label>
           </div>
-          <p *ngIf="bookingForm.get('preferredContact')?.invalid && bookingForm.get('preferredContact')?.touched" 
-             class="mt-1 text-sm text-red-600">
+          <p *ngIf="bookingForm.get('preferredContact')?.invalid && bookingForm.get('preferredContact')?.touched"
+            class="mt-1 text-sm text-red-600">
             {{ i18n.t$('booking.gateway1.errors.required') | async }}
           </p>
         </div>
 
         <!-- Submit Button -->
-        <button
-          type="submit"
-          [disabled]="!bookingForm.valid || isSubmitting"
+        <button type="submit" [disabled]="!bookingForm.valid || isSubmitting"
           class="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed">
           <span *ngIf="!isSubmitting">{{ i18n.t$('booking.gateway1.submit') | async }}</span>
           <span *ngIf="isSubmitting" class="flex items-center justify-center">
-            <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24">
               <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              <path class="opacity-75" fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+              </path>
             </svg>
             {{ i18n.t$('booking.gateway1.submitting') | async }}
           </span>
@@ -183,12 +174,9 @@
       <p class="text-sm text-gray-600 mb-6">
         {{ i18n.t$('booking.gateway1.success.next_steps') | async }}
       </p>
-      <button
-        (click)="goToHome()"
-        class="btn-primary w-full">
+      <button (click)="goToHome()" class="btn-primary w-full">
         {{ i18n.t$('booking.gateway1.success.close') | async }}
       </button>
     </div>
   </div>
 </div>
-
