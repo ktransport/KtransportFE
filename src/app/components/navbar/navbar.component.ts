@@ -60,8 +60,8 @@ export class NavbarComponent implements OnInit, OnDestroy, AfterViewInit {
 
   @HostListener('window:resize', ['$event'])
   onWindowResize(): void {
-    // Close mobile menu on resize to desktop
-    if (window.innerWidth > 768 && this.isMobileMenuOpen) {
+    // Close mobile menu on resize to desktop (>= 992px matches CSS min-width: 992px)
+    if (window.innerWidth >= 992 && this.isMobileMenuOpen) {
       this.closeMobileMenu();
     }
   }

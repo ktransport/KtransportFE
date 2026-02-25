@@ -10,21 +10,21 @@
     margin-top: -3rem;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     margin-top: 4rem;
   }
 }
 
 /* Shared banner background: mobile uses different image. Used by Services, About, Contact, Fleet, Partnerships. */
 .banner-bg {
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
     background-image: url('../assets/images/banner-mobile.png') !important;
   }
 }
 
 /* Portrait-friendly hero height for fixed-height sections (Transfer, Events, Tourism, Chauffeurs, Booking) */
 .page-hero-section {
-  @media (max-width: 768px) and (orientation: portrait) {
+  @media (max-width: 991px) and (orientation: portrait) {
     min-height: 280px;
     height: auto !important;
   }

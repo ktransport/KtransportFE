@@ -350,7 +350,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
 
   .cta-line-1,
   .cta-line-2 {
@@ -387,7 +387,7 @@
 }
 
 /* Mobile adjustments */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .hero-line-extending {
     height: 2px;
   }

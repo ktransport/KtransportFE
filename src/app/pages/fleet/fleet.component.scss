@@ -23,7 +23,7 @@ img {
   display: block; // Ensure image is displayed
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   img {
     min-height: 200px; // Ensure minimum height on mobile
   }

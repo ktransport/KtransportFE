@@ -69,7 +69,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     if (width < 640) {
       this.cardWidth = Math.floor(width * 0.9); // 90vw
       this.cardGap = 16;
-    } else if (width < 768) {
+    } else if (width < 992) {
       this.cardWidth = 400;
       this.cardGap = 16;
     } else if (width < 1024) {

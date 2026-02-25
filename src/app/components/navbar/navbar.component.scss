@@ -741,8 +741,8 @@
    RESPONSIVE BREAKPOINTS
    ============================================ */
 
-/* Tablet and below (768px) - Match desktop with shrinking on scroll */
-@media (max-width: 768px) {
+/* Mobile / tablet and below (992px) - includes flipped phones in landscape */
+@media (max-width: 991px) {
   .navbar {
     height: var(--navbar-height) !important;
     transition:

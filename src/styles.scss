@@ -236,7 +236,7 @@ main {
 }
 
 /* Prevent horizontal scroll on mobile */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
 
   html,
   body {
@@ -246,7 +246,7 @@ main {
 }
 
 /* Mobile navbar height (portrait) - single source for layout and hero offset */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   :root {
     --navbar-height: 140px;
     --navbar-height-scrolled: 100px;
@@ -270,7 +270,7 @@ main {
 
 /* Hero section margin-top adjustments - use variable so landscape (150px) is covered */
 section[style*="margin-top: 120px"] {
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
     margin-top: var(--navbar-height) !important;
   }
 
@@ -280,7 +280,7 @@ section[style*="margin-top: 120px"] {
 }
 
 section[style*="margin-top: 70px"] {
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
     margin-top: var(--navbar-height) !important;
   }
 
@@ -833,7 +833,7 @@ button:not(.mat-mdc-button):not(.mat-mdc-raised-button):active {
   padding: 6rem 1.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .section-padding {
     padding: 8rem 1.5rem;
   }
@@ -1003,7 +1003,7 @@ button:not(.mat-mdc-button):not(.mat-mdc-raised-button):active {
 }
 
 /* Mobile adjustments */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .hero-tagline-golden {
     overflow: hidden;
   }
