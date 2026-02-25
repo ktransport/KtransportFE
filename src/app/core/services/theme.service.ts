@@ -16,7 +16,7 @@ export class ThemeService {
   }
 
   /**
-   * Initialize theme from localStorage or browser preference
+   * Initialize theme from localStorage or light as primary when no saved preference
    */
   private initializeTheme(): void {
     if (!isPlatformBrowser(this.platformId)) {
@@ -32,10 +32,8 @@ export class ThemeService {
         return;
       }
 
-      // Detect browser preference
-      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const theme = prefersDark ? 'dark' : 'light';
-      this.setTheme(theme, false); // false = don't save initial detection
+      // No saved theme: use light as primary
+      this.setTheme('light', false);
     } catch (error) {
       console.warn('Error initializing theme:', error);
       // Fallback to light theme
