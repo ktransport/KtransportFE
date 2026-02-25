@@ -392,12 +392,20 @@
     height: 2px;
   }
 
+  .bottom-golden-line-full-container {
+    overflow: hidden;
+  }
+
   .bottom-golden-line-base {
     height: 2px;
   }
 
   .bottom-golden-line-swoosh {
-    height: 3px;
-    width: 120px;
+    height: 2.5px;
+    width: 76px;
+    box-shadow:
+      0 0 18px rgba(251, 191, 36, 1),
+      0 0 36px rgba(245, 158, 11, 0.7),
+      0 0 54px rgba(245, 158, 11, 0.4);
   }
 }

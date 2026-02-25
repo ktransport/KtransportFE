@@ -1,0 +1,20 @@
+@if (loading) {
+  <div
+    class="loader-wrapper"
+    [class.loader-overlay]="overlay"
+    [class.loader-inline]="!overlay"
+    role="status"
+    aria-live="polite"
+    [attr.aria-label]="message || 'Loading'">
+    <div class="loader-content">
+      <div class="ball-scale-multiple" aria-hidden="true">
+        <span class="ball-scale-multiple-ball"></span>
+        <span class="ball-scale-multiple-ball"></span>
+        <span class="ball-scale-multiple-ball"></span>
+      </div>
+      @if (message) {
+        <p class="loader-message">{{ message }}</p>
+      }
+    </div>
+  </div>
+}

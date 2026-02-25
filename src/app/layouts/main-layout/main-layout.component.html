@@ -1,6 +1,7 @@
 <app-navbar></app-navbar>
-<main class="min-h-screen">
+<main class="min-h-screen relative">
   <router-outlet></router-outlet>
+  <app-loader [loading]="navigationLoading" [overlay]="true"></app-loader>
 </main>
 <app-footer></app-footer>
 

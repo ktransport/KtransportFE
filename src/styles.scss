@@ -44,6 +44,10 @@
   --font-montserrat: "Montserrat", sans-serif;
   --white: #ffffff;
   --card-bg: #f8f8f8;
+
+  /* Navbar height for layout (main min-height, hero margin-top); desktop default */
+  --navbar-height: 140px;
+  --navbar-height-scrolled: 90px;
 }
 
 /* Dark theme overrides */
@@ -66,7 +70,7 @@
   --lang-bg-hover: rgba(181, 182, 186, 0.03);
   --footer-bg: #041022;
   --footer-text: #dbeafe;
-  --footer-muted: #94a3b8;
+  --footer-muted: #a8b4c4;
   --footer-border: rgba(255, 255, 255, 0.03);
   --partner-bg: rgba(255, 255, 255, 0.02);
   --social-bg: rgba(255, 255, 255, 0.04);
@@ -121,6 +125,69 @@
   border-color: var(--white) !important;
 }
 
+/* Lighter grays - ensure visible on dark backgrounds (hero, footer) */
+.theme-dark .text-gray-300,
+.theme-dark .text-gray-400 {
+  color: var(--footer-muted) !important;
+}
+
+.theme-dark .border-gray-100,
+.theme-dark .border-gray-300 {
+  border-color: var(--footer-border) !important;
+}
+
+.theme-dark .bg-gray-300 {
+  background-color: var(--light) !important;
+}
+
+/* Error UI - dark mode */
+.theme-dark .bg-red-50 {
+  background-color: rgba(127, 29, 29, 0.3) !important;
+}
+
+.theme-dark .border-red-200 {
+  border-color: rgba(248, 113, 113, 0.5) !important;
+}
+
+.theme-dark .text-red-500,
+.theme-dark .text-red-600,
+.theme-dark .text-red-800 {
+  color: #fca5a5 !important;
+}
+
+/* Success UI - dark mode */
+.theme-dark .bg-green-100 {
+  background-color: rgba(6, 95, 70, 0.4) !important;
+}
+
+.theme-dark .text-green-600 {
+  color: #6ee7b7 !important;
+}
+
+/* Gradient backgrounds - use theme colors in dark mode */
+.theme-dark .from-gray-50 {
+  --tw-gradient-from: var(--page-bg);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.theme-dark .to-white {
+  --tw-gradient-to: var(--card-bg);
+}
+
+.theme-dark .via-white {
+  --tw-gradient-via: var(--card-bg);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to);
+}
+
+/* Fallback for gradient sections (e.g. partnerships) when Tailwind uses background-image */
+.theme-dark .bg-gradient-to-br.from-gray-50.to-white {
+  background-image: linear-gradient(to bottom right, var(--page-bg), var(--card-bg)) !important;
+}
+
+.theme-dark .bg-gradient-to-br.from-gray-50.via-white.to-gray-50 {
+  background-image: linear-gradient(to bottom right, var(--page-bg), var(--card-bg), var(--page-bg)) !important;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -131,6 +198,7 @@ html {
   scroll-behavior: smooth;
   width: 100%;
   min-height: 100vh;
+  min-height: 100dvh;
   background: var(--page-bg);
   overflow-x: hidden;
 }
@@ -146,6 +214,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
   min-height: 100vh;
+  min-height: 100dvh;
   margin: 0;
   padding: 0;
   position: relative;
@@ -156,6 +225,7 @@ app-root {
   display: block;
   width: 100%;
   min-height: 100vh;
+  min-height: 100dvh;
   background: var(--page-bg);
 }
 
@@ -173,22 +243,49 @@ main {
     max-width: 100vw;
     overflow-x: hidden;
   }
+}
 
-  * {
-    max-width: 100%;
+/* Mobile navbar height (portrait) - single source for layout and hero offset */
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 140px;
+    --navbar-height-scrolled: 100px;
   }
 }
 
-/* Hero section margin-top adjustments for navbar height changes */
+@media (max-width: 480px) {
+  :root {
+    --navbar-height: 130px;
+    --navbar-height-scrolled: 90px;
+  }
+}
+
+/* Landscape on small viewports - bar tall enough for logo at top; slim when scrolled */
+@media (max-height: 500px) and (orientation: landscape) {
+  :root {
+    --navbar-height: 150px;
+    --navbar-height-scrolled: 80px;
+  }
+}
+
+/* Hero section margin-top adjustments - use variable so landscape (150px) is covered */
 section[style*="margin-top: 120px"] {
   @media (max-width: 768px) {
-    margin-top: 140px !important; // Match mobile navbar height at top (same as desktop!)
-    // Note: This accounts for the maximum height; when scrolled, navbar shrinks to 100px
+    margin-top: var(--navbar-height) !important;
   }
 
   @media (max-width: 480px) {
-    margin-top: 130px !important; // Match small mobile navbar height at top (almost same as desktop)
-    // Note: When scrolled, navbar shrinks to 90px giving more space
+    margin-top: var(--navbar-height) !important;
+  }
+}
+
+section[style*="margin-top: 70px"] {
+  @media (max-width: 768px) {
+    margin-top: var(--navbar-height) !important;
+  }
+
+  @media (max-width: 480px) {
+    margin-top: var(--navbar-height) !important;
   }
 }
 
@@ -212,6 +309,11 @@ section[style*="margin-top: 120px"] {
     padding-left: 0.625rem;
     padding-right: 0.625rem;
   }
+}
+
+/* Safe area insets for notched devices (viewport-fit=cover) */
+app-navbar .navbar {
+  padding-top: env(safe-area-inset-top, 0px);
 }
 
 h1,
@@ -384,16 +486,30 @@ mat-form-field {
   width: 100%;
 }
 
+/* Light mode - Material fields (default) */
 ::ng-deep .mdc-text-field {
-  background-color: rgba(31, 41, 55, 0.5);
+  background-color: var(--card-bg);
 }
 
 ::ng-deep .mdc-text-field .mdc-text-field__input {
-  color: #ffffff;
+  color: var(--primary);
 }
 
 ::ng-deep .mat-mdc-form-field-label {
-  color: #9ca3af;
+  color: #374151;
+}
+
+/* Dark mode - Material fields */
+.theme-dark ::ng-deep .mdc-text-field {
+  background-color: rgba(11, 23, 36, 0.6);
+}
+
+.theme-dark ::ng-deep .mdc-text-field .mdc-text-field__input {
+  color: var(--white);
+}
+
+.theme-dark ::ng-deep .mat-mdc-form-field-label {
+  color: var(--footer-muted);
 }
 
 /* Material Design Button Styles */
@@ -498,6 +614,13 @@ textarea:focus {
   background: rgba(11, 23, 36, 0.6);
   border-color: rgba(255, 255, 255, 0.1);
   color: var(--white);
+}
+
+.theme-dark .form-input::placeholder,
+.theme-dark input::placeholder,
+.theme-dark textarea::placeholder {
+  color: var(--footer-muted);
+  opacity: 0.9;
 }
 
 /* Luxury Buttons */
@@ -881,14 +1004,19 @@ button:not(.mat-mdc-button):not(.mat-mdc-raised-button):active {
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
+  .hero-tagline-golden {
+    overflow: hidden;
+  }
+
   .hero-golden-line-base {
     height: 2px;
-    bottom: -0.2rem;
   }
 
   .hero-golden-line-swoosh {
-    height: 3px;
-    width: 80px;
-    bottom: -0.2rem;
+    height: 2.5px;
+    width: 60px;
+    box-shadow:
+      0 0 10px rgba(251, 191, 36, 0.8),
+      0 0 20px rgba(245, 158, 11, 0.5);
   }
 }

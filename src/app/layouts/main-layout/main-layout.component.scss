@@ -2,11 +2,13 @@
   display: block;
   width: 100%;
   min-height: 100vh;
+  min-height: 100dvh;
   background: var(--page-bg);
 }
 
 main {
   width: 100%;
-  min-height: calc(100vh - 70px);
+  min-height: calc(100vh - var(--navbar-height, 140px));
+  min-height: calc(100dvh - var(--navbar-height, 140px));
   background: var(--page-bg);
 }

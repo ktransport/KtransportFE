@@ -66,6 +66,16 @@ export class NavbarComponent implements OnInit, OnDestroy, AfterViewInit {
     }
   }
 
+  @HostListener('window:orientationchange')
+  onOrientationChange(): void {
+    // Close mobile menu when screen is rotated so overlay/sidebar don't stay open with wrong dimensions
+    if (this.isMobileMenuOpen) {
+      this.closeMobileMenu();
+    }
+    // Force resize after a short delay so any code relying on resize recalculates with new dimensions
+    setTimeout(() => window.dispatchEvent(new Event('resize')), 150);
+  }
+
   @HostListener('document:keydown.escape', ['$event'])
   onEscapeKey(event: KeyboardEvent): void {
     if (this.isMobileMenuOpen) {

@@ -16,3 +16,9 @@
     background-position: center center;
   }
 }
+
+@media (max-width: 428px) {
+  .luxury-card-alt {
+    padding: 1rem !important;
+  }
+}

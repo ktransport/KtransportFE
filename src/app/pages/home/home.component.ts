@@ -5,7 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { HttpClient } from '@angular/common/http';
 import { I18nService } from '../../core/services/i18n.service';
 import { FadeInDirective } from '../../directives/fade-in.directive';
-import { provideHttpClient } from '@angular/common/http';
+import { LoaderComponent } from '../../components/loader/loader.component';
 
 interface Testimonial {
   text: string;
@@ -18,7 +18,7 @@ interface Testimonial {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, MatButtonModule, FadeInDirective],
+  imports: [CommonModule, RouterModule, MatButtonModule, FadeInDirective, LoaderComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
@@ -31,6 +31,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   private slides: NodeListOf<HTMLElement> | null = null;
 
   // Testimonials data
+  testimonialsLoading = true;
   testimonials: Testimonial[] = [];
   originalTestimonials: Testimonial[] = [];
   currentTestimonialIndex = 0;
@@ -57,6 +58,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     this.updateCardDimensions();
     if (typeof window !== 'undefined') {
       window.addEventListener('resize', this.resizeHandler);
+      window.addEventListener('orientationchange', this.resizeHandler);
     }
   }
 
@@ -89,6 +91,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
         this.testimonials = data;
         this.currentTestimonialIndex = 0;
         this.selectedCardIndex = 0; // Highlight first card by default
+        this.testimonialsLoading = false;
         setTimeout(() => {
           this.updateCardDimensions();
           // Start auto-rotation after testimonials are loaded
@@ -97,6 +100,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       },
       error: (error) => {
         console.error('Error loading testimonials:', error);
+        this.testimonialsLoading = false;
       }
     });
   }
@@ -193,12 +197,13 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     const cards = container.querySelectorAll('.testimonial-card');
     if (cards.length === 0 || !cards[index]) return;
 
-    // Scroll the card into view with center alignment
-    cards[index].scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest',
-      inline: 'center'
-    });
+    const cardEl = cards[index] as HTMLElement;
+    // Use content-relative positions so centering is correct regardless of viewport/container position
+    const targetScrollLeft =
+      cardEl.offsetLeft - (container.clientWidth / 2) + (cardEl.offsetWidth / 2);
+    const maxScrollLeft = container.scrollWidth - container.clientWidth;
+    const scrollLeft = Math.max(0, Math.min(maxScrollLeft, targetScrollLeft));
+    container.scrollTo({ left: scrollLeft, behavior: 'smooth' });
 
     this.resetAutoRotation(); // Reset auto-rotation on manual navigation
   }
@@ -245,6 +250,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     // Remove resize listener
     if (typeof window !== 'undefined') {
       window.removeEventListener('resize', this.resizeHandler);
+      window.removeEventListener('orientationchange', this.resizeHandler);
     }
   }
 

@@ -11,7 +11,7 @@
   backdrop-filter: blur(14px);
   font-family: var(--font-driven, var(--font-serif));
   overflow: visible;
-  height: 140px; // Increased from 90px for bigger logo
+  height: var(--navbar-height, 140px);
   transition:
     height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
     background 0.4s ease,
@@ -19,7 +19,7 @@
   z-index: 1000;
 
   &.scrolled {
-    height: 90px; // Shrinks to 90px when scrolled
+    height: var(--navbar-height-scrolled, 90px);
     background: rgba(11, 19, 43, 0.98);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   }
@@ -416,6 +416,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
+  height: 100dvh;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(4px);
   opacity: 0;
@@ -439,6 +440,7 @@
   width: 85%;
   max-width: 320px;
   height: 100vh;
+  height: 100dvh;
   background: rgba(11, 19, 43, 0.98);
   backdrop-filter: blur(20px);
   box-shadow: -4px 0 24px rgba(0, 0, 0, 0.3);
@@ -488,22 +490,9 @@
     border-radius: 10px;
     transition: all 0.3s ease;
 
+    // No golden cadre (frame) on mobile - removed for cleaner mobile format
     &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 10px;
-      padding: 1.5px;
-      background: linear-gradient(135deg, var(--luxury-gold), var(--luxury-gold-light));
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      opacity: 0.3;
-      transition: opacity 0.3s ease;
-    }
-
-    &:hover::before {
-      opacity: 0.6;
+      display: none;
     }
   }
 
@@ -755,14 +744,14 @@
 /* Tablet and below (768px) - Match desktop with shrinking on scroll */
 @media (max-width: 768px) {
   .navbar {
-    height: 140px !important; // Match desktop size (140px) for big mobile logo
+    height: var(--navbar-height) !important;
     transition:
       height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
       background 0.4s ease,
       box-shadow 0.4s ease;
 
     &.scrolled {
-      height: 100px !important; // Shrinks to 100px when scrolled - gives users more space
+      height: var(--navbar-height-scrolled) !important;
     }
   }
 
@@ -830,15 +819,14 @@
   }
 
   .navbar {
-    height: 130px !important; // Close to desktop (140px) - still very prominent
+    height: var(--navbar-height) !important;
     transition:
       height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
       background 0.4s ease,
       box-shadow 0.4s ease;
-    // Note: Slightly smaller than 140px to prevent taking too much screen on small phones
 
     &.scrolled {
-      height: 90px !important; // Shrinks to 90px when scrolled - more space for content
+      height: var(--navbar-height-scrolled) !important;
     }
   }
 

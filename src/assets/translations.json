@@ -806,6 +806,7 @@
       "reserve": "Reserve",
       "select": "Select",
       "sending": "Sending...",
+      "loading": "Loading...",
       "error": "An error occurred. Please try again."
     }
   },
@@ -1618,6 +1619,7 @@
       "reserve": "Réserver",
       "select": "Sélectionner",
       "sending": "Envoi...",
+      "loading": "Chargement...",
       "error": "Une erreur est survenue. Veuillez réessayer."
     }
   }

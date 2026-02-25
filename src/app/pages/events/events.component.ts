@@ -15,7 +15,7 @@ import { FadeInDirective } from '../../directives/fade-in.directive';
   imports: [CommonModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatSelectModule, FadeInDirective],
   template: `
     <!-- Hero Section -->
-    <section class="relative h-[500px] flex items-start justify-center bg-gray-900 overflow-hidden w-full pt-12 sm:pt-16 md:pt-20" style="margin-top: 70px; width: 100vw; margin-left: calc(-50vw + 50%);">
+    <section class="page-hero-section relative h-[500px] flex items-start justify-center bg-gray-900 overflow-hidden w-full pt-12 sm:pt-16 md:pt-20" style="margin-top: 70px; width: 100vw; margin-left: calc(-50vw + 50%);">
       <div class="absolute inset-0 bg-black opacity-60 z-10"></div>
       <div class="absolute inset-0 bg-center" style="background-image: url('assets/images/banner.png'); background-size: 150%; background-position: 40% center; background-repeat: no-repeat;"></div>
       <div class="container mx-auto px-6 z-20 text-center">

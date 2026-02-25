@@ -19,10 +19,10 @@ import { Subject, of } from 'rxjs';
   imports: [CommonModule, RouterModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule],
   template: `
     <!-- Hero Section -->
-    <section class="relative h-[500px] flex items-start justify-center bg-gray-900 overflow-hidden w-full pt-12 sm:pt-16 md:pt-20" style="margin-top: 70px; width: 100vw; margin-left: calc(-50vw + 50%);">
+    <section class="page-hero-section relative h-[500px] flex items-start justify-center bg-gray-900 overflow-hidden w-full pt-12 sm:pt-16 md:pt-20" style="margin-top: 70px; width: 100vw; margin-left: calc(-50vw + 50%);">
       <div class="absolute inset-0 bg-black opacity-60 z-10"></div>
       <div class="absolute inset-0 bg-center" style="background-image: url('assets/images/banner.png'); background-size: 150%; background-position: 40% center; background-repeat: no-repeat;"></div>
-      <div class="container mx-auto px-6 z-20 text-center">
+      <div class="container mx-auto px-4 sm:px-6 z-20 text-center">
         <h1 class="text-5xl md:text-6xl font-serif font-extrabold text-white mb-6 leading-tight tracking-wide">{{ i18n.t$('transfer.hero.title') | async }}</h1>
         <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">{{ i18n.t$('transfer.hero.subtitle') | async }}</p>
       </div>
@@ -30,7 +30,7 @@ import { Subject, of } from 'rxjs';
 
     <!-- Service Details -->
     <section class="py-24 bg-gray-50">
-      <div class="container mx-auto px-6 max-w-6xl">
+      <div class="container mx-auto px-4 sm:px-6 max-w-6xl">
         <div class="grid md:grid-cols-2 gap-16">
           <div>
             <h2 class="text-4xl font-serif font-bold mb-8 text-gray-900 section-heading">{{ i18n.t$('transfer.details.title') | async }}</h2>

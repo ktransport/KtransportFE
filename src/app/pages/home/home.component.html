@@ -1,3 +1,9 @@
+<app-loader
+  [loading]="testimonialsLoading"
+  [overlay]="true"
+  [message]="(i18n.t$('common.loading') | async) ?? 'Loading...'"></app-loader>
+
+<div *ngIf="!testimonialsLoading" class="home-content animate-fadeIn">
 <!-- Hero Section with Slideshow -->
 <section class="relative flex items-center justify-center bg-black overflow-hidden min-h-screen">
   <div class="absolute inset-0 bg-black opacity-60 z-10"></div>
@@ -196,13 +202,13 @@
       <div class="cta-text-wrapper text-center relative">
         <div class="cta-line-1 text-white font-serif">
           <ng-container *ngIf="(i18n.t$('index.cta.title') | async) as title">
-            {{ title.split(',')[0] }},
+            {{ $any(title).split(',')[0] }},
           </ng-container>
         </div>
         <div class="cta-line-2-wrapper relative">
           <div class="cta-line-2 text-white font-serif italic relative z-20">
             <ng-container *ngIf="(i18n.t$('index.cta.title') | async) as title">
-              {{ title.split(',').slice(1).join(',').trim() }}
+              {{ $any(title).split(',').slice(1).join(',').trim() }}
             </ng-container>
           </div>
 
@@ -219,3 +225,4 @@
     </div>
   </div>
 </section>
+</div>

@@ -21,3 +21,11 @@
     background-image: url('../assets/images/banner-mobile.png') !important;
   }
 }
+
+/* Portrait-friendly hero height for fixed-height sections (Transfer, Events, Tourism, Chauffeurs, Booking) */
+.page-hero-section {
+  @media (max-width: 768px) and (orientation: portrait) {
+    min-height: 280px;
+    height: auto !important;
+  }
+}
