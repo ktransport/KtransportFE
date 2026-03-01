@@ -4,6 +4,7 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angula
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { I18nService } from '../../core/services/i18n.service';
 import { FormService } from '../../core/services/form.service';
 
@@ -12,7 +13,7 @@ declare var L: any;
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule],
+  imports: [CommonModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatSnackBarModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -24,7 +25,8 @@ export class ContactComponent implements OnInit, AfterViewInit {
   constructor(
     public i18n: I18nService,
     private fb: FormBuilder,
-    private formService: FormService
+    private formService: FormService,
+    private snackBar: MatSnackBar
   ) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
@@ -93,11 +95,11 @@ export class ContactComponent implements OnInit, AfterViewInit {
         next: () => {
           this.isSubmitting = false;
           this.contactForm.reset();
-          alert(this.i18n.translate('contact.form.success'));
+          this.snackBar.open(this.i18n.translate('contact.form.success'), undefined, { duration: 4000, panelClass: ['success-snackbar'] });
         },
         error: () => {
           this.isSubmitting = false;
-          alert(this.i18n.translate('contact.form.error'));
+          this.snackBar.open(this.i18n.translate('contact.form.error'), undefined, { duration: 5000, panelClass: ['error-snackbar'] });
         }
       });
     }

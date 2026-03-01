@@ -1020,3 +1020,20 @@ button:not(.mat-mdc-button):not(.mat-mdc-raised-button):active {
       0 0 20px rgba(245, 158, 11, 0.5);
   }
 }
+
+/* Snackbar / Toast panel styles (contact form and elsewhere) */
+.mat-mdc-snack-bar-container.error-snackbar {
+  --mdc-snackbar-container-color: #b91c1c;
+  --mat-snack-bar-button-color: #fff;
+  .mdc-snackbar__label {
+    color: #fff;
+  }
+}
+
+.mat-mdc-snack-bar-container.success-snackbar {
+  --mdc-snackbar-container-color: #047857;
+  --mat-snack-bar-button-color: #fff;
+  .mdc-snackbar__label {
+    color: #fff;
+  }
+}
