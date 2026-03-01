@@ -156,7 +156,7 @@ export class BookingComponent implements OnInit {
     const defaultMsg = whatsapp.defaultMessage || 'Bonjour, demande de réservation via ktransport.online — je souhaite confirmer ou compléter ma réservation.';
     let text = defaultMsg;
     if (this.bookingId) {
-      text += ` Ref: ${this.bookingId}`;
+      text += ` Réf. demande : ${this.bookingId}`;
     }
     return `https://wa.me/${digits}?text=${encodeURIComponent(text)}`;
   }
