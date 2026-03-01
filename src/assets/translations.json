@@ -739,6 +739,10 @@
           "message": "Your request has been submitted. You will receive a confirmation link via your preferred contact method once approved.",
           "bookingId": "Booking Reference",
           "next_steps": "You will receive a personalized link to complete your booking once your request is approved.",
+          "whatsapp_check_email": "Check your email to complete the process. To reach us on WhatsApp, click the button below.",
+          "whatsapp_check_email_lead": "Check your email to complete the process.",
+          "whatsapp_check_email_follow": "To reach us on WhatsApp, click the button below.",
+          "whatsapp_button": "Message us on WhatsApp",
           "close": "Return to Home"
         },
         "errors": {
@@ -1552,6 +1556,10 @@
           "message": "Votre demande a été envoyée. Vous recevrez un lien de confirmation via votre méthode de contact préférée une fois approuvée.",
           "bookingId": "Référence de réservation",
           "next_steps": "Vous recevrez un lien personnalisé pour compléter votre réservation une fois votre demande approuvée.",
+          "whatsapp_check_email": "Consultez votre email pour poursuivre. Pour nous joindre sur WhatsApp, cliquez sur le bouton ci-dessous.",
+          "whatsapp_check_email_lead": "Consultez votre email pour poursuivre.",
+          "whatsapp_check_email_follow": "Pour nous joindre sur WhatsApp, cliquez sur le bouton ci-dessous.",
+          "whatsapp_button": "Nous contacter sur WhatsApp",
           "close": "Retour à l'accueil"
         },
         "errors": {

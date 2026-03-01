@@ -26,6 +26,7 @@ export interface AppConfig {
   whatsapp: {
     number: string;
     defaultMessage: string;
+    whatsAppAgentModeEnabled?: boolean;
   };
   contact: {
     email: string;
@@ -132,7 +133,8 @@ export class ConfigService {
       },
       whatsapp: {
         number: '+33680282572',
-        defaultMessage: 'Bonjour, je souhaite réserver un transport.'
+        defaultMessage: 'Bonjour, demande de réservation via ktransport.online — je souhaite confirmer ou compléter ma réservation.',
+        whatsAppAgentModeEnabled: true
       },
       contact: {
         email: 'bilal.ktransport@hotmail.com',

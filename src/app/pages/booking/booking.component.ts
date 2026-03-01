@@ -7,6 +7,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRadioModule } from '@angular/material/radio';
 import { I18nService } from '../../core/services/i18n.service';
+import { ConfigService } from '../../core/services/config.service';
+import type { AppConfig } from '../../core/services/config.service';
 import { BookingService, InitialBookingRequest } from '../../core/services/booking.service';
 
 @Component({
@@ -31,11 +33,14 @@ export class BookingComponent implements OnInit {
   submitSuccess = false;
   submitError: string | null = null;
   bookingId: string | null = null;
+  preferredContactAtSubmit: string | null = null;
+  config: AppConfig | null = null;
 
   constructor(
     public i18n: I18nService,
     private fb: FormBuilder,
     private bookingService: BookingService,
+    private configService: ConfigService,
     private router: Router,
     private route: ActivatedRoute
   ) {
@@ -49,6 +54,8 @@ export class BookingComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.configService.loadConfig().subscribe(c => (this.config = c));
+
     // Get service type from query params or route
     this.route.queryParams.subscribe(params => {
       this.serviceType = params['service'] || '';
@@ -92,8 +99,11 @@ export class BookingComponent implements OnInit {
           console.log('Booking submission successful:', response);
           this.isSubmitting = false;
           this.bookingId = response.bookingId;
+          this.preferredContactAtSubmit = this.bookingForm.value.preferredContact ?? null;
+          if (!this.config) {
+            this.config = this.configService.getConfig();
+          }
           this.submitSuccess = true;
-          // Keep the modal, no automatic redirect
         },
         error: (error) => {
           this.isSubmitting = false;
@@ -117,9 +127,38 @@ export class BookingComponent implements OnInit {
   }
 
   goToHome(): void {
-    // Close modal and go to home
+    this.preferredContactAtSubmit = null;
     this.submitSuccess = false;
     this.router.navigate(['/'], { replaceUrl: true });
+  }
+
+  /** Open WhatsApp in new tab and close the modal (used when WhatsApp block is the only CTA). */
+  openWhatsAppAndClose(): void {
+    window.open(this.getWhatsAppUrl(), '_blank', 'noopener,noreferrer');
+    this.goToHome();
+  }
+
+  /** Show "check email" + WhatsApp button when agent mode is off and user chose WhatsApp. */
+  get showWhatsAppButtonBlock(): boolean {
+    return (
+      this.submitSuccess === true &&
+      this.preferredContactAtSubmit === 'whatsapp' &&
+      this.config?.whatsapp?.whatsAppAgentModeEnabled === false
+    );
+  }
+
+  getWhatsAppUrl(): string {
+    const whatsapp = this.config?.whatsapp;
+    if (!whatsapp?.number) {
+      return 'https://wa.me/';
+    }
+    const digits = whatsapp.number.replace(/\D/g, '');
+    const defaultMsg = whatsapp.defaultMessage || 'Bonjour, demande de réservation via ktransport.online — je souhaite confirmer ou compléter ma réservation.';
+    let text = defaultMsg;
+    if (this.bookingId) {
+      text += ` Ref: ${this.bookingId}`;
+    }
+    return `https://wa.me/${digits}?text=${encodeURIComponent(text)}`;
   }
 }
 

@@ -20,7 +20,8 @@
   },
   "whatsapp": {
     "number": "+33680282572",
-    "defaultMessage": "Bonjour, je souhaite réserver un transport."
+    "defaultMessage": "Bonjour, demande de réservation via ktransport.online — je souhaite confirmer ou compléter ma réservation.",
+    "whatsAppAgentModeEnabled": false
   },
   "contact": {
     "email": "bilal.ktransport@hotmail.com",
